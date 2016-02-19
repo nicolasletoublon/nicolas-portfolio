@@ -2,6 +2,7 @@ html,
 body {
     background-color: white;
     margin: 0;
+    height: auto;
     font-family: "RobotoDraft", "Roboto", sans-serif;
 }
 
@@ -10,6 +11,10 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+.picture-content {
+    position: relative;
 }
 
 .home-picture {
@@ -26,7 +31,7 @@ body {
 
 .intro-container {
     position: absolute;
-    top: 15%;
+    top: 30%;
     width: 70%;
     padding-left: 50px;
 }
@@ -104,18 +109,65 @@ body {
 }
 
 .content-part {
+    padding: 50px 0;
     min-height: 800px;
-    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    align-self: center;
+}
+
+.content-title-box {
+    border: 1px solid #262729;
+    padding: 15px 20px;
+    width: 160px;
+    background-color: #262729;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-title-icon-container {
+    position: absolute;
+    border: 1px solid #262729;
+    background-color: white;
+    left: 41%;
+    width: 24px;
+    height: 24px;
+    top: -13px;
+}
+
+.content-title-icon {
+    color: #262729;
+}
+
+.content-title {
+    margin: 0;
+    font-size: 35px;
+    padding-top: 5px;
+}
+
+.content-title-subtitle {
+    font-variant: small-caps;
+    color: white;
+    margin: 0;
 }
 
 .profile-content {
     background-color: white;
+    color: #262729;
+    align-items: center;
 }
+
+.profile-content-body {
+}
+
 
 .skills-content {
     background-color: #262729;
+    color: white;
+    align-items: center;
 }
 
 .story-content {
@@ -127,8 +179,8 @@ body {
 }
 
 @media (orientation: landscape) {
-    .intro-container {
+/*    .intro-container {
         position: absolute;
-        top: 35%;
-    }
+        top: 10%;
+    }*/
 }

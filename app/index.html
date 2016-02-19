@@ -25,27 +25,26 @@
 </head>
 
 <body ng-app="Application" ng-controller="ApplicationController" layout="column" ng-cloak>
-<div id="anchor-home" role="heading" class="header">
-    <div class="picture-content">
-        <img class="home-picture load" src="assets/img/home-picture-color.png">
-    </div>
-    <div class="intro-container">
-        <md-content class="intro-content">
-            <h1 class="intro-title">HI! I AM NICOLAS,<br/><b>WEB</b> DEVELOPER</h1>
-            <div class="intro-separator"></div>
-            <h3 class="intro-subtitle">
-                sdjfh skufadhlsfisfhsaidhfdi aiu hauisdf usluf haisulf iluf
-                dfjdgjsdfig jgiods dudhd sfadhsuifhsdui fsufufhadlsu
-            </h3>
-        </md-content>
-    </div>
-</div>
+    <div id="anchor-home" role="heading" class="header">
+        <div class="picture-content">
+            <img class="home-picture load" src="assets/img/home-picture-color.png" />
+            <div class="intro-container">
+                <md-content class="intro-content">
+                    <h1 class="intro-title">HI! I AM NICOLAS,<br/><b>WEB</b> DEVELOPER</h1>
+                    <div class="intro-separator"></div>
+                    <h3 class="intro-subtitle">
+                        sdjfh skufadhlsfisfhsaidhfdi aiu hauisdf usluf haisulf iluf
+                        dfjdgjsdfig jgiods dudhd sfadhsuifhsdui fsufufhadlsu
+                    </h3>
+                </md-content>
+            </div>
+        </div>
 
-<div role="main" class="main-content">
+    </div>
 
-    <md-toolbar ng-controller="ToolBarController" class="navigation-toolbar md-whiteframe-z1" id="toolbar-nav">
+    <md-toolbar role="navigation" ng-controller="ToolBarController" class="navigation-toolbar md-whiteframe-z1" id="toolbar-nav">
         <div class="toolbar-container">
-            <div id="anchor-profile" class="brand-container toolbar-tools md-toolbar-tools">
+            <div class="brand-container toolbar-tools md-toolbar-tools">
                 <h2 class="brand-name">
                     <span>NICOLAS <b>LETOUBLON</b></span>
                 </h2>
@@ -65,52 +64,50 @@
         </div>
     </md-toolbar>
 
-    <div class="content-part profile-content">
+    <div role="main" class="main-content">
+        <section id="anchor-profile" class="content-part profile-content">
+            <div class="profile-content-body">
+                <div class="content-title-box md-whiteframe-7dp">
+                    <div class="content-title-icon-container">
+                        <i class="content-title-icon material-icons md-dark">person_outline</i>
+                    </div>
+                    <h2 class="content-title">{{'profile' | uppercase}}</h2>
+                    <h3 class="content-title-subtitle">about myself</h3>
+                </div>
+                <div class="content-body">
 
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <section id="anchor-skills" class="content-part skills-content">
+            <div class="content-title-box md-whiteframe-7dp">
+                <div class="content-title-icon-container">
+                    <i class="content-title-icon material-icons md-dark">person_outline</i>
+                </div>
+                <h2 class="content-title">{{'profile' | uppercase}}</h2>
+            </div>
+            <div class="content-body">
+
+            </div>
+        </section>
+        <section id="anchor-story" class="content-part story-content">
+
+        </section>
+        <section id="anchor-about" class="content-part about-content">
+        </section>
     </div>
 
-    <div id="anchor-skills" class="content-part skills-content">
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-animate/angular-animate.js"></script>
+    <script src="../node_modules/angular-aria/angular-aria.js"></script>
+    <script type="text/javascript" src="../node_modules/angular-material/angular-material.js"></script>
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
 
-    </div>
-    <div id="anchor-story" class="content-part story-content">
-
-    </div>
-    <div id="anchor-about" class="content-part about-content">
-    </div>
-</div>
-
-<md-sidenav hide-gt-xs class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
-    <md-toolbar class="md-theme-light">
-        <h1 class="md-toolbar-tools">Sidenav Right</h1>
-    </md-toolbar>
-    <md-content ng-controller="ToolBarController" layout-padding>
-        <md-list>
-            <md-subheader class="md-no-sticky">Avatar with Secondary Action Icon</md-subheader>
-            <md-list-item ng-click="goToAnchor('home'); close();" aria-label="Home">
-                HOME
-            </md-list-item>
-            <md-list-item ng-click="goToAnchor('skills'); close();" aria-label="Skills">
-                SKILLS
-            </md-list-item>
-            <md-list-item ng-click="goToAnchor('story'); close();" aria-label="Story">
-                STORY
-            </md-list-item>
-            <md-list-item ng-click="goToAnchor('about')" aria-label="About">
-                ABOUT
-            </md-list-item>
-        </md-list>
-    </md-content>
-</md-sidenav>
-
-
-<script src="../node_modules/angular/angular.js"></script>
-<script src="../node_modules/angular-animate/angular-animate.js"></script>
-<script src="../node_modules/angular-aria/angular-aria.js"></script>
-<script type="text/javascript" src="../node_modules/angular-material/angular-material.js"></script>
-<script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
-
-
-<script src="app.js"></script>
+    <script src="app.js"></script>
 
 </body>
 </html>
