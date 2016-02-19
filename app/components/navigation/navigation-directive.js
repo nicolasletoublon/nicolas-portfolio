@@ -1,26 +1,30 @@
-angular
-    .module('Application', [])
-    .directive('Navigation')
-    .controller('NavigationController', function ($scope, $anchorScroll, $location, $timeout, $mdSidenav) {
+'use strict';
 
-        $scope.toggleRight = function() {
-            $mdSidenav('right').toggle();
-        };
-        $scope.isOpenRight = function () {
-            return $mdSidenav('right').isOpen();
-        };
+function navigationDirective() {
+    return {
+        restrict        : "E",
+        templateUrl     : "components/navigation/navigation.html",
+        bindToController: true,
+        controllerAs    : "navigation",
+        controller      : 'navigationController'
+    };
+}
 
+function navigationController($scope, $anchorScroll, $location) {
+    var self = this;
 
-        $scope.goToAnchor = function (x) {
-            var newHash = 'anchor-' + x;
-            if ($location.hash() !== newHash) {
-                $location.hash('anchor-' + x);
-            } else {
-                $anchorScroll();
-            }
-        };
+    self.sections = ['home', 'profile', 'skills', 'projects', 'story', 'contact'];
 
-        $scope.close = function () {
-            $mdSidenav('right').close();
-        };
-    })
+    self.goToAnchor = function (x) {
+        var newHash = 'anchor-' + x;
+        if ($location.hash() !== newHash) {
+            $location.hash('anchor-' + x);
+        } else {
+            $anchorScroll();
+        }
+    };
+}
+
+angular.module('Navigation', [])
+    .directive('navigationDirective', navigationDirective)
+    .controller('navigationController', navigationController);

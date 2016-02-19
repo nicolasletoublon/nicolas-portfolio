@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<md-toolbar role="navigation" class="navigation-toolbar md-whiteframe-z1" id="toolbar-nav">
+    <div class="toolbar-container">
+        <div class="brand-container toolbar-tools md-toolbar-tools">
+            <h2 class="brand-name">
+                <span>NICOLAS <b>LETOUBLON</b></span>
+            </h2>
+        </div>
+        <span flex></span>
+        <div hide-gt-xs class="toolbar-tools md-toolbar-tools toolbar-actions">
+            <md-button class="md-icon-button" aria-label="Settings">
+                <i class="material-icons">menu</i>
+            </md-button>
+        </div>
+        <div hide-xs class="toolbar-tools md-toolbar-tools toolbar-actions">
+            <md-button ng-bind="section | uppercase" ng-repeat="section in navigation.sections track by $index" class="nav-button"
+                       ng-click="navigation.goToAnchor(section)" aria-label="{{section}}">
+            </md-button>
+        </div>
+    </div>
+</md-toolbar>
