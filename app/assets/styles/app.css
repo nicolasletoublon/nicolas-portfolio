@@ -1,0 +1,134 @@
+html,
+body {
+    background-color: white;
+    margin: 0;
+    font-family: "RobotoDraft", "Roboto", sans-serif;
+}
+
+.main-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-picture {
+    margin-bottom: -4px;
+    width: 100%;
+    height: 100%;
+    animation-duration: 2s;
+}
+
+.home-picture.load {
+    animation-timing-function: ease-in;
+    opacity: 1;
+}
+
+.intro-container {
+    position: absolute;
+    top: 15%;
+    width: 70%;
+    padding-left: 50px;
+}
+
+.intro-title {
+    margin: 0;
+    font-weight: normal;
+}
+
+.intro-separator {
+    height: 1px;
+    background-color: white;
+    width: 25%;
+    margin: 20px 0;
+}
+
+.intro-subtitle {
+    margin: 0;
+    width: 60%;
+    font-weight: normal;
+}
+
+.intro-content {
+    background: transparent;
+    color: white;
+}
+
+.navigation-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fixedTop {
+    top: 0;
+    position: fixed;
+}
+
+.brand-container {
+    background-color: #262729;
+    max-width: 235px;
+    min-width: 235px;
+}
+
+.brand-name {
+    color: white;
+}
+
+#toolbar-nav {
+    background-color: white;
+    color: #262729;
+    display: flex;
+    justify-content: center;
+}
+
+.toolbar-container {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+}
+
+.toolbar-tools {
+    flex: 1;
+}
+
+.toolbar-actions {
+    justify-content: flex-end;
+    padding-right: 8px;
+}
+
+.nav-button {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.content-part {
+    min-height: 800px;
+    max-width: 1024px;
+    width: 100%;
+    align-self: center;
+}
+
+.profile-content {
+    background-color: white;
+}
+
+.skills-content {
+    background-color: #262729;
+}
+
+.story-content {
+    background-color: white;
+}
+
+.about-content {
+    background-color: #262729;
+}
+
+@media (orientation: landscape) {
+    .intro-container {
+        position: absolute;
+        top: 35%;
+    }
+}
