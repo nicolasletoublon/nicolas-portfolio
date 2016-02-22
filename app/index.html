@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="assets/styles/css/navigation.css"/>
     <link rel="stylesheet" href="assets/styles/css/main-content.css"/>
     <link rel="stylesheet" href="assets/styles/css/profile.css"/>
+    <link rel="stylesheet" href="assets/styles/css/story.css"/>
+    <link rel="stylesheet" href="assets/styles/css/contact.css"/>
+    <link rel="stylesheet" href="assets/styles/css/skills.css"/>
+    <link rel="stylesheet" href="assets/styles/css/footer.css"/>
 
     <style type="text/css">
         [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
@@ -28,34 +32,23 @@
 
 <body ng-app="Application" ng-controller="ApplicationController" layout="column" ng-cloak>
 
-    <header-directive></header-directive>
+    <header-directive ng-if="false"></header-directive>
     <navigation-directive></navigation-directive>
     <div role="main" class="main-content">
-        <profile-directive></profile-directive>
-        <section id="anchor-skills" class="content-part dark skills-content">
-            <div class="profile-content-body">
-                <div class="title-box">
-                    <div class="icon-container">
-                        <i class="icon material-icons">palette</i>
-                    </div>
-                    <h2 class="title">{{'skills' | uppercase}}</h2>
-                    <h3 class="subtitle">my skills</h3>
-                </div>
-                <div class="content-body">
+        <profile-directive ng-if="true"></profile-directive>
+        <div class="section-separator"></div>
+        <story-directive ng-if="true"></story-directive>
+        <div class="section-separator"></div>
+        <skills-directive ng-if="true"></skills-directive>
+        <div class="section-separator"></div>
+        <contact-directive ng-if="true" class="contact-directive-container"></contact-directive>
 
-                </div>
-            </div>
-        </section>
-        <section id="anchor-story" class="content-part story-content">
-
-        </section>
-        <section id="anchor-about" class="content-part about-content">
-        </section>
     </div>
-
+    <footer-directive ng-if="true"></footer-directive>
     <script src="../node_modules/angular/angular.js"></script>
     <script src="../node_modules/angular-animate/angular-animate.js"></script>
     <script src="../node_modules/angular-aria/angular-aria.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
     <script type="text/javascript" src="../node_modules/angular-material/angular-material.js"></script>
     <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
 
@@ -63,5 +56,9 @@
     <script src="components/header/header-directive.js"></script>
     <script src="components/navigation/navigation-directive.js"></script>
     <script src="components/profile/profile-directive.js"></script>
+    <script src="components/story/story-directive.js"></script>
+    <script src="components/contact/contact-directive.js"></script>
+    <script src="components/skills/skills-directive.js"></script>
+    <script src="components/footer/footer-directive.js"></script>
 </body>
 </html>

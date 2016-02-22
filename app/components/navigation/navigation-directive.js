@@ -13,7 +13,7 @@ function navigationDirective() {
 function navigationController($scope, $anchorScroll, $location) {
     var self = this;
 
-    self.sections = ['home', 'profile', 'skills', 'projects', 'story', 'contact'];
+    self.sections = ['home', 'profile', 'skills', 'projects', 'stories', 'contact'];
 
     self.goToAnchor = function (x) {
         var newHash = 'anchor-' + x;

@@ -6,12 +6,12 @@
             </h2>
         </div>
         <span flex></span>
-        <div hide-gt-xs class="toolbar-tools md-toolbar-tools toolbar-actions">
+        <div hide-gt-sm class="toolbar-tools md-toolbar-tools toolbar-actions">
             <md-button class="md-icon-button" aria-label="Settings">
                 <i class="material-icons">menu</i>
             </md-button>
         </div>
-        <div hide-xs class="toolbar-tools md-toolbar-tools toolbar-actions">
+        <div hide-xs hide-sm class="toolbar-tools md-toolbar-tools toolbar-actions">
             <md-button ng-bind="section | uppercase" ng-repeat="section in navigation.sections track by $index" class="nav-button"
                        ng-click="navigation.goToAnchor(section)" aria-label="{{section}}">
             </md-button>

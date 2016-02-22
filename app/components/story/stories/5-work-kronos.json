@@ -1,0 +1,25 @@
+{
+  "name": "Kronos Canadian Inc.",
+  "year": 2016,
+  "city": "Montreal",
+  "country": "Canada",
+  "type": "job experience",
+  "website": "www.kronos.com",
+  "description": "sdhfkdshfk jdshfkjdshfjk sdfsdh ds fsdh fkjdshfjsdf jksd hjshdjkshjsk ",
+  "job-title": "Web software engineer",
+  "projects": [
+    {
+      "name": "Falcon",
+      "period": "feb-march",
+      "missions": [
+        "jfsodijf oidsfjiosdjfs",
+        "sdfks dfhs dfosihisdho"
+      ],
+      "tools": [
+        "Anglar JS",
+        "NodeJS",
+        "Grunt"
+      ]
+    }
+  ]
+}
