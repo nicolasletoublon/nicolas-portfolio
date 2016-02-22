@@ -1,70 +1,116 @@
-<section data-component="skills-component" id="anchor-skills" class="content-part">
-    <div layout="column" class="content-container">
-        <div class="title-box">
-            <div class="icon-container">
-                <i class="icon material-icons">palette</i>
-            </div>
-            <h2 class="title">{{'my skills' | uppercase}}</h2>
-            <h4 class="subtitle">knowledge & expertise</h4>
+<div layout="column" layout-align="start center" class="content-container" data-component="skills-component" id="anchor-skills">
+    <div class="title-box">
+        <div class="icon-container">
+            <i class="icon material-icons">palette</i>
         </div>
-        <div layout="column" layout-gt-sm="row" class="content-body">
-            <div flex="50" layout-padding layout="column" class="knowledge-container">
-                <div flex layout="column">
-                    <h2 class="knowledge">Knowledge</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                        laborum.
-                    </p>
+        <h2 class="title">{{'my skills' | uppercase}}</h2>
+        <h4 class="subtitle">knowledge & expertise</h4>
+    </div>
+    <div layout-margin layout-gt-sm="row" class="content-body">
+        <div flex layout="column" layout-align="space-around" class="knowledge-container">
+            <h2>Knowledge</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum.
+            </p>
+            <div layout="row" layout-align="space-around" class="domains-container">
+                <md-list layout-align="space-around start" layout="column" class="list-domains">
+                    <md-list-item class="md-2-line">
+                        <md-icon>check</md-icon>
+                        <div>
+                            <p>Interface Design</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-2-line">
+                        <md-icon>check</md-icon>
+                        <div>
+                            <p>Web services REST</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-2-line">
+                        <md-icon>check</md-icon>
+                        <div>
+                            <p>Front-end Frameworks</p>
+                        </div>
+                    </md-list-item>
+                </md-list>
+                <md-list layout-align="space-around start" layout="column" class="list-domains">
+                    <md-list-item class="md-2-line">
+                        <md-icon>check</md-icon>
+                        <div>
+                            <p>Web Applications</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-2-line">
+                        <md-icon>check</md-icon>
+                        <div>
+                            <p>Responsive Web Design</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-2-line">
+                        <md-icon>check</md-icon>
+                        <div>
+                            <p>Back-end Frameworks</p>
+                        </div>
+                    </md-list-item>
+                </md-list>
+            </div>
+        </div>
+        <div flex="5"></div>
+        <div flex layout="column" layout-align="space-around" class="expertise-container">
+            <h2>Expertise</h2>
+            <div flex layout="column" layout-align="space-around" class="frameworks-container"  >
+                <div class="framework-container">
+                    <p class="framework-label">Angular JS 1.x</p>
+                    <md-progress-linear md-mode="determinate" value="80"></md-progress-linear>
                 </div>
-                <div flex layout="row" class="domains-container">
-                    <div flex layout="column">
-                        <p flex>toto</p>
-                        <p flex>toto</p>
-                        <p flex>toto</p>
-                    </div>
-                    <div flex layout="column">
-                        <p flex>toto</p>
-                        <p flex>toto</p>
-                        <p flex>toto</p>
-                    </div>
+                <div class="framework-container">
+                    <p class="framework-label">Bootstrap 3 / Material Design</p>
+                    <md-progress-linear md-mode="determinate" value="90"></md-progress-linear>
+                </div>
+                <div class="framework-container">
+                    <p class="framework-label">Node JS</p>
+                    <md-progress-linear md-mode="determinate" value="70"></md-progress-linear>
+                </div>
+                <div class="framework-container">
+                    <p class="framework-label">React JS</p>
+                    <md-progress-linear md-mode="determinate" value="50"></md-progress-linear>
+                </div>
+                <div class="framework-container">
+                    <p class="framework-label">ASP MVC 5</p>
+                    <md-progress-linear md-mode="determinate" value="60"></md-progress-linear>
                 </div>
             </div>
-            <div flex="50" layout="column" layout-padding class="expertise-container">
-                <h2 class="expertise">Expertise</h2>
-                <div flex layout="column" layout-align="space-around" >
-                    <div class="skill-container">
-                        <label class="skill-label">Javascript</label>
-                        <md-progress-linear class="skill-bar" md-mode="determinate" value="70"></md-progress-linear>
-                    </div>
-                    <div class="skill-container">
-                        <label class="skill-label">Css 3</label>
-                        <md-progress-linear class="skill-bar" md-mode="determinate" value="90"></md-progress-linear>
-                    </div>
-                    <div class="skill-container">
-                        <label class="skill-label">Html 5</label>
-                        <md-progress-linear class="skill-bar" md-mode="determinate" value="65"></md-progress-linear>
-                    </div>
-                    <div class="skill-container">
-                        <label class="skill-label">C# / ASP.MVC 5</label>
-                        <md-progress-linear class="skill-bar" md-mode="determinate" value="60"></md-progress-linear>
-                    </div>
-                    <div class="skill-container">
-                        <label class="skill-label">Java 8</label>
-                        <md-progress-linear class="skill-bar" md-mode="determinate" value="50"></md-progress-linear>
-                    </div>
+            <div flex class="separator"></div>
+            <div flex layout="row" layout-align="space-between center" layout-padding class="skills-container">
+                <div layout="column" class="skill-container">
+                    <md-progress-circular md-diameter="70" md-mode="determinate" value="85"></md-progress-circular>
+                    <md-progress-circular md-diameter="70" class="skill-second-bar" md-mode="determinate" value="100"></md-progress-circular>
+                    <p class="skill-number-label">85%</p>
+                    <p>Javascript</p>
                 </div>
-                <div flex layout="row" class="domains-container">
-                    <div layout="column">
-
-                    </div>
-                    <div layout="column">
-
-                    </div>
+                <div layout="column" class="skill-container">
+                    <md-progress-circular md-diameter="70" md-mode="determinate" value="70"></md-progress-circular>
+                    <md-progress-circular md-diameter="70" class="skill-second-bar" md-mode="determinate" value="100"></md-progress-circular>
+                    <p class="skill-number-label" >70%</p>
+                    <p>Html 5</p>
+                </div>
+                <div layout="column" class="skill-container">
+                    <md-progress-circular md-diameter="70" md-mode="determinate" value="90"></md-progress-circular>
+                    <md-progress-circular md-diameter="70" class="skill-second-bar" md-mode="determinate" value="100"></md-progress-circular>
+                    <p class="skill-number-label">90%</p>
+                    <p>Css 3</p>
+                </div>
+                <div layout="column" class="skill-container">
+                    <md-progress-circular md-diameter="70" md-mode="determinate" value="65"></md-progress-circular>
+                    <md-progress-circular md-diameter="70" class="skill-second-bar" md-mode="determinate" value="100"></md-progress-circular>
+                    <p class="skill-number-label">65%</p>
+                    <p>Java</p>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>

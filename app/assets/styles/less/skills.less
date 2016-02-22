@@ -1,33 +1,43 @@
 [data-component='skills-component'] {
-  &.content-part {
-    margin: 0 0 40px 0;
-    min-height: 300px;
-  }
   .title-box {
-    .icon-container {
-      margin: -37px 0 0 72px;
-      .icon {
-        color: white;
-        position: absolute;
-        top: 1px;
-        left: 1px;
-        transform: rotate(-45deg);
-      }
-    }
-    .subtitle {
-      margin: 8px 0 0 7px;
-    }
+	.icon-container {
+	  left: 87px;
+	  .icon {
+		top: 1px;
+		left: 1px;
+	  }
+	}
+	.subtitle {
+	  left: 21px;
+	}
   }
   .content-body {
-    margin-top: 50px;
-    .knowledge-container {
-      border: 1px solid black;
-    }
-    .expertise-container {
-      border: 1px solid black;
-      .skill-container {
-
-      }
-    }
+	margin-top: 30px;
+	.knowledge-container {
+	  border: 1px solid green;
+	  md-icon {
+		margin-right: 5px;
+	  }
+	}
+	.expertise-container {
+	  border: 1px solid pink;
+	  .skill-container {
+		position: relative;
+		text-align: center;
+		.skill-second-bar {
+		  opacity: .2;
+		  top: 8px;
+		  position: absolute;
+		}
+		.skill-number-label {
+		  top: 15px;
+		  left: 30px;
+		  position: absolute;
+		}
+	  }
+	  .framework-label {
+		margin: 20px 0 2px 0;
+	  }
+	}
   }
 }

@@ -1,55 +1,66 @@
-<section data-component="profile-component" id="anchor-profile" class="content-part">
-    <div class="content-container">
-        <div class="title-box">
-            <div class="icon-container">
-                <i class="icon material-icons">person_outline</i>
-            </div>
-            <h2 class="title">{{'profile' | uppercase}}</h2>
-            <h4 class="subtitle">about myself</h4>
+<div layout="column"
+     layout-align="start center"
+     class="content-container"
+     data-component="profile-component"
+     id="anchor-profile">
+    <div class="title-box">
+        <div class="icon-container">
+            <i class="icon material-icons">person_outline</i>
         </div>
-        <div class="content-body">
-            <div flex class="content-text">
-                <div class="text-container">
+        <h2 class="title">{{'profile' | uppercase}}</h2>
+        <h4 class="subtitle">about myself</h4>
+    </div>
+    <div layout="row" layout-margin class="content-body">
+        <div flex="60" layout="column" layout-align="space-between start" class="text-container">
+            <div flex layout="column" layout-align="space-around">
+                <div >
                     <h2 class="first-title">Portrait</h2>
                     <p class="first-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                         exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
                         reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                         occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                        laborum.</p>
+                        laborum.
+                    </p>
+                </div>
+                <div>
                     <h2 class="second-title">Objectifs</h2>
                     <p class="second-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                         exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
                         reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                         occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                        laborum.</p>
+                        laborum.
+                    </p>
                 </div>
-                <md-button class="md-raised dl-cv">
-                    <i class="material-icons icon ">cloud_download</i> Download my CV
-                </md-button>
             </div>
-
-            <div flex class="photo-container">
-                <div class="picture">
-                    <img src="assets/img/profile-picture.png"/>
-                </div>
-                <h2 class="title">
+            <div flex></div>
+            <md-button class="custom-button md-primary md-raised download-cv-btn">
+                <i class="material-icons">cloud_download</i>Download my CV
+            </md-button>
+        </div>
+        <div flex="5"></div>
+        <div flex="35" layout="column" layout-align="space-around center" class="picture-container">
+            <div class="picture">
+                <img src="assets/img/profile-pictufre.png" />
+            </div>
+            <div layout="column" layout-align="start center" class="description-container">
+                <h3 class="title">
                     Hi, I'm</br>
                     <b>Nicolas Letoublon,</b></br>
                     <span class="job">web developer</span>
-                </h2>
+                </h3>
                 <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore.</p>
-                <div class="links-container">
-                    <div class="link">
-                        <img class="linkedin-picture"/>
-                    </div>
-                    <div class="link ">
-                        <img class="github-picture"/>
-                    </div>
+            </div>
+            <div layout="row" class="links-container">
+                <div class="link">
+                    <img class="linkedin-picture" />
+                </div>
+                <div class="link ">
+                    <img class="github-picture" />
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>

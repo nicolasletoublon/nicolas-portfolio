@@ -1,66 +1,55 @@
 html,
 body {
-  background-color: white;
   margin: 0;
   height: auto;
   color: #262729;
+  background-color: white;
   font-family: 'Roboto', "Helvetica Neue", sans-serif;
   .main-content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    .section-separator {
-      min-height: 400px;
-      background-color: #262729;
-    }
-    .content-part {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      align-items: center;
-      .content-container {
-        width: 100%;
-        display: flex;
-        max-width: 976px;
-        flex-direction: column;
-        .title-box {
-          border: 1px solid #E2E2E2;
-          padding: 20px 15px 20px 15px;
-          background-color: white;
-          color: #262729;
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          align-self: center;
-          .icon-container {
-            position: absolute;
-            border: 1px solid #262729;
-            background-color: #262729;
-            width: 30px;
-            height: 30px;
-            transform: rotate(45deg);
-          }
-          .title {
-            margin: 0;
-            font-size: 35px;
-            padding-top: 5px;
-          }
-          .subtitle {
-            position: absolute;
-            font-variant: small-caps;
-            background-color: white;
-            padding: 0 10px;
-            font-weight: normal;
-            color: #908D8D;
-          }
-        }
-      }
-    }
+	.section-separator {
+	  min-height: 400px;
+	  background-color: #262729;
+	}
+	.content-container {
+	  max-width: 1024px;
+	  border: 1px solid red;
+	  .title-box {
+		border: 1px solid #E2E2E2;
+		padding: 25px 15px 20px 15px;
+		position: relative;
+		.icon-container {
+		  position: absolute;
+		  border: 1px solid #262729;
+		  background-color: #262729;
+		  width: 30px;
+		  height: 30px;
+		  transform: rotate(45deg);
+		  top: -17px;
+		  .icon {
+			color: white;
+			position: absolute;
+			transform: rotate(-45deg);
+		  }
+		}
+		.title {
+		  margin: 0;
+		  font-size: 35px;
+		}
+		.subtitle {
+		  background-color: white;
+		  position: absolute;
+		  margin: 0;
+		  font-variant: small-caps;
+		  font-weight: normal;
+		  top: 76px;
+		  padding: 0 10px;
+		}
+	  }
+	}
   }
   .contact-directive-container {
-    .map {
+	.map {
 
-    }
+	}
   }
 }
