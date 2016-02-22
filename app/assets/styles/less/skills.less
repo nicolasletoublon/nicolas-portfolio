@@ -1,11 +1,11 @@
 [data-component='skills-component'] {
   &.content-part {
-    margin: 70px 0 40px 0;
+    margin: 0 0 40px 0;
     min-height: 300px;
   }
   .title-box {
     .icon-container {
-      margin: -37px 0 0 54px;
+      margin: -37px 0 0 72px;
       .icon {
         color: white;
         position: absolute;
@@ -15,110 +15,19 @@
       }
     }
     .subtitle {
-      margin: 8px 0 0 20px;
+      margin: 8px 0 0 7px;
     }
   }
   .content-body {
     margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .content-text {
-    flex-grow: 2;
-    padding-right: 160px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    .second-title {
-      padding-top: 40px;
+    .knowledge-container {
+      border: 1px solid black;
     }
-    .first-paragraph, .second-paragraph {
-      color: #908D8D;
-    }
-    .dl-cv {
-      margin: 0;
-      border-radius: 0;
-      width: 200px;
-      padding: 0 20px 0 28px;
-      color: white;
-      background-color: #262729;
-      text-transform: none;
-      font-weight: normal;
-      &:hover {
-        color: #262729;
-      }
-      .icon {
-        top: 7px;
-        left: -7px;
-        position: relative;
-      }
-    }
-  }
-  .photo-container {
-    border: 1px solid #E2E2E2;
-    padding: 20px;
-    height: 650px;
-    margin-top: 50px;
-    max-width: 350px;
-    min-width: 350px;
-    position: relative;
-    text-align: center;
-    .title {
-      padding-top: 50px;
-      font-weight: normal;
-      .job {
-        font-variant: small-caps;
-        font-weight: 600;
-      }
-    }
-    .picture {
-      border: 1px solid #E2E2E2;
-      transform: rotate(45deg);
-      height: 200px;
-      width: 200px;
-      margin-top: 50px;
-      margin-left: 50px;
-      background-color: #E2E2E2;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    .description {
+    .expertise-container {
+      border: 1px solid black;
+      .skill-container {
 
-    }
-    .links-container {
-      display: inline-flex;
-      margin-top: 25px;
-      .link {
-        cursor: pointer;
-        transform: rotate(45deg);
-        margin: 0 20px;
-        img {
-          transition: transform .3s ease-in-out;
-          background-size: 40px;
-          background-repeat: no-repeat;
-          &:hover {
-            transform: rotate(-45deg);
-          }
-        }
-        .linkedin-picture {
-          background-image: url('../../img/linkedin-logo-dark.png');
-          width: 40px;
-          height: 40px;
-          &:hover {
-            background-image: url('../../img/linkedin-logo.png');
-          }
-        }
-        .github-picture {
-          width: 40px;
-          height: 40px;
-          background-image: url('../../img/github-logo-dark.png');
-          &:hover {
-            background-image: url('../../img/github-logo.png');
-          }
-        }
       }
     }
-}
+  }
 }
