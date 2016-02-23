@@ -1,36 +1,39 @@
-<section data-component="contact-component" id="anchor-contact" class="content-part">
-    <div class="content-container">
-        <div class="title-box">
-            <div class="icon-container">
-                <i class="icon material-icons">@</i>
-            </div>
-            <h2 class="title">{{'contact' | uppercase}}</h2>
-            <h4 class="subtitle">get in touch</h4>
+<div layout="column" layout-align="start center" class="content-container" data-component="contact-component" id="anchor-contact">
+    <div class="title-box">
+        <div class="icon-container">
+            <i class="icon material-icons">@</i>
         </div>
-        <div class="content-body">
-            <form class="form-container" name="contact-form">
-                <div layout-gt-sm="row">
-                    <md-input-container class="md-block" flex-gt-sm>
-                        <input required ng-model="contact.user.name" placeholder="Name">
-                    </md-input-container>
-                    <div flex="5" hide-xs hide-sm>
-                    </div>
-                    <md-input-container class="md-block" flex-gt-sm>
-                        <input required ng-model="contact.user.email" type="email" placeholder="Email">
-                    </md-input-container>
-                </div>
-                <div layout-gt-sm="row">
-                    <md-input-container class="md-block" flex-gt-sm>
-                        <input required ng-model="contact.user.subject" placeholder="Subject">
-                    </md-input-container>
-                </div>
-                <md-input-container class="md-block">
-                    <textarea required placeholder="What are you going to tell me !" ng-model="contact.user.message" md-maxlength="500" rows="4" md-select-on-focus></textarea>
-                </md-input-container>
-                <md-button class="md-raised send-message-btn" type="submit">
-                    <i class="material-icons icon">send</i> Send
-                </md-button>
-            </form>
-        </div>
+        <h2 class="title">{{'contact' | uppercase}}</h2>
+        <h4 class="subtitle">get in touch</h4>
     </div>
-</section>
+    <div layout-margin class="content-body">
+        <form class="form-container" name="contact-form">
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <input required ng-model="contact.user.name" placeholder="Name">
+                </md-input-container>
+                <div flex="5" hide-xs hide-sm>
+                </div>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <input required ng-model="contact.user.email" type="email" placeholder="Email">
+                </md-input-container>
+            </div>
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <input required ng-model="contact.user.subject" placeholder="Subject">
+                </md-input-container>
+            </div>
+            <md-input-container class="md-block">
+                <textarea required
+                          placeholder="What are you going to tell me !"
+                          ng-model="contact.user.message"
+                          md-maxlength="500"
+                          rows="4"
+                          md-select-on-focus></textarea>
+            </md-input-container>
+            <md-button class="md-raised md-primary custom-button" type="submit">
+                <i class="material-icons icon">send</i> Send
+            </md-button>
+        </form>
+    </div>
+</div>
