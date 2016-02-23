@@ -10,8 +10,13 @@ function profileDirective() {
     };
 }
 
-function profileController($scope) {
+function profileController($scope, $mdSidenav, $window) {
     var self = this;
+
+    self.togglePicture = function(id) {
+        $('.picture-container').css('padding-top', $window.scrollY + 60);
+        $mdSidenav(id).toggle();
+    }
 }
 
 angular.module('Profile', [])

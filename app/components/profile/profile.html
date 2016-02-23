@@ -11,10 +11,10 @@
         <h4 class="subtitle">about myself</h4>
     </div>
     <div layout="row" layout-margin class="content-body">
-        <div flex="60" layout="column" layout-align="space-between start" class="text-container">
+        <div flex layout="column" layout-align="space-between start" class="text-container">
             <div flex layout="column" layout-align="space-around">
                 <div >
-                    <h2 class="first-title">Portrait</h2>
+                    <h2 class="first-title">About me</h2>
                     <p class="first-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                         exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -24,7 +24,7 @@
                     </p>
                 </div>
                 <div>
-                    <h2 class="second-title">Objectifs</h2>
+                    <h2 class="second-title">Objectives</h2>
                     <p class="second-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                         exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -39,10 +39,10 @@
                 <i class="material-icons">cloud_download</i>Download my CV
             </md-button>
         </div>
-        <div flex="5"></div>
-        <div flex="35" layout="column" layout-align="space-around center" class="picture-container">
+        <div hide-xs hide-sm flex="5"></div>
+        <div hide-xs hide-sm flex="35" layout="column" layout-align="space-around center" class="picture-container">
             <div class="picture">
-                <img src="assets/img/profile-pictufre.png" />
+                <img src="assets/img/profile-picture.png" />
             </div>
             <div layout="column" layout-align="start center" class="description-container">
                 <h3 class="title">
@@ -62,5 +62,34 @@
                 </div>
             </div>
         </div>
+        <div hide-gt-sm flex="5" layout="column" layout-align="space-around center" class="sticked-container">
+            <md-button class="md-raised custom-button sticked-button " ng-click="profile.togglePicture('picture-side')">
+                <i class="material-icons">keyboard_arrow_left</i>
+            </md-button>
+        </div>
     </div>
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2 " md-component-id="picture-side">
+        <div layout-margin layout-align="space-around center" layout="column" class="picture-container">
+            <div class="picture">
+                <img src="assets/img/profile-picture.png" />
+            </div>
+            <div layout="column" layout-align="start center" class="description-container">
+                <h3 class="title">
+                    Hi, I'm</br>
+                    <b>Nicolas Letoublon,</b></br>
+                    <span class="job">web developer</span>
+                </h3>
+                <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore.</p>
+            </div>
+            <div layout="row" class="links-container">
+                <div class="link">
+                    <img class="linkedin-picture" />
+                </div>
+                <div class="link ">
+                    <img class="github-picture" />
+                </div>
+            </div>
+        </div>
+    </md-sidenav>
 </div>
