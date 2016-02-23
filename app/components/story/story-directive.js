@@ -15,6 +15,13 @@ function storyController($scope, storyService) {
 
     self.stories = storyService.stories;
 
+    self.toppings = [
+        { name: 'Pepperoni', wanted: true },
+        { name: 'Sausage', wanted: false },
+        { name: 'Black Olives', wanted: true },
+        { name: 'Green Peppers', wanted: false }
+    ];
+
     self.activateStory = function(story) {
         for(var i = 0; i < self.stories.length; i++) {
             self.stories[i].active = false;
