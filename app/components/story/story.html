@@ -7,17 +7,17 @@
         <h4 class="subtitle">education & experience</h4>
     </div>
     <div class="content-body">
-        <div hide ng-repeat="story in storyCtrl.stories track by $index">
+        <div hide-xs hide-sm ng-repeat="story in storyCtrl.stories track by $index">
             <div ng-if="$odd" layout="row" class="story-container">
                 <div flex layout="column" layout-align="center end" class="story-description-container left">
                     <h4 class="type" ng-bind="story.type"></h4>
                     <h3 class="title" ng-bind="story.highligh"></h3>
                     <p class="subtitle firm" ng-bind="story.name"></p>
                     <p class="subtitle location" ng-bind="story.city + ', ' + story.country"></p>
-                    <p hide class="description" ng-bind="story.description" ng-show="story.active"></p>
-                    <!--<md-button ng-show="story.active && story.description.length" class="custom-button read-more-button">
+                    <p class="description" ng-bind="story.shortDescription" ng-show="story.active"></p>
+                    <md-button ng-click="storyCtrl.showAdvanced($event,story)" ng-show="story.active && story.shortDescription.length" class="custom-button read-more-button">
                         Read more
-                    </md-button>-->
+                    </md-button>
                 </div>
                 <div flex="20" layout="column" layout-align="center center" class="year-container">
                     <div class="year-square" ng-class="{'active': story.active}"
@@ -40,24 +40,29 @@
                     <h3 class="title" ng-bind="story.highligh"></h3>
                     <p class="subtitle firm" ng-bind="story.name"></p>
                     <p class="subtitle location" ng-bind="story.city + ', ' + story.country"></p>
-                    <p hide class="description" ng-bind="story.description" ng-show="story.active"></p>
-                    <!--<md-button ng-show="story.active && story.description.length" class="custom-button read-more-button">
+                    <p class="description" ng-bind="story.shortDescription" ng-show="story.active"></p>
+                    <md-button ng-click="storyCtrl.showAdvanced($event, story)" ng-show="story.active && story.shortDescription.length" class="custom-button read-more-button">
                         Read more
-                    </md-button>-->
+                    </md-button>
                 </div>
             </div>
         </div>
 
-        <md-list ng-cloak class="list-story-container">
-            <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)"
+        <md-list hide-gt-sm ng-cloak class="list-story-container">
+            <md-list-item class="secondary-button-padding list-item" ng-click="storyCtrl.activateStory(story)"
                           ng-repeat="story in storyCtrl.stories">
+                <i ng-if="story.type === 'education'" class="icon material-icons">account_balance</i>
+                <i ng-if="story.type !== 'education'" class="icon material-icons">work</i>
                 <div class="story-description-container" ng-click="angular.noop()">
-                    <h4 class="type" ng-bind="story.type"></h4>
                     <h3 class="title" ng-bind="story.highligh"></h3>
                     <p class="subtitle firm" ng-bind="story.name"></p>
                     <p class="subtitle location" ng-bind="story.city + ', ' + story.country"></p>
+                    <p ng-show="story.active" class="description" ng-class="{'active' : story.active}" ng-bind="story.shortDescription"></p>
+                    <md-button ng-click="storyCtrl.showpanel($event)" ng-show="story.active && story.shortDescription.length" class="custom-button read-more-button">
+                        Read more
+                    </md-button>
                 </div>
-                <md-button class="md-secondary" ng-click="doSecondaryAction($event)">More Info</md-button>
+                <md-button class="md-secondary year-button custom-button" ng-disabled="true" ng-bind="story.year"></md-button>
             </md-list-item>
         </md-list>
     </div>

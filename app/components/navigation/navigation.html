@@ -12,14 +12,13 @@
             </md-button>
         </div>
         <div hide-xs hide-sm class="toolbar-tools md-toolbar-tools toolbar-actions">
-            <md-button ng-bind="section | uppercase" ng-repeat="section in navigation.sections track by $index" class="nav-button"
-                       ng-click="navigation.goToAnchor(section)" aria-label="{{section}}">
+            <md-button hide-xs hide-sm ng-bind="section.name | uppercase" ng-repeat="section in navigation.sections track by $index" class="nav-button"
+                       ng-click="navigation.goToAnchor(section.name)" aria-label="{{section.name}}">
             </md-button>
-        </div>
-        <div hide-xs hide-gt-sm class="toolbar-tools md-toolbar-tools toolbar-actions">
-            <div class="icon-container">
-                <i class="icon material-icons">palette</i>
-            </div>
+            <md-button hide-xs hide-gt-sm ng-repeat="section in navigation.sections track by $index" class="nav-button"
+                       ng-click="navigation.goToAnchor(section.name)" aria-label="{{section.name}}">
+                <i class="material-icons">{{section.icon}}</i>
+            </md-button>
         </div>
     </div>
 </md-toolbar>

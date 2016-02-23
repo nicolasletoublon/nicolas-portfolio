@@ -10,162 +10,167 @@ function storyDirective() {
     };
 }
 
-function storyController($scope, storyService) {
+function storyController($scope, storyService, $mdMedia, $mdDialog,$timeout) {
     var self = this;
+
+    self.showAdvanced = function (ev, story) {
+        var useFullScreen = ($mdMedia('sm') || $mdMedia('xs')) && $scope.customFullscreen;
+        $mdDialog.show({
+                           controller         : dialogController,
+                           templateUrl        : 'components/story/templates/' + story.template + '.tmpl.html',
+                           targetEvent        : ev,
+                           clickOutsideToClose: true,
+                           fullscreen         : useFullScreen,
+                           locals: {story: story}
+                       });
+
+        $scope.$watch(function () {
+            return $mdMedia('xs') || $mdMedia('sm');
+        }, function (wantsFullScreen) {
+            $scope.customFullscreen = (wantsFullScreen === true);
+        });
+    };
 
     self.stories = storyService.stories;
 
-    self.toppings = [
-        { name: 'Pepperoni', wanted: true },
-        { name: 'Sausage', wanted: false },
-        { name: 'Black Olives', wanted: true },
-        { name: 'Green Peppers', wanted: false }
-    ];
-
-    self.activateStory = function(story) {
-        for(var i = 0; i < self.stories.length; i++) {
+    self.activateStory = function (story) {
+        for (var i = 0; i < self.stories.length; i++) {
             self.stories[i].active = false;
         }
         story.active = true;
-    }
+    };
+
+
+}
+
+function sidePanelController($scope, $mdDialog, $timeout) {
+
+    $timeout(function () {
+        var el = $('md-dialog');
+        el.css('position', 'fixed');
+        el.css('top', '10%');
+        el.css('left', '10%');
+    });
+
+    $scope.hide   = function () {
+        $mdDialog.hide();
+    };
+    $scope.cancel = function () {
+        $mdDialog.cancel();
+    };
+    $scope.answer = function (answer) {
+        $mdDialog.hide(answer);
+    };
+}
+
+function dialogController($scope, $mdDialog, $timeout, story) {
+
+    $scope.story = story;
+
+    $timeout(function () {
+        var el = $('md-dialog');
+        el.css('position', 'fixed');
+        el.css('top', '10%');
+        el.css('left', '10%');
+    });
+
+    $scope.cancel = function () {
+        $mdDialog.cancel();
+    };
+
 }
 
 function storyService() {
     return {
-        stories: [
-            {
-                "name": "Saint Joseph de Tivoli",
-                "highligh": "French Scientific Baccalaureat",
-                "year": 2007,
-                "city": "Bordeaux",
-                "country": "France",
-                "type": "education",
-                "description": "",
-                "grade": ""
-            },
-            {
-                "name": "Exia CESI",
-                "year": 2012,
-                "duration" : "5 years",
-                "highligh": "Computer Engineering Degree",
-                "city": "Bordeaux",
-                "country": "France",
-                "type": "education",
-                "description":  "Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                "grade": "Software Engineer",
-                "projects": [
-                    {
-                        "name": "Falcon",
-                        "period": "feb-march",
-                        "missions": [
-                            "jfsodijf oidsfjiosdjfs",
-                            "sdfks dfhs dfosihisdho"
-                        ],
-                        "tools": [
-                            "Anglar JS",
-                            "NodeJS",
-                            "Grunt"
-                        ]
-                    }
-                ]
-            },
-            {
-                "name": "Eurogiciel",
-                "year": 2013,
-                "highligh": "Full stack developer",
-                "duration": "6 months",
-                "city": "Bordeaux",
-                "country": "France",
-                "type": "internship",
-                "website": "www.eurogiciel.com",
-                "description":  "Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                "job-title": "Web software engineer",
-                "projects": [
-                    {
-                        "name": "Plan de charges",
-                        "description": "dfjdlj gdfkjgldkfkdfgkldglkdfgdflgld",
-                        "period": "feb-march",
-                        "missions": [
-                            "jfsodijf oidsfjiosdjfs",
-                            "sdfks dfhs dfosihisdho"
-                        ],
-                        "tools": [
-                            "Anglar JS",
-                            "NodeJS",
-                            "Grunt"
-                        ]
-                    }
-                ]
-            },
-            {
-                "name": "Eurogiciel",
-                "year": 2014,
-                "highligh": "Software engineer",
-                "city": "Bordeaux",
-                "country": "France",
-                "type": "job experience",
-                "website": "www.eurogiciel.com",
-                "description":  "Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                "job-title": "Web software engineer",
-                "projects": [
-                    {
-                        "name": "Plan de charges",
-                        "description": "dfjdlj gdfkjgldkfkdfgkldgldshfkjdshfjk sdfsdh ds fsdh fkjdshfjsdf jksd hkdfgdflgld",
-                        "period": "feb-march",
-                        "missions": [
-                            "jfsodijf oidsfjiosdjfs",
-                            "sdfks dfhs dfosihisdho"
-                        ],
-                        "tools": [
-                            "Anglar JS",
-                            "NodeJS",
-                            "Grunt"
-                        ]
-                    },
-                    {
-                        "name": "Aslo",
-                        "description": "dfjdlj gdfkjdshfkjdshfjk sdfsdh ds fsdh fkjdshfjsdf jksd hgldkfkdfgkldglkdfgdflgld",
-                        "period": "feb-march",
-                        "missions": [
-                            "jfsodijf oidsfjiosdjfs",
-                            "sdfks dfhs dfosihisdho"
-                        ],
-                        "tools": [
-                            "Anglar JS",
-                            "NodeJS",
-                            "Grunt"
-                        ]
-                    }
-                ]
-            },
-            {
-                "name": "Kronos Canadian Inc.",
-                "active": true,
-                "highligh": "Front-end engineer",
-                "year": 2016,
-                "city": "Montreal",
-                "country": "Canada",
-                "type": "job experience",
-                "website": "www.kronos.com",
-                "description":  "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                "job-title": "Web software engineer",
-                "projects": [
-                    {
-                        "name": "Falcon",
-                        "period": "feb-march",
-                        "missions": [
-                            "jfsodijf oidsfjiosdjfs",
-                            "sdfks dfhs dfosihisdho"
-                        ],
-                        "tools": [
-                            "Anglar JS",
-                            "NodeJS",
-                            "Grunt"
-                        ]
-                    }
-                ]
-            }
-        ]
+        stories: [{
+            "name"            : "Saint Joseph de Tivoli",
+            "template"          : "tivoli",
+            "highligh"        : "French Scientific Baccalaureat",
+            "year"            : 2007,
+            "city"            : "Bordeaux",
+            "country"         : "France",
+            "type"            : "education",
+            "shortDescription": "",
+            "grade"           : ""
+        }, {
+            "name"            : "Exia CESI",
+            "template"          : "exia",
+            "year"            : 2012,
+            "duration"        : "5 years",
+            "highligh"        : "Computer Engineering Degree",
+            "city"            : "Bordeaux",
+            "country"         : "France",
+            "type"            : "education",
+            "shortDescription": "Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "grade"           : "Software Engineer",
+            "projects"        : [{
+                "name"    : "Falcon",
+                "period"  : "feb-march",
+                "missions": ["jfsodijf oidsfjiosdjfs", "sdfks dfhs dfosihisdho"],
+                "tools"   : ["Anglar JS", "NodeJS", "Grunt"]
+            }]
+        }, {
+            "name"            : "Eurogiciel",
+            "template"          : "eurogiciel-intern",
+            "year"            : 2013,
+            "highligh"        : "Full stack developer",
+            "duration"        : "6 months",
+            "city"            : "Bordeaux",
+            "country"         : "France",
+            "type"            : "internship",
+            "website"         : "www.eurogiciel.com",
+            "shortDescription": "Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "job-title"       : "Web software engineer",
+            "projects"        : [{
+                "name"       : "Plan de charges",
+                "description": "dfjdlj gdfkjgldkfkdfgkldglkdfgdflgld",
+                "period"     : "feb-march",
+                "missions"   : ["jfsodijf oidsfjiosdjfs", "sdfks dfhs dfosihisdho"],
+                "tools"      : ["Anglar JS", "NodeJS", "Grunt"]
+            }]
+        }, {
+            "name"            : "Eurogiciel",
+            "template"          : "eurogiciel-job",
+            "year"            : 2014,
+            "highligh"        : "Software engineer",
+            "city"            : "Bordeaux",
+            "country"         : "France",
+            "type"            : "job experience",
+            "website"         : "www.eurogiciel.com",
+            "shortDescription": "Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "job-title"       : "Web software engineer",
+            "projects"        : [{
+                "name"       : "Plan de charges",
+                "description": "dfjdlj gdfkjgldkfkdfgkldgldshfkjdshfjk sdfsdh ds fsdh fkjdshfjsdf jksd hkdfgdflgld",
+                "period"     : "feb-march",
+                "missions"   : ["jfsodijf oidsfjiosdjfs", "sdfks dfhs dfosihisdho"],
+                "tools"      : ["Anglar JS", "NodeJS", "Grunt"]
+            }, {
+                "name"       : "Aslo",
+                "description": "dfjdlj gdfkjdshfkjdshfjk sdfsdh ds fsdh fkjdshfjsdf jksd hgldkfkdfgkldglkdfgdflgld",
+                "period"     : "feb-march",
+                "missions"   : ["jfsodijf oidsfjiosdjfs", "sdfks dfhs dfosihisdho"],
+                "tools"      : ["Anglar JS", "NodeJS", "Grunt"]
+            }]
+        }, {
+            "name"            : "Kronos Canadian Inc.",
+            "template"          : "kronos",
+            "active"          : true,
+            "highligh"        : "Front-end engineer",
+            "year"            : 2016,
+            "city"            : "Montreal",
+            "country"         : "Canada",
+            "type"            : "job experience",
+            "website"         : "www.kronos.com",
+            "shortDescription": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "job-title"       : "Web software engineer",
+            "projects"        : [{
+                "name"    : "Falcon",
+                "period"  : "feb-march",
+                "missions": ["jfsodijf oidsfjiosdjfs", "sdfks dfhs dfosihisdho"],
+                "tools"   : ["Anglar JS", "NodeJS", "Grunt"]
+            }]
+        }]
     }
 }
 
