@@ -1,30 +1,76 @@
-<section data-component="story-component" id="anchor-stories" class="content-part">
-    <div class="content-container">
-        <div class="title-box">
-            <div class="icon-container">
-                <i class="icon material-icons">timelapse</i>
-            </div>
-            <h2 class="title">{{'my stories' | uppercase}}</h2>
-            <h4 class="subtitle">education & experience</h4>
+<div layout="column" data-component="story-component" id="anchor-stories" class="content-container">
+    <div class="title-box">
+        <div class="icon-container">
+            <i class="icon material-icons">timelapse</i>
         </div>
-        <div class="content-body">
-            <div class="story-container" ng-repeat="story in storyCtrl.stories track by $index">
-                <div class="short-description-container"
-                     ng-class="{'left' : $even, 'right' : $odd, 'active': story.active}">
+        <h2 class="title">{{'my stories' | uppercase}}</h2>
+        <h4 class="subtitle">education & experience</h4>
+    </div>
+    <div flex layout-margin layout="column" layout-align="space-around" class="content-body">
+        <div hide-xs ng-repeat="story in storyCtrl.stories track by $index">
+            <div ng-if="$odd" layout="row" class="story-container">
+                <div flex layout="column" layout-align="center end" class="story-description-container left">
                     <h4 class="type" ng-bind="story.type"></h4>
                     <h3 class="title" ng-bind="story.highligh"></h3>
                     <p class="subtitle firm" ng-bind="story.name"></p>
                     <p class="subtitle location" ng-bind="story.city + ', ' + story.country"></p>
-                    <p class="description" ng-bind="story.description" ng-show="story.active"></p>
-                    <md-button ng-show="story.active && story.description.length" class="read-more">
+                    <p hide class="description" ng-bind="story.description" ng-show="story.active"></p>
+                    <!--<md-button ng-show="story.active && story.description.length" class="custom-button read-more-button">
                         Read more
-                    </md-button>
+                    </md-button>-->
                 </div>
-                <div class="year-container" ng-class="{'active': story.active}"
-                     ng-mouseover="storyCtrl.activateStory(story)">
-                    <h3 class="year" ng-bind="story.year"></h3>
+                <div flex="20" layout="column" layout-align="center center" class="year-container">
+                    <div class="year-square" ng-class="{'active': story.active}"
+                         ng-mouseover="storyCtrl.activateStory(story)">
+                        <h3 class="year" ng-bind="story.year"></h3>
+                    </div>
+                </div>
+                <div flex="40" ></div>
+            </div>
+            <div ng-if="$even" layout="row" class="story-container">
+                <div flex="40" ></div>
+                <div flex="20" layout="column" layout-align="center center" class="year-container">
+                    <div class="year-square" ng-class="{'active': story.active}"
+                         ng-mouseover="storyCtrl.activateStory(story)">
+                        <h3 class="year" ng-bind="story.year"></h3>
+                    </div>
+                </div>
+                <div flex layout="column" layout-align="center start" class="story-description-container right">
+                    <h4 class="type" ng-bind="story.type"></h4>
+                    <h3 class="title" ng-bind="story.highligh"></h3>
+                    <p class="subtitle firm" ng-bind="story.name"></p>
+                    <p class="subtitle location" ng-bind="story.city + ', ' + story.country"></p>
+                    <p hide class="description" ng-bind="story.description" ng-show="story.active"></p>
+                    <!--<md-button ng-show="story.active && story.description.length" class="custom-button read-more-button">
+                        Read more
+                    </md-button>-->
                 </div>
             </div>
         </div>
+
+
+        <!--<div class="story-container" ng-repeat="story in storyCtrl.stories track by $index">
+            <div class="short-description-container"
+                 ng-class="{'left' : $even, 'right' : $odd, 'active': story.active}">
+                <h4 class="type" ng-bind="story.type"></h4>
+                <h3 class="title" ng-bind="story.highligh"></h3>
+                <p class="subtitle firm" ng-bind="story.name"></p>
+                <p class="subtitle location" ng-bind="story.city + ', ' + story.country"></p>
+                <p class="description" ng-bind="story.description" ng-show="story.active"></p>
+                <md-button ng-show="story.active && story.description.length" class="read-more">
+                    Read more
+                </md-button>
+            </div>
+            <div class="year-container" ng-class="{'active': story.active}"
+                 ng-mouseover="storyCtrl.activateStory(story)">
+                <h3 class="year" ng-bind="story.year"></h3>
+            </div>
+        </div>-->
     </div>
-</section>
+
+</div>
+
+
+
+
+

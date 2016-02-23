@@ -1,4 +1,4 @@
-<div layout="column" layout-align="start center" class="content-container" data-component="contact-component" id="anchor-contact">
+<div layout="column" class="content-container" data-component="contact-component" id="anchor-contact">
     <div class="title-box">
         <div class="icon-container">
             <i class="icon material-icons">@</i>
@@ -6,8 +6,8 @@
         <h2 class="title">{{'contact' | uppercase}}</h2>
         <h4 class="subtitle">get in touch</h4>
     </div>
-    <div layout-margin class="content-body">
-        <form class="form-container" name="contact-form">
+    <div flex layout-margin layout="row" layout-align="space-between" class="content-body" >
+        <form flex layout="column" layout-align="start stretch" class="form-container" name="contact-form" >
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
                     <input required ng-model="contact.user.name" placeholder="Name">
@@ -31,7 +31,7 @@
                           rows="4"
                           md-select-on-focus></textarea>
             </md-input-container>
-            <md-button class="md-raised md-primary custom-button" type="submit">
+            <md-button class="md-raised md-primary custom-button send-message-button" type="submit">
                 <i class="material-icons icon">send</i> Send
             </md-button>
         </form>

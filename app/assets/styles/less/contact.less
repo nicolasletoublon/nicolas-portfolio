@@ -1,20 +1,26 @@
 [data-component='contact-component'] {
+  &.content-container {
+    max-width: 500px !important;
+  }
   .title-box {
     .icon-container {
-      left: 87px;
+      left: 81px;
       .icon {
-        top: 1px;
+        top: 0;
         left: 1px;
+        font-size: 21px;
       }
     }
     .subtitle {
-      left: 21px;
+      left: 47px;
     }
   }
   .content-body {
     margin-top: 30px;
     .form-container {
-      border: 1px solid green;
+      .send-message-button {
+        align-self: center;
+      }
     }
   }
 }
