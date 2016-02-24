@@ -20,7 +20,7 @@
                     </md-button>
                 </div>
                 <div flex="20" layout="column" layout-align="center center" class="year-container">
-                    <div class="year-square" ng-class="{'active': story.active}"
+                    <div tabindex="0" ng-focus="story.focus" role="button" ng-keydown="storyCtrl.keypress($event, story)" class="year-square" ng-class="{'active': story.active}"
                          ng-mouseover="storyCtrl.activateStory(story)">
                         <h3 class="year" ng-bind="story.year"></h3>
                     </div>
@@ -30,7 +30,7 @@
             <div ng-if="$even" layout="row" class="story-container">
                 <div flex="40"></div>
                 <div flex="20" layout="column" layout-align="center center" class="year-container">
-                    <div class="year-square" ng-class="{'active': story.active}"
+                    <div tabindex="0" ng-focus="story.focus" role="button" class="year-square" ng-keydown="storyCtrl.keypress($event, story)" ng-class="{'active': story.active}"
                          ng-mouseover="storyCtrl.activateStory(story)">
                         <h3 class="year" ng-bind="story.year"></h3>
                     </div>
@@ -62,7 +62,7 @@
                         Read more
                     </md-button>
                 </div>
-                <md-button class="md-secondary year-button custom-button" ng-disabled="true" ng-bind="story.year"></md-button>
+                <md-button tabindex="-1" class="md-secondary year-button custom-button" ng-disabled="true" ng-bind="story.year"></md-button>
             </md-list-item>
         </md-list>
     </div>

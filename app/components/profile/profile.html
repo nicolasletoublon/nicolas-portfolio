@@ -11,7 +11,7 @@
     </div>
     <div layout="row" layout-margin class="content-body">
         <div flex layout="column" layout-align="space-between start" class="text-container">
-            <div flex layout="column" layout-align="space-around">
+            <div flex layout="column" layout-align="space-between">
                 <div >
                     <h2 class="first-title">About me</h2>
                     <p class="first-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -33,7 +33,6 @@
                     </p>
                 </div>
             </div>
-            <div flex></div>
             <md-button class="custom-button md-primary md-raised download-cv-btn">
                 <i class="material-icons">cloud_download</i>Download my CV
             </md-button>
@@ -68,6 +67,9 @@
         </div>
     </div>
     <md-sidenav class="md-sidenav-right md-whiteframe-z2 " md-component-id="picture-side">
+        <!--<md-button class="md-raised custom-button sticked-button " ng-click="profile.closeSide('picture-side')">
+            <i class="material-icons">keyboard_arrow_right</i>
+        </md-button>-->
         <div layout-margin layout-align="space-around center" layout="column" class="picture-container-side">
             <div class="picture">
                 <img src="assets/img/profile-picture.png" />

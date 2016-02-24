@@ -22,7 +22,10 @@
       color: white;
       .intro-title {
         margin: 0;
-        font-weight: normal;
+        color: #262729;
+        b {
+          color: white;
+        }
       }
       .intro-separator {
         height: 1px;
@@ -30,11 +33,47 @@
         width: 25%;
         margin: 20px 0;
       }
-      .intro-subtitle {
+      .intro-subtitle, .little {
         margin: 0;
-        width: 60%;
+        width: 70%;
         font-weight: normal;
       }
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 840px) {
+  .intro-container {
+    top: 20% !important;
+    width: 80% !important;
+    .intro-subtitle {
+      width: 80% !important;
+    }
+  }
+}
+
+@media (min-width: 480px) and (max-width: 600px) {
+  .intro-container {
+    top: 20% !important;
+    width: 80% !important;
+    .intro-subtitle, .little {
+      width: 90% !important;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .intro-container {
+    padding-left: 15px !important;
+    top: 10% !important;
+    width: 90% !important;
+    .intro-title {
+      font-size: 26px !important;
+    }
+
+    .intro-subtitle, .little {
+      width: 100% !important;
+      font-size: 16px !important;
     }
   }
 }

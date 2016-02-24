@@ -10,30 +10,46 @@
   flex-direction: row;
   justify-content: space-between;
   .toolbar-container {
-	width: 100%;
-	max-width: 1024px;
-	display: flex;
-	.brand-container {
-	  background-color: #262729;
-	  max-width: 235px;
-	  min-width: 235px;
-	  .brand-name {
-		color: white;
-	  }
-	}
-	.toolbar-tools {
-	  flex: 1;
-	}
-	.toolbar-actions {
-	  justify-content: flex-end;
-	  padding-right: 0;
-	  .nav-button {
-		height: 100%;
-		padding: 0;
-		margin: 0;
-		border-radius: 0;
-	  }
-	}
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    .brand-container {
+      background-color: #262729;
+      max-width: 235px;
+      min-width: 171px;
+      .brand-name {
+        color: white;
+      }
+    }
+    .toolbar-tools {
+      flex: 1;
+    }
+    .toolbar-actions {
+      justify-content: flex-end;
+      &.plain-title {
+        padding-right: 0;
+      }
+      .nav-button {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+      }
+      .nav-icons {
+        min-width: 55px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+  }
+}
+.menu-side-panel {
+  .list-item {
+    .icon {
+      padding: 0 20px 0 0;
+      opacity: 0.7;
+    }
   }
 }
 
