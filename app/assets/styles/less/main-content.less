@@ -54,8 +54,30 @@ body {
 	  background-size: 130%;
 	}
 
+	interest-directive {
+	  background: url('../../img/montreal-bw.JPG') no-repeat center;
+	  background-size: cover;
+	  height: 500px;
+	}
+
 	frameworks-directive, interest-directive {
 	  background-color: #262729;
 	}
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  interest-directive {
+	background-position-x: -150px !important;
+	height: 300px;
+  }
+}
+
+@media (max-width: 480px){
+  interest-directive {
+	background-position-x: -356px !important;
+	height: 300px;
   }
 }

@@ -1,54 +1,13 @@
 [data-component='interest-component'] {
   color: white;
   &.content-container {
+	max-width: none !important;
 	position: relative;
   }
-  .square {
-	background-color: white;
-	position: absolute;
-	width: 30px;
-	height: 30px;
-	transform: rotate(45deg);
-	top: -15px;
-	left: 48.5%;
+  .content-container {
   }
   .content-body {
-	margin-top: 70px;
-	margin-bottom: 50px;
-	.top-container {
-	  height: 140px;
-	  .interest-container {
-
-	  }
-	}
-	.bottom-container {
-	  height: 140px;
-	  .interest-container {
-
-	  }
-	}
-  	.middle-container {
-		.interest-container {
-		  text-align: center;
-		  height: 140px;
-		  &.books {
-			background: url('../../img/interest/books3.png') no-repeat center ;
-			background-size: 54%;
-		  }
-		  &.plane {
-			background: url('../../img/interest/plane2.png') no-repeat center ;
-			background-size: 82%;
-		  }
-		  &.sport {
-			background: url('../../img/interest/sport2.png') no-repeat center ;
-			background-size: 62%;
-		  }
-		  &.computer {
-			background: url('../../img/interest/computer2.png') no-repeat center ;
-			background-size: 63%;
-		  }
-		}
-	}
+	margin-top: 30px;
   }
 }
 

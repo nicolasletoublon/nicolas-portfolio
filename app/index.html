@@ -37,13 +37,13 @@
     <header-directive ng-if="false"></header-directive>
     <navigation-directive></navigation-directive>
     <div role="main" class="main-content" >
-        <profile-directive ng-if="true" layout="column" layout-align="start center" ></profile-directive>
+        <profile-directive id="anchor-profile" ng-if="true" layout="column" layout-align="start center" ></profile-directive>
         <div ng-if="true" class="section-separator"></div>
-        <story-directive ng-if="true" layout="column" layout-align="start center" ></story-directive>
+        <story-directive id="anchor-stories" ng-if="true" layout="column" layout-align="start center" ></story-directive>
         <interest-directive ng-if="true" layout="column" layout-align="start center"></interest-directive>
-        <skills-directive ng-if="true" layout="column" layout-align="start center"></skills-directive>
+        <skills-directive id="anchor-skills" ng-if="true" layout="column" layout-align="start center"></skills-directive>
         <frameworks-directive ng-if="true" layout="column" layout-align="start center"></frameworks-directive>
-        <contact-directive class="contact-directive" ng-if="true" layout="column" layout-align="start center"></contact-directive>
+        <contact-directive id="anchor-contact" class="contact-directive" ng-if="true" layout="column" layout-align="start center"></contact-directive>
 
     </div>
     <footer-directive  ng-if="true"></footer-directive>
