@@ -10,7 +10,7 @@ function storyDirective() {
     };
 }
 
-function storyController($scope, storyService, $mdMedia, $mdDialog, $timeout) {
+function storyController($scope, storyService, $mdMedia, $mdDialog, $mdSidenav, $window) {
     var self = this;
 
     self.showAdvanced = function (ev, story) {
@@ -29,6 +29,14 @@ function storyController($scope, storyService, $mdMedia, $mdDialog, $timeout) {
         }, function (wantsFullScreen) {
             $scope.customFullscreen = (wantsFullScreen === true);
         });
+    };
+    self.toggleMenu = function(id) {
+        $mdSidenav(id).toggle();
+    };
+    self.showPanel = function(id, story) {
+        self.story = story;
+        $('.story-container-side').css('padding-top', $window.scrollY + 40);
+        $mdSidenav(id).toggle();
     };
 
     self.stories = storyService.stories;

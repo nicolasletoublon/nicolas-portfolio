@@ -58,7 +58,10 @@
                     <p class="subtitle firm" ng-bind="story.name"></p>
                     <p class="subtitle location" ng-bind="story.city + ', ' + story.country"></p>
                     <p ng-show="story.active" class="description" ng-class="{'active' : story.active}" ng-bind="story.shortDescription"></p>
-                    <md-button ng-click="storyCtrl.showpanel($event)" ng-show="story.active && story.shortDescription.length" class="custom-button read-more-button">
+                    <md-button hide-xs ng-click="storyCtrl.showAdvanced($event, story)" ng-show="story.active && story.shortDescription.length" class="custom-button read-more-button">
+                        Read more
+                    </md-button>
+                    <md-button hide-gt-xs ng-click="storyCtrl.showPanel('story-side', story)" ng-show="story.active && story.shortDescription.length" class="custom-button read-more-button">
                         Read more
                     </md-button>
                 </div>
@@ -66,6 +69,13 @@
             </md-list-item>
         </md-list>
     </div>
+
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2 " md-component-id="story-side">
+        <div layout-margin layout-align="space-around center" layout="column" class="story-container-side">
+            {{storyCtrl.story.country}}
+        </div>
+    </md-sidenav>
+
 </div>
 
 

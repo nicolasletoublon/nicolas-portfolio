@@ -10,7 +10,7 @@ function navigationDirective() {
     };
 }
 
-function navigationController($scope, $mdSidenav, $anchorScroll, $location, $window) {
+function navigationController($scope, $mdSidenav, $anchorScroll, $location) {
     var self = this;
 
     self.sections = [
@@ -25,23 +25,24 @@ function navigationController($scope, $mdSidenav, $anchorScroll, $location, $win
         $mdSidenav(id).toggle();
     };
 
-    self.goToAnchor = function (x, id) {
-        var newHash = 'anchor-' + x;
-        if ($location.hash() !== newHash) {
-            $location.hash('anchor-' + x);
-/*
-            var id2 = 'anchor-' + x;
-            $(id2).offsetTop
-*/
-
-
-            $mdSidenav(id).toggle();
-            //$window.scroll(300);
+    self.goToAnchor = function (anchor, id) {
+        var newHash = 'anchor-' + anchor;
+        if(id) {
+            $mdSidenav(id).toggle().then(function() {
+                scroll(newHash, anchor);
+            });
         } else {
-            $anchorScroll();
-            $mdSidenav(id).toggle();
+            scroll(newHash, anchor);
         }
     };
+
+    function scroll(newHash, anchor) {
+        if ($location.hash() !== newHash) {
+            $location.hash('anchor-' + anchor);
+        } else {
+            $anchorScroll();
+        }
+    }
 }
 
 angular.module('Navigation', [])

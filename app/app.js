@@ -1,5 +1,5 @@
 angular
-    .module('Application', ['ngMaterial', 'Header', 'Navigation', 'Profile', 'Story', 'Contact', 'Skills', 'Footer'])
+    .module('Application', ['ngMaterial', 'Header', 'Navigation', 'Profile', 'Story', 'Contact', 'Skills', 'Footer', 'Frameworks', 'Interest'])
     .config(function ($mdThemingProvider, $mdIconProvider) {
         /*// Extend the red theme with a few different colors
         var neonGreyMap = $mdThemingProvider.extendPalette('grey', {

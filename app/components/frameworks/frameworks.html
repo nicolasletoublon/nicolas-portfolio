@@ -1,0 +1,26 @@
+<div layout="column" class="content-container" data-component="frameworks-component">
+    <div class="square">
+    </div>
+    <div flex layout-margin class="content-body">
+        <md-grid-list hide-xs
+                md-cols="10"
+                md-row-height="1:1"
+                md-gutter="25px">
+
+            <md-grid-tile class="tile" ng-class="logo.image" ng-repeat="logo in frameworks.bigLogos track by $index"
+                          md-rowspan="{{logo.row}}" md-colspan="{{logo.col}}">
+                <a class="link" href="{{logo.href}}" target="_blank"></a>
+            </md-grid-tile>
+        </md-grid-list>
+
+        <md-grid-list hide-gt-xs
+                md-cols="6"
+                md-row-height="1:1"
+                md-gutter="10px">
+            <md-grid-tile class="tile" ng-class="logo.image" ng-repeat="logo in frameworks.littleLogos track by $index"
+                          md-rowspan="{{logo.row}}" md-colspan="{{logo.col}}">
+                <a class="link" href="{{logo.href}}" target="_blank"></a>
+            </md-grid-tile>
+        </md-grid-list>
+    </div>
+</div>

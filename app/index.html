@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="assets/styles/css/contact.css"/>
     <link rel="stylesheet" href="assets/styles/css/skills.css"/>
     <link rel="stylesheet" href="assets/styles/css/footer.css"/>
+    <link rel="stylesheet" href="assets/styles/css/frameworks.css"/>
+    <link rel="stylesheet" href="assets/styles/css/interest.css"/>
 
     <style type="text/css">
         [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
@@ -32,15 +34,15 @@
 
 <body ng-app="Application" ng-controller="ApplicationController" layout="column" ng-cloak layout-align="start stretch">
 
-    <header-directive ng-if="true"></header-directive>
+    <header-directive ng-if="false"></header-directive>
     <navigation-directive></navigation-directive>
     <div role="main" class="main-content" >
         <profile-directive ng-if="true" layout="column" layout-align="start center" ></profile-directive>
         <div ng-if="true" class="section-separator"></div>
         <story-directive ng-if="true" layout="column" layout-align="start center" ></story-directive>
-        <div ng-if="true" class="section-separator"></div>
+        <interest-directive ng-if="true" layout="column" layout-align="start center"></interest-directive>
         <skills-directive ng-if="true" layout="column" layout-align="start center"></skills-directive>
-        <div ng-if="true" class="section-separator"></div>
+        <frameworks-directive ng-if="true" layout="column" layout-align="start center"></frameworks-directive>
         <contact-directive class="contact-directive" ng-if="true" layout="column" layout-align="start center"></contact-directive>
 
     </div>
@@ -60,5 +62,7 @@
     <script src="components/contact/contact-directive.js"></script>
     <script src="components/skills/skills-directive.js"></script>
     <script src="components/footer/footer-directive.js"></script>
+    <script src="components/frameworks/frameworks-directive.js"></script>
+    <script src="components/interest/interest-directive.js"></script>
 </body>
 </html>
