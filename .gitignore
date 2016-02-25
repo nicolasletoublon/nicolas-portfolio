@@ -1,8 +1,8 @@
 logs/*
 !.gitkeep
-node_modules/
-bower_components/
+node_modules
 tmp
 .DS_Store
+/node_modules
 .idea
 app/jspm_packages
