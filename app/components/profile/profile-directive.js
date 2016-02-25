@@ -10,6 +10,7 @@ function profileDirective() {
     };
 }
 
+profileController.$inject = ["$scope", "$mdSidenav", "$window"];
 function profileController($scope, $mdSidenav, $window) {
     var self = this;
 

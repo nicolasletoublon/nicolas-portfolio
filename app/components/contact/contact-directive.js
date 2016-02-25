@@ -10,6 +10,7 @@ function contactDirective() {
     };
 }
 
+contactController.$inject = ["$scope"];
 function contactController($scope) {
     var self = this;
 

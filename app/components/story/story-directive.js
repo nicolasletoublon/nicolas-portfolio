@@ -10,6 +10,7 @@ function storyDirective() {
     };
 }
 
+storyController.$inject = ["$scope", "storyService", "$mdMedia", "$mdDialog", "$mdSidenav", "$window"];
 function storyController($scope, storyService, $mdMedia, $mdDialog, $mdSidenav, $window) {
     var self = this;
 
@@ -53,11 +54,10 @@ function storyController($scope, storyService, $mdMedia, $mdDialog, $mdSidenav, 
         story.focus = true;
         story.active = true;
     };
-
-
 }
 
-function sidePanelController($scope, $mdDialog, $timeout) {
+sidePanelController.$inject = ["$scope", "$mdDialog", "$mdMedia"];
+function sidePanelController($scope, $mdDialog, $mdMedia) {
 
     $timeout(function () {
         var el = $('md-dialog');
@@ -77,6 +77,7 @@ function sidePanelController($scope, $mdDialog, $timeout) {
     };
 }
 
+dialogController.$inject = ["$scope", "$mdDialog", "$timeout"];
 function dialogController($scope, $mdDialog, $timeout, story) {
 
     $scope.story = story;
@@ -94,6 +95,7 @@ function dialogController($scope, $mdDialog, $timeout, story) {
 
 }
 
+storyService.$inject = [];
 function storyService() {
     return {
         stories: [{

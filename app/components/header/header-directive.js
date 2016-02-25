@@ -10,7 +10,8 @@ function headerDirective() {
     };
 }
 
-function headerController() {
+headerController.$inject = ["$scope"];
+function headerController($scope) {
     var self = this;
 }
 

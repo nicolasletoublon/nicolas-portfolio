@@ -10,6 +10,7 @@ function frameworksDirective() {
     };
 }
 
+frameworksController.$inject = ["$scope"];
 function frameworksController($scope) {
     var self = this;
 

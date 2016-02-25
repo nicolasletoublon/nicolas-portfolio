@@ -10,6 +10,7 @@ function navigationDirective() {
     };
 }
 
+navigationController.$inject = ["$scope",  "$mdSidenav", "$anchorScroll", "$location"];
 function navigationController($scope, $mdSidenav, $anchorScroll, $location) {
     var self = this;
 

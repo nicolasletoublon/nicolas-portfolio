@@ -10,7 +10,8 @@ function skillsDirective() {
     };
 }
 
-function skillsController($scope, $interval) {
+skillsController.$inject = ["$scope"];
+function skillsController($scope) {
     var self = this;
 
     self.expertSkills = [
