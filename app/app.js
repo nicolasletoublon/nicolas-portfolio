@@ -42,11 +42,10 @@ angular
                 'default': 'A700'
             })
     }])
-    .controller('ApplicationController', ['$translate', '$scope', function ($translate, $scope) {
+    .controller('ApplicationController', ['$translate', '$scope', "$timeout", function ($translate, $scope, $timeout) {
         var position = 0;
         $(window).scroll(function () {
-            if (!position) position = $('#toolbar-nav')[0].offsetTop + $('#toolbar-nav')[0].offsetHeight + 30;
-            console.log($(window).scrollTop())
+            if(!position) position = $('#toolbar-nav')[0].offsetTop + $('#toolbar-nav')[0].offsetHeight + 30;
             if ($(window).scrollTop() > position) {
                 $('#toolbar-nav').addClass('navbar-fixed');
             }

@@ -13,11 +13,11 @@
             </md-button>
         </div>
         <div hide-xs class="toolbar-tools md-toolbar-tools toolbar-actions plain-title">
-            <md-button du-scrollspy du-smooth-scroll="{{section.anchor}}" du-smooth-scroll ng-class="{'active' : section.active}" hide-xs hide-sm ng-bind="section.name | uppercase"
+            <md-button du-smooth-scroll="{{section.anchor}}" ng-class="{'active' : section.active}" hide-xs hide-sm ng-bind="section.name | uppercase"
                        ng-repeat="section in navigation.sections track by $index" class="nav-button"
                        ng-click="navigation.activate(section)">
             </md-button>
-            <md-button du-scrollspy du-smooth-scroll="{{section.anchor}}" du-smooth-scroll ng-class="{'active' : section.active}" title="{{section.name}}" layout-align="center center" layout="column"
+            <md-button du-smooth-scroll="{{section.anchor}}" ng-class="{'active' : section.active}" title="{{section.name}}" layout-align="center center" layout="column"
                        hide-gt-sm ng-repeat="section in navigation.sections track by $index"
                        ng-click="navigation.activate(section)"
                        class="nav-button nav-icons">

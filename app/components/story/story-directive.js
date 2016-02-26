@@ -85,7 +85,7 @@ function dialogController($scope, $mdDialog, $timeout, story) {
     $timeout(function () {
         var el = $('md-dialog');
         el.css('position', 'fixed');
-        el.css('top', '10%');
+        el.css('top', '15%');
         el.css('left', '10%');
     });
 

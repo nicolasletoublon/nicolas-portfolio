@@ -5,7 +5,7 @@ function projectsDirective() {
         restrict        : "E",
         templateUrl     : "components/projects/projects.html",
         bindToController: true,
-        controllerAs    : "projects",
+        controllerAs    : "projectCtrl",
         controller      : 'projectsController'
     };
 }
@@ -14,7 +14,27 @@ projectsController.$inject = ["$scope", "$interval", "$timeout"];
 function projectsController($scope, $interval, $timeout) {
     var self = this;
 
-    self.map = { center: { latitude: 44.859671, longitude: -0.675391 }, zoom: 8 };
+    self.projects = [
+        {
+            name: 'ttoo',
+            subtitle: '',
+            description: 'dsf',
+            subtitle2: '',
+            description2: '',
+            coords: {
+                x: '',
+                y: ''
+            },
+            zoom: 12,
+            technos1 : ["node large", "angular ", "css3"],
+            technos2 : ["node", "angular", "css3"]
+
+
+        }
+    ];
+
+
+    self.map = { center: { latitude: 44.859671, longitude: -0.675391 }, zoom: 10 };
     self.marker = {
         id: 0,
         coords: {
@@ -24,19 +44,6 @@ function projectsController($scope, $interval, $timeout) {
             draggable: false
         }
     };
-
-    $timeout(function () {
-        self.marker.coords = {
-            latitude: 42.1451,
-            longitude: -100.6680
-        };
-        $timeout(function () {
-            self.marker.coords = {
-                latitude: 43.1451,
-                longitude: -102.6680
-            };
-        }, 2000);
-    }, 1000);
 
 }
 

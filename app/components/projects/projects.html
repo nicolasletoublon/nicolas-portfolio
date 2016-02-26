@@ -28,21 +28,24 @@
         </div>
         <div flex="5"></div>
         <div flex="35" layout="column" layout-align="space-around" class="images-container">
-            <div flex="65" class="description-container">
+            <div class="description-container md-whiteframe-z2" >
                 <ui-gmap-google-map center='projects.map.center' zoom='projects.map.zoom'>
-                    <ui-gmap-marker coords="marker.coords" options="marker.options" idkey="marker.id">
+                    <ui-gmap-marker coords="projects.marker.coords" options="projects.marker.options" idkey="projects.marker.id">
                     </ui-gmap-marker>
                 </ui-gmap-google-map>
             </div>
 
-            <div flex="35"  layout="column" layout-align="start center" layout-padding
+            <div flex layout="column" layout-align="start center" layout-padding
                  class="skills-container">
-                <h4>Knowledge</h4>
-                <div layout="row" layout-align="center stretch">
-                    <div flex>1</div>
-                    <div flex>2</div>
-                    <div flex>3</div>
-                    <div flex>4</div>
+                <h4>Technical environment</h4>
+                <div layout="column" layout-align="center stretch">
+                    <div layout="row" flex>
+
+                        <div ng-class="techno1" class="technical" ng-repeat="techno1 in projectCtrl.projects[0].technos1"></div>
+                    </div>
+                    <div layout="row" flex>
+                        <div ng-class="techno2" class="technical" ng-repeat="techno2 in projectCtrl.projects[0].technos2"></div>
+                    </div>
                 </div>
 
             </div>
