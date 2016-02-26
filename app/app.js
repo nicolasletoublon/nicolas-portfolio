@@ -1,8 +1,25 @@
+window.navigator.languages[0] = "fr";
+
 angular
-    .module('Application', ['ngMaterial', 'Header', 'Navigation', 'Profile', 'Story', 'Contact', 'Skills', 'Footer', 'Frameworks', 'Interest'])
+    .module('Application', ['ngMaterial', 'ngSanitize', 'pascalprecht.translate', 'Header', 'Navigation', 'Profile', 'Story', 'Contact', 'Skills', 'Footer', 'Frameworks', 'Interest'])
     .config([
-        "$mdThemingProvider",
-        function ($mdThemingProvider) {
+        "$mdThemingProvider", "$translateProvider",
+        function ($mdThemingProvider, $translateProvider) {
+
+            $translateProvider
+                .registerAvailableLanguageKeys(['en_EN', 'fr_FR'], {
+                    'en*': 'en_EN',
+                    'fr*': 'fr_FR'
+                });
+            $translateProvider.useStaticFilesLoader({
+                prefix: 'i18n/locale-',
+                suffix: '.json'
+            });
+            $translateProvider.useSanitizeValueStrategy('sanitize');
+            $translateProvider
+               .uniformLanguageTag('bcp47')
+                .determinePreferredLanguage();
+
             $mdThemingProvider.definePalette('amazingPaletteName', {
                 '50': 'ffebee',
                 '100': 'cccdcf',
@@ -29,5 +46,12 @@ angular
                     'default': 'A700'
                 })
         }
-    ]);
+    ]).controller('ApplicationController', ['$translate', '$scope',
+    function ($translate, $scope) {
+
+        $scope.changeLanguage = function (langKey) {
+            $translate.use(langKey);
+        };
+    }
+]);
 

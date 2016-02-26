@@ -5,6 +5,10 @@
     "angular-animate": "^1.4.9",
     "angular-aria": "^1.4.9",
     "angular-material": "^1.0.0",
+    "angular-sanitize": "^1.5.0",
+    "angular-translate": "^2.9.2",
+    "angular-translate-loader-static-files": "^2.9.2",
+    "angular-translate-loader-url": "^2.9.2",
     "bootstrap-material-design": "^0.5.8",
     "jquery": "^2.2.0"
   },
