@@ -9,8 +9,8 @@ angular
             'en*': 'en_EN', 'fr*': 'fr_FR'
         });
         $translateProvider.useStaticFilesLoader({
-            prefix: 'i18n/locale-', suffix: '.json'
-        });
+                                                    prefix: 'i18n/locale-', suffix: '.json'
+                                                });
         $translateProvider.useSanitizeValueStrategy('sanitize');
         $translateProvider
             .uniformLanguageTag('bcp47')
@@ -43,9 +43,21 @@ angular
             })
     }])
     .controller('ApplicationController', ['$translate', '$scope', function ($translate, $scope) {
+        var position = 0;
+        $(window).scroll(function () {
+            if (!position) position = $('#toolbar-nav')[0].offsetTop + $('#toolbar-nav')[0].offsetHeight + 30;
+            console.log($(window).scrollTop())
+            if ($(window).scrollTop() > position) {
+                $('#toolbar-nav').addClass('navbar-fixed');
+            }
+            if ($(window).scrollTop() < position) {
+                $('#toolbar-nav').removeClass('navbar-fixed');
+            }
 
-    $scope.changeLanguage = function (langKey) {
-        $translate.use(langKey);
-    };
-}]);
+        });
+
+        $scope.changeLanguage = function (langKey) {
+            $translate.use(langKey);
+        };
+    }]);
 

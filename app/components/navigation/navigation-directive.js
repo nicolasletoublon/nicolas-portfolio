@@ -10,8 +10,8 @@ function navigationDirective() {
     };
 }
 
-navigationController.$inject = ["$scope",  "$mdSidenav", "$anchorScroll", "$location"];
-function navigationController($scope, $mdSidenav, $anchorScroll, $location) {
+navigationController.$inject = ["$scope",  "$mdSidenav", "$window"];
+function navigationController($scope, $mdSidenav, $window) {
     var self = this;
 
     self.sections = [
@@ -24,6 +24,12 @@ function navigationController($scope, $mdSidenav, $anchorScroll, $location) {
     ];
 
     self.toggleMenu = function(id) {
+        var margin = 50;
+        var position = $('#toolbar-nav')[0].offsetTop + $('#toolbar-nav')[0].offsetHeight + 30;
+
+        if($window.scrollY <= position) margin = 0;
+
+        $('.menu-container-side').css('margin-top', $window.scrollY + margin);
         $mdSidenav(id).toggle();
     };
 
@@ -44,5 +50,6 @@ function navigationController($scope, $mdSidenav, $anchorScroll, $location) {
 
 angular.module('Navigation', ["duScroll"])
     .value('duScrollDuration', 1000)
+    .value('duScrollOffset', 50)
     .directive('navigationDirective', navigationDirective)
     .controller('navigationController', navigationController);
