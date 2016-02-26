@@ -51,8 +51,8 @@
         <md-list hide-gt-sm ng-cloak class="list-story-container">
             <md-list-item class="secondary-button-padding list-item" ng-click="storyCtrl.activateStory(story)"
                           ng-repeat="story in storyCtrl.stories">
-                <i ng-if="story.type === 'education'" class="icon material-icons">account_balance</i>
-                <i ng-if="story.type !== 'education'" class="icon material-icons">work</i>
+                <i ng-if="story.type === 'education'" class="icon material-icons">school</i>
+                <i ng-if="story.type !== 'education'" class="icon material-icons">business_center</i>
                 <div class="story-description-container" ng-click="angular.noop()">
                     <h3 class="title" ng-bind="story.highligh"></h3>
                     <p class="subtitle firm" ng-bind="story.name"></p>

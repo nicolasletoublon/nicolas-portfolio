@@ -5,6 +5,40 @@ body {
   color: #262729;
   background-color: white;
   font-family: 'Roboto', "Helvetica Neue", sans-serif;
+
+  .locale-container {
+	width: 100%;
+	margin-right: 31px;
+	max-width: 1024px;
+	align-self: center;
+	.md-icon-button {
+	  &.canada {
+		background: url('../../img/countries/Canada-bw.png') no-repeat center;
+		background-size: contain;
+		&:hover {
+		  background: url('../../img/countries/Canada.png') no-repeat center;
+		  background-size: contain;
+		}
+	  }
+	  &.france {
+
+		margin-left: 10px;
+		background: url('../../img/countries/France-bw.png') no-repeat center;
+		background-size: contain;
+		&:hover {
+		  background: url('../../img/countries/France.png') no-repeat center;
+		  background-size: contain;
+		}
+	  }
+	  margin: 0;
+	  height: 0;
+	  min-width: 0;
+	  padding: 0;
+	  width: 35px;
+	  border-radius: 0;
+	}
+  }
+
   .main-content {
 	.section-separator {
 	  min-height: 400px;

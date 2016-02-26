@@ -1,0 +1,51 @@
+<div layout="column" class="content-container" data-component="skills-component" >
+    <div class="title-box">
+        <div class="icon-container">
+            <i class="icon material-icons">format_paint</i>
+        </div>
+        <h2 class="title">{{'projects' | uppercase}}</h2>
+        <h4 class="subtitle">works</h4>
+    </div>
+    <div layout-margin layout="column" layout-gt-sm="row" class="content-body">
+        <div flex="60" layout="column" layout-align="space-around" class="description-container">
+            <h2>Knowledge</h2>
+            <h4>Knowledge</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum.
+            </p>
+            <h4>Knowledge</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum.
+            </p>
+        </div>
+        <div flex="5"></div>
+        <div flex="35" layout="column" layout-align="space-around" class="images-container">
+            <div flex="65" class="description-container">
+                <ui-gmap-google-map center='projects.map.center' zoom='projects.map.zoom'>
+                    <ui-gmap-marker coords="marker.coords" options="marker.options" idkey="marker.id">
+                    </ui-gmap-marker>
+                </ui-gmap-google-map>
+            </div>
+
+            <div flex="35"  layout="column" layout-align="start center" layout-padding
+                 class="skills-container">
+                <h4>Knowledge</h4>
+                <div layout="row" layout-align="center stretch">
+                    <div flex>1</div>
+                    <div flex>2</div>
+                    <div flex>3</div>
+                    <div flex>4</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

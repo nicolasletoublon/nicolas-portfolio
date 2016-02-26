@@ -22,6 +22,6 @@ function contactController($scope) {
     };
 }
 
-angular.module('Contact', ['ngMessages'])
+angular.module('Contact', [])
     .directive('contactDirective', contactDirective)
     .controller('contactController', contactController);

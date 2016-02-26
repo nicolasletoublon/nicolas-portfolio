@@ -8,32 +8,34 @@
             </h2>
         </div>
         <div hide-gt-xs class="toolbar-tools md-toolbar-tools toolbar-actions">
-            <md-button md-no-focus ng-click="navigation.toggleMenu('menu-side')" class="md-icon-button" aria-label="Menu">
+            <md-button ng-click="navigation.toggleMenu('menu-side')" class="md-icon-button" aria-label="Menu">
                 <i class="material-icons">apps</i>
             </md-button>
         </div>
         <div hide-xs class="toolbar-tools md-toolbar-tools toolbar-actions plain-title">
-            <md-button hide-xs hide-sm ng-bind="section.name | uppercase"
+            <md-button du-smooth-scroll="{{section.anchor}}" du-smooth-scroll ng-class="{'active' : section.active}" hide-xs hide-sm ng-bind="section.name | uppercase"
                        ng-repeat="section in navigation.sections track by $index" class="nav-button"
-                       ng-click="navigation.goToAnchor(section.name)" aria-label="{{section.name}}">
+                       ng-click="navigation.activate(section)">
             </md-button>
-            <md-button title="{{section.name}}" aria-label="section.name" layout-align="center center" layout="column"
+            <md-button du-smooth-scroll="{{section.anchor}}" du-smooth-scroll ng-class="{'active' : section.active}" title="{{section.name}}" layout-align="center center" layout="column"
                        hide-gt-sm ng-repeat="section in navigation.sections track by $index"
-                       class="nav-button nav-icons"
-                       ng-click="navigation.goToAnchor(section.name)" aria-label="{{section.name}}">
+                       ng-click="navigation.activate(section)"
+                       class="nav-button nav-icons">
                 <i class="material-icons">{{section.icon}}</i>
             </md-button>
         </div>
     </div>
-
 </md-toolbar>
-<md-sidenav md-no-focus hide-gt-sm class="md-sidenav-left md-whiteframe-z2 menu-side-panel" md-component-id="menu-side">
+
+<md-sidenav hide-gt-sm class="md-sidenav-left md-whiteframe-z2 menu-side-panel" md-component-id="menu-side">
     <md-toolbar class="md-primary">
         <h1 class="md-toolbar-tools">Navigation</h1>
     </md-toolbar>
     <md-list ng-cloak class="list-story-container">
-        <md-list-item class="list-item" ng-repeat="section in navigation.sections"
-                      ng-click="navigation.goToAnchor(section.name, 'menu-side')">
+        <md-list-item class="list-item" ng-class="{'active' : section.active}"
+                      ng-repeat="section in navigation.sections"
+                      du-smooth-scroll="{{section.anchor}}"
+                      ng-click="navigation.goToAnchorMobile(section, 'menu-side')">
             <i class="icon material-icons">{{section.icon}}</i>
             <p class="title" ng-bind="section.name | uppercase"></p>
         </md-list-item>
