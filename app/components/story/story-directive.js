@@ -10,25 +10,18 @@ function storyDirective() {
     };
 }
 
-storyController.$inject = ["$scope", "storyService", "$mdMedia", "$mdDialog", "$mdSidenav", "$window"];
-function storyController($scope, storyService, $mdMedia, $mdDialog, $mdSidenav, $window) {
+storyController.$inject = ["storyService", "$mdDialog", "$mdSidenav", "$window"];
+function storyController(storyService, $mdDialog, $mdSidenav, $window) {
     var self = this;
 
     self.showAdvanced = function (ev, story) {
-        var useFullScreen = ($mdMedia('sm') || $mdMedia('xs')) && $scope.customFullscreen;
         $mdDialog.show({
             controller: dialogController,
             templateUrl: 'components/story/templates/' + story.template + '.tmpl.html',
             targetEvent: ev,
             clickOutsideToClose: true,
-            fullscreen: useFullScreen,
+            fullscreen: true,
             locals: {story: story}
-        });
-
-        $scope.$watch(function () {
-            return $mdMedia('xs') || $mdMedia('sm');
-        }, function (wantsFullScreen) {
-            $scope.customFullscreen = (wantsFullScreen === true);
         });
     };
     self.toggleMenu = function(id) {
@@ -56,28 +49,7 @@ function storyController($scope, storyService, $mdMedia, $mdDialog, $mdSidenav, 
     };
 }
 
-sidePanelController.$inject = ["$scope", "$mdDialog", "$mdMedia"];
-function sidePanelController($scope, $mdDialog, $mdMedia) {
-
-    $timeout(function () {
-        var el = $('md-dialog');
-        el.css('position', 'fixed');
-        el.css('top', '10%');
-        el.css('left', '10%');
-    });
-
-    $scope.hide = function () {
-        $mdDialog.hide();
-    };
-    $scope.cancel = function () {
-        $mdDialog.cancel();
-    };
-    $scope.answer = function (answer) {
-        $mdDialog.hide(answer);
-    };
-}
-
-dialogController.$inject = ["$scope", "$mdDialog", "$timeout"];
+dialogController.$inject = ["$scope", "$mdDialog", "$timeout", "story"];
 function dialogController($scope, $mdDialog, $timeout, story) {
 
     $scope.story = story;
@@ -85,7 +57,7 @@ function dialogController($scope, $mdDialog, $timeout, story) {
     $timeout(function () {
         var el = $('md-dialog');
         el.css('position', 'fixed');
-        el.css('top', '15%');
+        el.css('top', '10%');
         el.css('left', '10%');
     });
 

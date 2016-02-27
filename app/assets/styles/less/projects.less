@@ -1,123 +1,135 @@
 [data-component='projects-component'] {
 
   .angular-google-map-container {
-	border: 2px solid #262729;;
-	height: 300px;
+    border: 2px solid #262729;
   }
 
   margin-top: 70px;
   .title-box {
-	.icon-container {
-	  left: 84px;
-	  .icon {
-		top: 4px;
-		left: 4px;
-	  }
-	}
-	.subtitle {
-	  left: 72px;
-	}
+    .icon-container {
+      left: 84px;
+      .icon {
+        top: 4px;
+        left: 4px;
+      }
+    }
+    .subtitle {
+      left: 72px;
+    }
   }
   .content-body {
-	margin-top: 30px;
-	margin-bottom: 50px;
-	.description-container {
-	  text-align: justify;
-	}
-	.images-container {
-		.skills-container {
-		  .technical {
-			height: 60px;
-			width: 60px;
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center;
-			&.large {
-			  width: 120px;
-			}
-			&.grunt {
-			  background-image: url('../../img/frameworks/grunt-bw.png');
-			  &:hover {
-				background-image: url('../../img/frameworks/grunt.png');
-				background-size: contain;
-				background-repeat: no-repeat;
-				background-position: center;
-			  }
-			}
-			&.angular {
-			  background-image: url('../../img/frameworks/angular-bw.png');
-			  &:hover {
-				background-image: url('../../img/frameworks/angular.png');
-				background-size: contain;
-				background-repeat: no-repeat;
-				background-position: center;
-			  }
-			}
-			&.react {
-			  background-image: url('../../img/frameworks/react-bw.png');
-			  &:hover {
-				background-image: url('../../img/frameworks/react.png');
-				background-size: contain;
-				background-repeat: no-repeat;
-				background-position: center;
-			  }
-			}
-			&.mui {
-			  background-image: url('../../img/frameworks/mui-bw.png');
-			  &:hover {
-				background-image: url('../../img/frameworks/mui.png');
-				background-size: contain;
-				background-repeat: no-repeat;
-				background-position: center;
-			  }
-			}
-			&.mongo {
-			  background-image: url('../../img/frameworks/mongodb-bw.png');
-			  &:hover {
-				background-image: url('../../img/frameworks/mongodb.png');
-				background-size: contain;
-				background-repeat: no-repeat;
-				background-position: center;
-			  }
-			}
-			&.js {
-			  background-image: url('../../img/frameworks/js-bw.png');
-			  &:hover {
-				background-image: url('../../img/frameworks/js.png');
-				background-size: contain;
-				background-repeat: no-repeat;
-				background-position: center;
-			  }
-			}
-			&.ionic {
-			  background-image: url('../../img/frameworks/ionic-bw.png');
-			  &:hover {
-				background-image: url('../../img/frameworks/ionic.png');
-				background-size: contain;
-				background-repeat: no-repeat;
-				background-position: center;
-			  }
-			}
-			&.css3 {
-			  background-image: url('../../img/frameworks/css3-bw.png');
-			  &:hover {
-				background-image: url('../../img/frameworks/css3.png');
-				background-size: contain;
-				background-repeat: no-repeat;
-				background-position: center;
-			  }
-			}
-			&.node {
-			  background-image: url('../../img/frameworks/node-bw.png');
-			  &:hover {
-				background-image: url('../../img/frameworks/node.png');
-				background-size: contain;
-				background-repeat: no-repeat;
-				background-position: center;
-			  }
-			}
-		  }
-		}
-	}
+    margin-top: 30px;
+    margin-bottom: 50px;
+    .change-project-button {
+      width: 100px;
+      &.right {
+        margin-left: 15px;
+        padding: 0 25px 0 25px;
+        i {
+          left: 8px;
+        }
+      }
+      &.left {
+        padding: 0 20px 0 21px;
+      }
+    }
+    .description-container {
+      text-align: justify;
+    }
+    .images-container {
+      .skills-container {
+        .technical {
+          height: 60px;
+          width: 60px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          &.large {
+            width: 120px;
+          }
+          &.grunt {
+            background-image: url('../../img/frameworks/grunt-bw.png');
+            &:hover {
+              background-image: url('../../img/frameworks/grunt.png');
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+          &.angular {
+            background-image: url('../../img/frameworks/angular-bw.png');
+            &:hover {
+              background-image: url('../../img/frameworks/angular.png');
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+          &.react {
+            background-image: url('../../img/frameworks/react-bw.png');
+            &:hover {
+              background-image: url('../../img/frameworks/react.png');
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+          &.mui {
+            background-image: url('../../img/frameworks/mui-bw.png');
+            &:hover {
+              background-image: url('../../img/frameworks/mui.png');
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+          &.mongo {
+            background-image: url('../../img/frameworks/mongodb-bw.png');
+            &:hover {
+              background-image: url('../../img/frameworks/mongodb.png');
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+          &.js {
+            background-image: url('../../img/frameworks/js-bw.png');
+            &:hover {
+              background-image: url('../../img/frameworks/js.png');
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+          &.ionic {
+            background-image: url('../../img/frameworks/ionic-bw.png');
+            &:hover {
+              background-image: url('../../img/frameworks/ionic.png');
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+          &.css3 {
+            background-image: url('../../img/frameworks/css3-bw.png');
+            &:hover {
+              background-image: url('../../img/frameworks/css3.png');
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+          &.node {
+            background-image: url('../../img/frameworks/node-bw.png');
+            &:hover {
+              background-image: url('../../img/frameworks/node.png');
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+        }
+      }
+    }
   }
 }

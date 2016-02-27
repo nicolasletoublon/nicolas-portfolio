@@ -12,7 +12,8 @@
     "angular-translate-loader-static-files": "^2.9.2",
     "bootstrap-material-design": "^0.5.8",
     "jquery": "^2.2.0",
-    "lodash": "^4.5.1"
+    "lodash": "^4.5.1",
+    "ngmap": "^1.17.0"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.9",

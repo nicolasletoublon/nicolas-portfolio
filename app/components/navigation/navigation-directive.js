@@ -2,16 +2,16 @@
 
 function navigationDirective() {
     return {
-        restrict        : "E",
-        templateUrl     : "components/navigation/navigation.html",
+        restrict: "E",
+        templateUrl: "components/navigation/navigation.html",
         bindToController: true,
-        controllerAs    : "navigation",
-        controller      : 'navigationController'
+        controllerAs: "navigation",
+        controller: 'navigationController'
     };
 }
 
-navigationController.$inject = ["$scope",  "$mdSidenav", "$window"];
-function navigationController($scope, $mdSidenav, $window) {
+navigationController.$inject = ["$mdSidenav", "$window"];
+function navigationController($mdSidenav, $window) {
     var self = this;
 
     self.sections = [
@@ -23,23 +23,24 @@ function navigationController($scope, $mdSidenav, $window) {
         {name: 'contact', icon: 'contact_mail', anchor: "anchor-contact"}
     ];
 
-    self.toggleMenu = function(id) {
+    self.toggleMenu = function (id) {
         var margin = 50;
-        var position = $('#toolbar-nav')[0].offsetTop + $('#toolbar-nav')[0].offsetHeight + 30;
+        var element = $('#toolbar-nav')[0];
+        var position = element.offsetTop + element.offsetHeight + 30;
 
-        if($window.scrollY <= position) margin = 0;
+        if ($window.scrollY <= position) margin = 0;
 
         $('.menu-container-side').css('margin-top', $window.scrollY + margin);
         $mdSidenav(id).toggle();
     };
 
     self.goToAnchorMobile = function (section, id) {
-         $mdSidenav(id).toggle().then(function() {
-             self.activate(section);
-         })
+        $mdSidenav(id).toggle().then(function () {
+            self.activate(section);
+        })
     };
 
-    self.activate = function(section) {
+    self.activate = function (section) {
         for (var i = 0; i < self.sections.length; i++) {
             self.sections[i].active = false;
         }
@@ -50,6 +51,6 @@ function navigationController($scope, $mdSidenav, $window) {
 
 angular.module('Navigation', ["duScroll"])
     .value('duScrollDuration', 1000)
-    .value('duScrollOffset', 50)
+    .value('duScrollOffset', 0)
     .directive('navigationDirective', navigationDirective)
     .controller('navigationController', navigationController);

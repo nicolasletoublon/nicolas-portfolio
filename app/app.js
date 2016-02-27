@@ -1,8 +1,8 @@
-window.navigator.languages[0] = "fr";
+/*window.navigator.languages[0] = "fr";*/
 
 angular
     .module('Application',
-            ['ngMaterial', 'ngSanitize', 'pascalprecht.translate', 'Header', 'Navigation', 'Profile', 'Story', 'Contact', 'Skills', 'Footer', 'Frameworks', 'Interest', 'Projects'])
+            ['ngMaterial', 'ngAria', 'ngSanitize', 'pascalprecht.translate', 'Header', 'Navigation', 'Profile', 'Story', 'Contact', 'Skills', 'Footer', 'Frameworks', 'Interest', 'Projects'])
     .config(["$mdThemingProvider", "$translateProvider", function ($mdThemingProvider, $translateProvider) {
 
         $translateProvider.registerAvailableLanguageKeys(['en_EN', 'fr_FR'], {
@@ -42,8 +42,8 @@ angular
                 'default': 'A700'
             })
     }])
-    .controller('ApplicationController', ['$translate', '$scope', "$timeout", function ($translate, $scope, $timeout) {
-        var position = 0;
+    .controller('ApplicationController', ['$translate', '$scope', function ($translate, $scope) {
+        /*var position = 0;
         $(window).scroll(function () {
             if(!position) position = $('#toolbar-nav')[0].offsetTop + $('#toolbar-nav')[0].offsetHeight + 30;
             if ($(window).scrollTop() > position) {
@@ -53,7 +53,7 @@ angular
                 $('#toolbar-nav').removeClass('navbar-fixed');
             }
 
-        });
+        });*/
 
         $scope.changeLanguage = function (langKey) {
             $translate.use(langKey);
