@@ -10,9 +10,8 @@ function footerDirective() {
     };
 }
 
-footerController.$inject = ["$scope"];
-function footerController($scope) {
-    var self = this;
+footerController.$inject = [];
+function footerController() {
 }
 
 angular.module('Footer', [])

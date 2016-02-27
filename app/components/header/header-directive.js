@@ -10,9 +10,8 @@ function headerDirective() {
     };
 }
 
-headerController.$inject = ["$scope"];
-function headerController($scope) {
-    var self = this;
+headerController.$inject = [];
+function headerController() {
 }
 
 angular.module('Header', [])

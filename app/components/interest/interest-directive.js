@@ -10,8 +10,8 @@ function interestDirective() {
     };
 }
 
-interestController.$inject = ["$scope"];
-function interestController($scope) {
+interestController.$inject = [];
+function interestController() {
     var self = this;
 
     self.logos = [

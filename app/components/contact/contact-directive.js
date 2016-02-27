@@ -10,8 +10,8 @@ function contactDirective() {
     };
 }
 
-contactController.$inject = ["$scope"];
-function contactController($scope) {
+contactController.$inject = [];
+function contactController() {
     var self = this;
 
     self.user = {

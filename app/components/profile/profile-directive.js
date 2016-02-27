@@ -10,8 +10,8 @@ function profileDirective() {
     };
 }
 
-profileController.$inject = ["$scope", "$mdSidenav", "$window"];
-function profileController($scope, $mdSidenav, $window) {
+profileController.$inject = ["$mdSidenav", "$window"];
+function profileController($mdSidenav, $window) {
     var self = this;
 
     self.togglePicture = function(id) {

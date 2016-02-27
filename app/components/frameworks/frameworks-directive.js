@@ -10,8 +10,8 @@ function frameworksDirective() {
     };
 }
 
-frameworksController.$inject = ["$scope"];
-function frameworksController($scope) {
+frameworksController.$inject = [];
+function frameworksController() {
     var self = this;
 
     self.littleLogos = [
