@@ -1,4 +1,4 @@
-<md-toolbar  role="navigation" class="navigation-toolbar md-whiteframe-z1" id="toolbar-nav">
+<md-toolbar role="navigation" class="navigation-toolbar md-whiteframe-z1" id="toolbar-nav">
     <div class="toolbar-container">
         <div class="brand-container toolbar-tools md-toolbar-tools">
             <h2 class="brand-name">
@@ -12,11 +12,14 @@
             </md-button>
         </div>
         <div hide-xs class="toolbar-tools md-toolbar-tools toolbar-actions plain-title">
-            <md-button aria-label="{{section.name}}" du-smooth-scroll="{{section.anchor}}" ng-class="{'active' : section.active}" hide-xs hide-sm ng-bind="section.name | uppercase"
+            <md-button aria-label="{{section.name | translate }}" du-smooth-scroll="{{section.anchor}}"
+                       ng-class="{'active' : section.active}" hide-xs hide-sm translate="{{section.name}}"
                        ng-repeat="section in navigation.sections track by $index" class="nav-button"
                        ng-click="navigation.activate(section)">
             </md-button>
-            <md-button aria-label="{{section.name}}" du-smooth-scroll="{{section.anchor}}" ng-class="{'active' : section.active}" title="{{section.name}}" layout-align="center center" layout="column"
+            <md-button aria-label="{{section.name | translate}}" du-smooth-scroll="{{section.anchor}}"
+                       ng-class="{'active' : section.active}" title="{{section.name}}" layout-align="center center"
+                       layout="column"
                        hide-gt-sm ng-repeat="section in navigation.sections track by $index"
                        ng-click="navigation.activate(section)"
                        class="nav-button nav-icons">
@@ -36,7 +39,7 @@
                       du-smooth-scroll="{{section.anchor}}"
                       ng-click="navigation.goToAnchorMobile(section, 'menu-side')">
             <i class="icon material-icons">{{section.icon}}</i>
-            <p class="title" ng-bind="section.name | uppercase"></p>
+            <p class="title" translate="{{section.name}}"></p>
         </md-list-item>
     </md-list>
 </md-sidenav>

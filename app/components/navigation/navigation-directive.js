@@ -15,12 +15,12 @@ function navigationController($mdSidenav, $window) {
     var self = this;
 
     self.sections = [
-        {name: 'home', icon: 'home', active: true, anchor: "anchor-home"},
-        {name: 'profile', icon: 'person_outline', anchor: "anchor-profile"},
-        {name: 'stories', icon: 'timelapse', anchor: "anchor-stories"},
-        {name: 'projects', icon: 'format_paint', anchor: "anchor-projects"},
-        {name: 'skills', icon: 'palette', anchor: "anchor-skills"},
-        {name: 'contact', icon: 'contact_mail', anchor: "anchor-contact"}
+        {name: 'menu_home', icon: 'home', active: true, anchor: "anchor-home"},
+        {name: 'menu_profile', icon: 'person_outline', anchor: "anchor-profile"},
+        {name: 'menu_stories', icon: 'timelapse', anchor: "anchor-stories"},
+        {name: 'menu_projects', icon: 'format_paint', anchor: "anchor-projects"},
+        {name: 'menu_skills', icon: 'palette', anchor: "anchor-skills"},
+        {name: 'menu_contact', icon: 'contact_mail', anchor: "anchor-contact"}
     ];
 
     self.toggleMenu = function (id) {

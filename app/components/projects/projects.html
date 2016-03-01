@@ -1,25 +1,26 @@
-<div layout="column" class="content-container" data-component="projects-component" >
+<div layout="column" class="content-container" data-component="projects-component">
     <div class="title-box">
         <div class="icon-container">
             <i class="icon material-icons">format_paint</i>
         </div>
-        <h2 class="title">{{'projects' | uppercase}}</h2>
-        <h4 class="subtitle">works</h4>
+        <h2 class="title">{{'projects_box_title' | translate | uppercase}}</h2>
+        <h4 class="subtitle">{{'projects_box_subtitle' | translate }}</h4>
     </div>
     <div layout-margin layout="column" class="content-body">
         <div layout="column" layout-gt-sm="row">
             <div flex="60" layout="column" layout-align="space-around" class="description-container">
-                <h2 ng-bind="projectController.project.name"></h2>
-                <h4 ng-bind="projectController.project.subtitle"></h4>
-                <p ng-bind="projectController.project.description">
+                <h2 translate="{{projectController.project.name}}"></h2>
+                <h4 translate="{{projectController.project.subtitle}}" ></h4>
+                <p translate="{{projectController.project.description}}" >
                 </p>
-                <h4 ng-bind="projectController.project.subtitle2"></h4>
-                <p ng-bind="projectController.project.description2">
+                <h4 translate="{{projectController.project.subtitle2}}" ></h4>
+                <p translate="{{projectController.project.description2}}">
                 </p>
             </div>
             <div flex="5"></div>
-            <div flex="35" layout-gt-sm="column" layout-sm="row" layout-align="space-between" layout-align-gt-sm="space-around" class="images-container">
-                <div flex class="angular-google-map-container md-whiteframe-z2 " >
+            <div flex="35" layout-gt-sm="column" layout-sm="row" layout-align="space-between"
+                 layout-align-gt-sm="space-around" class="images-container">
+                <div flex class="angular-google-map-container md-whiteframe-z2 ">
                     <ng-map center="{{projectController.project.center}}" zoom="{{projectController.project.zoom}}">
                         <marker position="{{projectController.project.marker}}"></marker>
                     </ng-map>
@@ -27,25 +28,29 @@
 
                 <div flex layout="column" layout-align="start center" layout-margin
                      class="skills-container">
-                    <h4>Technical environment</h4>
+                    <h4>{{'projects_technical_subtitle' | translate}}</h4>
                     <div layout="column" layout-align="center stretch">
                         <div layout="row" flex>
 
-                            <div ng-class="techno1" class="technical" ng-repeat="techno1 in projectController.project.technos1"></div>
+                            <div ng-class="techno1" class="technical"
+                                 ng-repeat="techno1 in projectController.project.technos1"></div>
                         </div>
                         <div layout="row" flex>
-                            <div ng-class="techno2" class="technical" ng-repeat="techno2 in projectController.project.technos2"></div>
+                            <div ng-class="techno2" class="technical"
+                                 ng-repeat="techno2 in projectController.project.technos2"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div layout="row" layout-align="center">
-            <md-button aria-label="Show the previous project" ng-click="projectController.previousProject()" class="md-raised md-primary custom-button change-project-button left">
-                <i class="material-icons icon">chevron_left</i> Prev
+            <md-button aria-label="Show the previous project" ng-click="projectController.previousProject()"
+                       class="md-raised md-primary custom-button change-project-button left">
+                <i class="material-icons icon">chevron_left</i>{{'projects_button_previous' | translate}}
             </md-button>
-            <md-button aria-label="Show the next project" ng-click="projectController.nextProject()" class="md-raised md-primary custom-button change-project-button right">
-                Next <i class="material-icons icon">chevron_right</i>
+            <md-button aria-label="Show the next project" ng-click="projectController.nextProject()"
+                       class="md-raised md-primary custom-button change-project-button right">
+                {{'projects_button_next' | translate}} <i class="material-icons icon">chevron_right</i>
             </md-button>
         </div>
     </div>

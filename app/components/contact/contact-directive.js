@@ -20,6 +20,13 @@ function contactController() {
         subject: "",
         message: ""
     };
+
+    self.form = {
+        name: "contact_form_name",
+        email: "contact_form_email",
+        subject: "contact_form_subject",
+        message: "contact_form_message"
+    }
 }
 
 angular.module('Contact', [])

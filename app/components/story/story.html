@@ -3,24 +3,29 @@
         <div class="icon-container">
             <i class="icon material-icons">timelapse</i>
         </div>
-        <h2 class="title">{{'my stories' | uppercase}}</h2>
-        <h4 class="subtitle">education & experience</h4>
+        <h2 class="title">{{ 'stories_box_title' | translate | uppercase}}</h2>
+        <h4 class="subtitle">{{ 'stories_box_subtitle1' | translate}} & {{ 'stories_box_subtitle2' | translate}}</h4>
     </div>
     <div class="content-body">
         <div hide-xs hide-sm ng-repeat="story in storyCtrl.stories track by $index">
             <div ng-if="$odd" layout="row" class="story-container">
                 <div flex layout="column" layout-align="center end" class="story-description-container left">
-                    <h4 class="type" ng-bind="story.type"></h4>
-                    <h3 class="title" ng-bind="story.highligh"></h3>
-                    <p class="subtitle firm" ng-bind="story.name"></p>
-                    <p class="subtitle location" ng-bind="story.city + ', ' + story.country"></p>
-                    <p class="description" ng-bind="story.shortDescription" ng-show="story.active"></p>
-                    <md-button aria-label="Show more info about this story in a modal" ng-click="storyCtrl.showAdvanced($event,story)" ng-show="story.active && story.shortDescription.length" class="custom-button read-more-button">
-                        Read more
+                    <h4 class="type" translate="{{story.type}}"></h4>
+                    <h3 class="title" translate="{{story.highligh}}"></h3>
+                    <p class="subtitle firm" translate="{{story.name}}"></p>
+                    <p class="subtitle location" translate="{{story.localisation}}"></p>
+                    <p class="description" translate="{{story.shortDescription}}" ng-show="story.active"></p>
+                    <md-button aria-label="Show more info about this story in a modal"
+                               ng-click="storyCtrl.showAdvanced($event,story)"
+                               ng-show="story.active && story.shortDescription.length"
+                               class="custom-button read-more-button">
+                        {{ 'stories_button_read_more' | translate}}
                     </md-button>
                 </div>
                 <div flex="20" layout="column" layout-align="center center" class="year-container">
-                    <div tabindex="0" data-ng-focus="story.focus" role="button" ng-keydown="storyCtrl.keypress($event, story)" class="year-square" ng-class="{'active': story.active}"
+                    <div tabindex="0" data-ng-focus="story.focus" role="button"
+                         ng-keydown="storyCtrl.keypress($event, story)" class="year-square"
+                         ng-class="{'active': story.active}"
                          ng-mouseover="storyCtrl.activateStory(story)">
                         <h3 class="year" ng-bind="story.year"></h3>
                     </div>
@@ -30,42 +35,55 @@
             <div ng-if="$even" layout="row" class="story-container">
                 <div flex="40"></div>
                 <div flex="20" layout="column" layout-align="center center" class="year-container">
-                    <div tabindex="0" data-ng-focus="story.focus" role="button" class="year-square" ng-keydown="storyCtrl.keypress($event, story)" ng-class="{'active': story.active}"
+                    <div tabindex="0" data-ng-focus="story.focus" role="button" class="year-square"
+                         ng-keydown="storyCtrl.keypress($event, story)" ng-class="{'active': story.active}"
                          ng-mouseover="storyCtrl.activateStory(story)">
                         <h3 class="year" ng-bind="story.year"></h3>
                     </div>
                 </div>
                 <div flex layout="column" layout-align="center start" class="story-description-container right">
-                    <h4 class="type" ng-bind="story.type"></h4>
-                    <h3 class="title" ng-bind="story.highligh"></h3>
-                    <p class="subtitle firm" ng-bind="story.name"></p>
-                    <p class="subtitle location" ng-bind="story.city + ', ' + story.country"></p>
-                    <p class="description" ng-bind="story.shortDescription" ng-show="story.active"></p>
-                    <md-button aria-label="Show more info about this story in a modal" ng-click="storyCtrl.showAdvanced($event, story)" ng-show="story.active && story.shortDescription.length" class="custom-button read-more-button">
-                        Read more
+                    <h4 class="type" translate="{{story.type}}"></h4>
+                    <h3 class="title" translate="{{story.highligh}}"></h3>
+                    <p class="subtitle firm" translate="{{story.name}}"></p>
+                    <p class="subtitle location" translate="{{story.localisation}}"></p>
+                    <p class="description" ng-show="story.active" translate="{{story.shortDescription}}"></p>
+                    <md-button aria-label="Show more info about this story in a modal"
+                               ng-click="storyCtrl.showAdvanced($event, story)"
+                               ng-show="story.active && story.shortDescription.length"
+                               class="custom-button read-more-button">
+                        {{ 'stories_button_read_more' | translate}}
                     </md-button>
                 </div>
             </div>
         </div>
 
         <md-list hide-gt-sm ng-cloak class="list-story-container">
-            <md-list-item aria-label="Display more info about the story" class="secondary-button-padding list-item" ng-click="storyCtrl.activateStory(story)"
+            <md-list-item aria-label="Display more info about the story" class="secondary-button-padding list-item"
+                          ng-click="storyCtrl.activateStory(story)"
                           ng-repeat="story in storyCtrl.stories">
-                <i ng-if="story.type === 'education'" class="icon material-icons">school</i>
-                <i ng-if="story.type !== 'education'" class="icon material-icons">business_center</i>
+                <i ng-if="story.typeId === 'edu'" class="icon material-icons">school</i>
+                <i ng-if="story.typeId !== 'edu'" class="icon material-icons">business_center</i>
                 <div class="story-description-container" ng-click="angular.noop()">
-                    <h3 class="title" ng-bind="story.highligh"></h3>
-                    <p class="subtitle firm" ng-bind="story.name"></p>
-                    <p class="subtitle location" ng-bind="story.city + ', ' + story.country"></p>
-                    <p ng-show="story.active" class="description" ng-class="{'active' : story.active}" ng-bind="story.shortDescription"></p>
-                    <md-button aria-label="Show more info about this story in a modal" hide-xs ng-click="storyCtrl.showAdvanced($event, story)" ng-if="story.active && story.shortDescription.length" class="custom-button read-more-button">
-                        Read more
+                    <h3 class="title" translate="{{story.highligh}}"></h3>
+                    <p class="subtitle firm" translate="{{story.name}}"></p>
+                    <p class="subtitle location" translate="{{story.localisation}}"></p>
+                    <p ng-show="story.active" translate="{{story.shortDescription}}" class="description" ng-class="{'active' : story.active}"></p>
+                    <md-button aria-label="Show more info about this story in a modal" hide-xs
+                               ng-click="storyCtrl.showAdvanced($event, story)"
+                               ng-if="story.active && story.shortDescription.length"
+                               class="custom-button read-more-button">
+                        {{ 'stories_button_read_more' | translate}}
                     </md-button>
-                    <md-button aria-label="Show more info about this story in a modal" hide-gt-xs ng-click="storyCtrl.showPanel('story-side', story)" ng-if="story.active && story.shortDescription.length" class="custom-button read-more-button">
-                        Read more
+                    <md-button aria-label="Show more info about this story in a modal" hide-gt-xs
+                               ng-click="storyCtrl.showPanel('story-side', story)"
+                               ng-if="story.active && story.shortDescription.length"
+                               class="custom-button read-more-button">
+                        {{ 'stories_button_read_more' | translate}}
                     </md-button>
                 </div>
-                <md-button aria-label="Display more info about the story" aria-hidden="true" tabindex="-1" class="md-secondary year-button custom-button" ng-disabled="true" ng-bind="story.year"></md-button>
+                <md-button aria-label="Display more info about the story" aria-hidden="true" tabindex="-1"
+                           class="md-secondary year-button custom-button" ng-disabled="true"
+                           ng-bind="story.year"></md-button>
             </md-list-item>
         </md-list>
     </div>

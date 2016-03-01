@@ -6,35 +6,25 @@
         <div class="icon-container">
             <i class="icon material-icons">person_outline</i>
         </div>
-        <h2 class="title">{{'profile' | uppercase}}</h2>
-        <h4 class="subtitle">about myself</h4>
+        <h2 class="title">{{ 'profile_box_title' | translate | uppercase }}</h2>
+        <h4 class="subtitle">{{ 'profile_box_subtitle' | translate }}</h4>
     </div>
     <div layout="row" layout-margin class="content-body">
         <div flex layout="column" layout-align="space-between start" class="text-container">
             <div flex layout="column" layout-align="space-around">
                 <div >
-                    <h2 class="first-title">About me</h2>
-                    <p class="first-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                        laborum.
+                    <h2 class="first-title">{{ 'profile_first_title' | translate }}</h2>
+                    <p class="first-paragraph">{{ 'profile_first_description' | translate }}
                     </p>
                 </div>
                 <div>
-                    <h2 class="second-title">Objectives</h2>
-                    <p class="second-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                        laborum.
+                    <h2 class="second-title">{{ 'profile_second_title' | translate }}</h2>
+                    <p class="second-paragraph">{{ 'profile_second_description' | translate }}
                     </p>
                 </div>
             </div>
             <md-button aria-label="Download my CV" class="custom-button md-primary md-raised download-cv-btn">
-                <i class="material-icons">cloud_download</i>Download my CV
+                <i class="material-icons">cloud_download</i>{{ 'profile_button_download' | translate }}
             </md-button>
         </div>
         <div hide-xs hide-sm flex="5"></div>
@@ -44,12 +34,11 @@
             </div>
             <div layout="column" layout-align="start center" class="description-container">
                 <h3 class="title">
-                    Hi, I'm <br>
-                    <b>Nicolas Letoublon,</b><br>
-                    <span class="job">web developer</span>
+                    {{ 'profile_picture_title' | translate }}<br>
+                    <b>{{ 'profile_picture_subtitle' | translate }}</b><br>
+                    <span class="job">{{ 'profile_picture_job' | translate }}</span>
                 </h3>
-                <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore.</p>
+                <p class="subtitle">{{ 'profile_picture_description' | translate }}</p>
             </div>
             <div layout="row" class="links-container">
                 <div class="link">
@@ -76,12 +65,11 @@
             </div>
             <div layout="column" layout-align="start center" class="description-container">
                 <h3 class="title">
-                    Hi, I'm <br>
-                    <b>Nicolas Letoublon,</b><br>
-                    <span class="job">web developer</span>
+                    {{ 'profile_picture_title' | translate }}<br>
+                    <b>{{ 'profile_picture_subtitle' | translate }}</b><br>
+                    <span class="job">{{ 'profile_picture_job' | translate }}</span>
                 </h3>
-                <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore.</p>
+                <p class="subtitle">{{ 'profile_picture_description' | translate }}</p>
             </div>
             <div layout="row" class="links-container">
                 <div class="link">

@@ -3,37 +3,32 @@
         <div class="icon-container">
             <i class="icon material-icons">palette</i>
         </div>
-        <h2 class="title">{{'my skills' | uppercase}}</h2>
-        <h4 class="subtitle">knowledge & expertise</h4>
+        <h2 class="title">{{ 'skills_box_title' | translate | uppercase}}</h2>
+        <h4 class="subtitle">{{ 'skills_box_subtitle1' | translate}} & {{ 'skills_box_subtitle2' | translate}}</h4>
     </div>
     <div layout-margin layout-gt-sm="row" class="content-body">
         <div flex layout="column" layout-align="space-around" class="knowledge-container">
-            <h2>Knowledge</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                laborum.
+            <h2>{{ 'skills_knowledge_title' | translate}}</h2>
+            <p>{{ 'skills_knowledge_text' | translate}}
             </p>
             <div layout="row" layout-align="space-around" class="domains-container">
                 <md-list layout-align="space-around start" layout="column" class="list-domains">
                     <md-list-item class="md-2-line">
                         <md-icon>check</md-icon>
                         <div>
-                            <p>Interface Design</p>
+                            <p>{{ 'skills_knowledge_1' | translate}}</p>
                         </div>
                     </md-list-item>
                     <md-list-item class="md-2-line">
                         <md-icon>check</md-icon>
                         <div>
-                            <p>Web services REST</p>
+                            <p>{{ 'skills_knowledge_2' | translate}}</p>
                         </div>
                     </md-list-item>
                     <md-list-item class="md-2-line">
                         <md-icon>check</md-icon>
                         <div>
-                            <p>Front-end Frameworks</p>
+                            <p>{{ 'skills_knowledge_3' | translate}}</p>
                         </div>
                     </md-list-item>
                 </md-list>
@@ -41,19 +36,19 @@
                     <md-list-item class="md-2-line">
                         <md-icon>check</md-icon>
                         <div>
-                            <p>Web Applications</p>
+                            <p>{{ 'skills_knowledge_4' | translate}}</p>
                         </div>
                     </md-list-item>
                     <md-list-item class="md-2-line">
                         <md-icon>check</md-icon>
                         <div>
-                            <p>Responsive Web Design</p>
+                            <p>{{ 'skills_knowledge_5' | translate}}</p>
                         </div>
                     </md-list-item>
                     <md-list-item class="md-2-line">
                         <md-icon>check</md-icon>
                         <div>
-                            <p>Back-end Frameworks</p>
+                            <p>{{ 'skills_knowledge_6' | translate}}</p>
                         </div>
                     </md-list-item>
                 </md-list>
@@ -61,7 +56,7 @@
         </div>
         <div flex="5"></div>
         <div flex layout="column" layout-align="space-around" class="expertise-container">
-            <h2>Expertise</h2>
+            <h2>{{ 'skills_expertise_title' | translate}}</h2>
             <div flex layout="column" layout-align="space-around" class="frameworks-container">
                 <div class="framework-container">
                     <p class="framework-label">Angular JS 1.x</p>

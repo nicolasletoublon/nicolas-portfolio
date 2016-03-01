@@ -71,26 +71,26 @@ storyService.$inject = [];
 function storyService() {
     return {
         stories: [{
-            "name": "Saint Joseph de Tivoli",
+            "name": "stories_story_1_firm",
             "template": "tivoli",
-            "highligh": "French Scientific Baccalaureat",
+            "highligh": "stories_story_1_highlight",
             "year": 2007,
-            "city": "Bordeaux",
-            "country": "France",
-            "type": "education",
-            "shortDescription": "",
-            "grade": ""
+            "localisation": "stories_story_1_localisation",
+            "type": "stories_story_1_type",
+            "shortDescription": "stories_story_1_description",
+            "grade": "",
+            "typeId": "edu"
         }, {
-            "name": "Exia CESI",
+            "name": "stories_story_2_firm",
             "template": "exia",
             "year": 2012,
             "duration": "5 years",
-            "highligh": "Computer Engineering Degree",
-            "city": "Bordeaux",
-            "country": "France",
-            "type": "education",
-            "shortDescription": "Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "highligh": "stories_story_2_highlight",
+            "localisation": "stories_story_2_localisation",
+            "type": "stories_story_2_type",
+            "shortDescription": "stories_story_2_description",
             "grade": "Software Engineer",
+            "typeId": "edu",
             "projects": [{
                 "name": "Falcon",
                 "period": "feb-march",
@@ -98,17 +98,17 @@ function storyService() {
                 "tools": ["Anglar JS", "NodeJS", "Grunt"]
             }]
         }, {
-            "name": "Eurogiciel",
+            "name": "stories_story_3_firm",
             "template": "eurogiciel-intern",
             "year": 2013,
-            "highligh": "Full stack developer",
+            "highligh": "stories_story_3_highlight",
             "duration": "6 months",
-            "city": "Bordeaux",
-            "country": "France",
-            "type": "internship",
+            "localisation": "stories_story_3_localisation",
+            "type": "stories_story_3_type",
             "website": "www.eurogiciel.com",
-            "shortDescription": "Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "shortDescription": "stories_story_3_description",
             "job-title": "Web software engineer",
+            "typeId": "job",
             "projects": [{
                 "name": "Plan de charges",
                 "description": "dfjdlj gdfkjgldkfkdfgkldglkdfgdflgld",
@@ -117,16 +117,16 @@ function storyService() {
                 "tools": ["Anglar JS", "NodeJS", "Grunt"]
             }]
         }, {
-            "name": "Eurogiciel",
+            "name": "stories_story_4_firm",
             "template": "eurogiciel-job",
             "year": 2014,
-            "highligh": "Software engineer",
-            "city": "Bordeaux",
-            "country": "France",
-            "type": "job experience",
+            "highligh": "stories_story_4_highlight",
+            "localisation": "stories_story_4_localisation",
+            "type": "stories_story_4_type",
             "website": "www.eurogiciel.com",
-            "shortDescription": "Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "shortDescription": "stories_story_4_description",
             "job-title": "Web software engineer",
+            "typeId": "job",
             "projects": [{
                 "name": "Plan de charges",
                 "description": "dfjdlj gdfkjgldkfkdfgkldgldshfkjdshfjk sdfsdh ds fsdh fkjdshfjsdf jksd hkdfgdflgld",
@@ -141,17 +141,17 @@ function storyService() {
                 "tools": ["Anglar JS", "NodeJS", "Grunt"]
             }]
         }, {
-            "name": "Kronos Canadian Inc.",
+            "name": "stories_story_5_firm",
             "template": "kronos",
             "active": true,
-            "highligh": "Front-end engineer",
+            "highligh": "stories_story_5_highlight",
             "year": 2016,
-            "city": "Montreal",
-            "country": "Canada",
-            "type": "job experience",
+            "localisation": "stories_story_5_localisation",
+            "type": "stories_story_5_type",
             "website": "www.kronos.com",
-            "shortDescription": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "shortDescription": "stories_story_5_description",
             "job-title": "Web software engineer",
+            "typeId": "job",
             "projects": [{
                 "name": "Falcon",
                 "period": "feb-march",

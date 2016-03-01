@@ -11,8 +11,7 @@ function footerDirective() {
 }
 
 footerController.$inject = [];
-function footerController() {
-}
+function footerController() {}
 
 angular.module('Footer', [])
     .directive('footerDirective', footerDirective)

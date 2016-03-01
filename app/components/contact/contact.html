@@ -3,36 +3,38 @@
         <div class="icon-container">
             <i class="icon material-icons">@</i>
         </div>
-        <h2 class="title">{{'contact' | uppercase}}</h2>
+        <h2 class="title" ng-bind="'contact_box_title' | translate | uppercase"></h2>
         <h4 class="subtitle" ng-bind="'contact_box_subtitle' | translate"></h4>
     </div>
-    <div flex layout-margin layout="row" layout-align="space-between" class="content-body" >
-        <form flex layout="column" layout-align="start stretch" class="form-container" name="contact-form" >
+    <div flex layout-margin layout="row" layout-align="space-between" class="content-body">
+        <form flex layout="column" layout-align="start stretch" class="form-container" name="contact-form">
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
-                    <input required ng-model="contact.user.name" placeholder="Name">
+                    <input required ng-model="contact.user.name"
+                           data-placeholder="{{contact.form.name | translate}}"  >
                 </md-input-container>
                 <div flex="5" hide-xs hide-sm>
                 </div>
                 <md-input-container class="md-block" flex-gt-sm>
-                    <input required ng-model="contact.user.email" type="email" placeholder="Email">
+                    <input required ng-model="contact.user.email" type="email" data-placeholder="{{contact.form.email | translate}}">
                 </md-input-container>
             </div>
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
-                    <input required ng-model="contact.user.subject" placeholder="Subject">
+                    <input required ng-model="contact.user.subject" data-placeholder="{{contact.form.subject | translate}}">
                 </md-input-container>
             </div>
             <md-input-container class="md-block">
                 <textarea required
-                          placeholder="What are you going to tell me !"
+                          data-placeholder="{{contact.form.message | translate}}"
                           ng-model="contact.user.message"
                           md-maxlength="500"
                           rows="4"
                           md-select-on-focus></textarea>
             </md-input-container>
-            <md-button aria-label="Submit the contact form" class="md-raised md-primary custom-button send-message-button" type="submit">
-                <i class="material-icons icon">send</i> Send
+            <md-button aria-label="Submit the contact form"
+                       class="md-raised md-primary custom-button send-message-button" type="submit">
+                <i class="material-icons icon">send</i> {{'contact_button_send' | translate}}
             </md-button>
         </form>
     </div>
