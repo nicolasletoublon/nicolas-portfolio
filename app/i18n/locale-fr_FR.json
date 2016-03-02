@@ -1,8 +1,9 @@
 {
-  "header_title": "Salut, Je suis Nicolas,",
-  "header_job": "Developpeur Web",
-  "header_subtitle": "sous titre long",
-  "header_subtitle_short": "sous titre court",
+  "header_title": "Hi! Nicolas,",
+  "header_job": "Developpeur",
+  "header_job2": "Web",
+  "header_subtitle": "Bienvenue sur mon site web, cree avant tout pour me faire plaisir, mais aussi pour permettre d'en savoir un peu plus sur moi, mes travaux et mes aspirations ! ",
+  "header_subtitle_short": "La bonne place pour en apprendre un peu plus sur moi !",
 
   "menu_home": "ACCUEIL",
   "menu_profile": "PROFIL",
@@ -12,18 +13,18 @@
   "menu_contact": "CONTACT",
 
   "profile_box_title": "Profil",
-  "profile_box_subtitle": "a propos de moi",
+  "profile_box_subtitle": "a propos",
   "profile_first_title": "Resume",
-  "profile_first_description": "description du profil",
+  "profile_first_description": "Je suis un jeune ingenieur de 25 ans, specialise dans le developpement logiciel. Passionne, j'aime apprendre de nouvelles facon de travailler, communiquer et concevoir chaque jour qui passe. Je me suis lance dans l'aventure du developpement parce que j'aime non seulement creer, mais creer de belles choses, intuitives et agreables a l'oeil. C'est une des raison de ma residence actuelle a Montreal, une ville en pleine expansion et a la pointe dans le domaine.",
   "profile_second_title": "Objectifs",
-  "profile_second_description": "description des objectifs",
+  "profile_second_description": "Innover, amener mon ",
   "profile_button_download": "Telecharger mon CV",
   "profile_picture_title": "Salut, c'est",
   "profile_picture_subtitle": "Nicolas Letoublon",
   "profile_picture_job": "Developpeur Web",
   "profile_picture_description": "description",
 
-  "stories_box_title": "Parcours",
+  "stories_box_title": "Mon Parcours",
   "stories_box_subtitle1": "formation",
   "stories_box_subtitle2": "experience",
   "stories_button_read_more": "En savoir plus",
@@ -59,7 +60,7 @@
   "stories_story_5_description": "",
 
 
-  "projects_box_title": "Projets",
+  "projects_box_title": "Mes Projets",
   "projects_box_subtitle": "derniers travaux",
   "projects_technical_subtitle": "Environnement technique",
   "projects_button_previous": "Prec",

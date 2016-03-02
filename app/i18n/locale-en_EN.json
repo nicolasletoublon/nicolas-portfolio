@@ -25,7 +25,7 @@
   "profile_picture_description": "description",
 
 
-  "stories_box_title": "Stories",
+  "stories_box_title": "My story",
   "stories_box_subtitle1": "education",
   "stories_box_subtitle2": "experience",
   "stories_button_read_more": "Read more",
@@ -61,7 +61,7 @@
   "stories_story_5_description": "",
 
 
-  "projects_box_title": "Projects",
+  "projects_box_title": "My Projects",
   "projects_box_subtitle": "latest works",
   "projects_technical_subtitle": "Technical environment",
   "projects_button_previous": "Prev",
