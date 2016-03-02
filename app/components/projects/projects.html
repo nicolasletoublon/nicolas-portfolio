@@ -8,14 +8,16 @@
     </div>
     <div layout-margin layout="column" class="content-body">
         <div layout="column" layout-gt-sm="row">
-            <div flex="60" layout="column" layout-align="space-around" class="description-container">
-                <h2 translate="{{projectController.project.name}}"></h2>
-                <h4 translate="{{projectController.project.subtitle}}" ></h4>
-                <p translate="{{projectController.project.description}}" >
-                </p>
-                <h4 translate="{{projectController.project.subtitle2}}" ></h4>
-                <p translate="{{projectController.project.description2}}">
-                </p>
+            <div flex="60" layout="column" class="description-container">
+                <div>
+                    <h2 translate="{{projectController.project.name}}"></h2>
+                    <h4 translate="{{projectController.project.subtitle}}" ></h4>
+                    <p translate="{{projectController.project.description}}" ></p>
+                </div>
+                <div>
+                    <h4 translate="{{projectController.project.subtitle2}}" ></h4>
+                    <p translate="{{projectController.project.description2}}"></p>
+                </div>
             </div>
             <div flex="5"></div>
             <div flex="35" layout-gt-sm="column" layout-sm="row" layout-align="space-between"

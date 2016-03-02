@@ -35,7 +35,7 @@
             <div layout="column" layout-align="start center" class="description-container">
                 <h3 class="title">
                     {{ 'profile_picture_title' | translate }}<br>
-                    <b>{{ 'profile_picture_subtitle' | translate }}</b><br>
+                    <b><span class="subtitle">{{ 'profile_picture_subtitle' | translate }}</span></b><br>
                     <span class="job">{{ 'profile_picture_job' | translate }}</span>
                 </h3>
                 <p class="subtitle">{{ 'profile_picture_description' | translate }}</p>
@@ -56,9 +56,6 @@
         </div>
     </div>
     <md-sidenav class="md-sidenav-right md-whiteframe-z2 " md-component-id="picture-side">
-        <!--<md-button class="md-raised custom-button sticked-button " ng-click="profile.closeSide('picture-side')">
-            <i class="material-icons">keyboard_arrow_right</i>
-        </md-button>-->
         <div layout-margin layout-align="space-around center" layout="column" class="picture-container-side">
             <div class="picture">
                 <img src="/app/assets/img/home/profile-picture.png" />
@@ -66,7 +63,7 @@
             <div layout="column" layout-align="start center" class="description-container">
                 <h3 class="title">
                     {{ 'profile_picture_title' | translate }}<br>
-                    <b>{{ 'profile_picture_subtitle' | translate }}</b><br>
+                    <b><span class="subtitle">{{ 'profile_picture_subtitle' | translate }}</span></b><br>
                     <span class="job">{{ 'profile_picture_job' | translate }}</span>
                 </h3>
                 <p class="subtitle">{{ 'profile_picture_description' | translate }}</p>

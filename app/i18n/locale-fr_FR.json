@@ -14,15 +14,15 @@
 
   "profile_box_title": "Profil",
   "profile_box_subtitle": "a propos",
-  "profile_first_title": "Resume",
+  "profile_first_title": "A propos de moi",
   "profile_first_description": "Je suis un jeune ingenieur de 25 ans, specialise dans le developpement logiciel. Passionne, j'aime apprendre de nouvelles facon de travailler, communiquer et concevoir chaque jour qui passe. Je me suis lance dans l'aventure du developpement parce que j'aime non seulement creer, mais creer de belles choses, intuitives et agreables a l'oeil. C'est une des raison de ma residence actuelle a Montreal, une ville en pleine expansion et a la pointe dans le domaine.",
-  "profile_second_title": "Objectifs",
-  "profile_second_description": "Innover, amener mon ",
+  "profile_second_title": "Missions et Objectifs",
+  "profile_second_description": "Innover, progresser et faire de chacun de mes appentissages une force. Mon principal objectif est d'apprendre toujours plus afin de me perfectionner dans mon travail. C'est pour cela que le travail d'equipe est pour moi primordial: pouvoir confronter sa production aux autres est un moyen de se remettre en question constamment et de s'ameliorer.",
   "profile_button_download": "Telecharger mon CV",
-  "profile_picture_title": "Salut, c'est",
+  "profile_picture_title": "Lui, c'est moi",
   "profile_picture_subtitle": "Nicolas Letoublon",
   "profile_picture_job": "Developpeur Web",
-  "profile_picture_description": "description",
+  "profile_picture_description": "Dynamique et novateur, j'aime mettre en oeuvre mes nouveaux acquis pour faire avancer mes projets.",
 
   "stories_box_title": "Mon Parcours",
   "stories_box_subtitle1": "formation",
@@ -67,9 +67,9 @@
   "projects_button_next": "Suiv",
 
   "projects_project_1_name": "Big data",
-  "projects_project_1_first_part_title": "",
-  "projects_project_1_first_part_text": "",
-  "projects_project_1_second_part_title": "",
+  "projects_project_1_first_part_title": "Le projet",
+  "projects_project_1_first_part_text": "Ce projet se concentre sur la fouille et l'analyse de donnees. Ce projet a eu pour but de creer une application web permettant de mettre en correlation de l'information provenant de n'importe quelles sources. <br/> Le but du projet etait de manipuler un nouveau framework web, <i>Play Framework</i>, ainsi que le concept de base NoSQL avec MongoDB. Le challenge fut de realiser un requeteur graphique multi base de donnees. Ce dernier incluait toutes les operations possibles ",
+  "projects_project_1_second_part_title": "Les missions",
   "projects_project_1_second_part_text": "",
 
   "projects_project_2_name": "Logiciel de protection de l'environnement",
