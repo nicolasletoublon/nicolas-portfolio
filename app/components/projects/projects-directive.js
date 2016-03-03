@@ -23,8 +23,8 @@ function projectsController() {
             subtitle2: 'projects_project_1_second_part_title',
             description2: 'projects_project_1_second_part_text',
             marker: [44.837789, -0.57918],
-            center: [44.837789, -0.57918],
-            zoom: 10,
+            center: [44.774036, -0.706215],
+            zoom: 9,
             technos: [
                 {image: "ionic", col: 2, row: 2 },
                 {image: "gfh", col: 2, row: 2},
