@@ -25,8 +25,18 @@ function projectsController() {
             marker: [44.837789, -0.57918],
             center: [44.837789, -0.57918],
             zoom: 10,
-            technos1: ["react large", "angular ", "css3"],
-            technos2: ["node", "angular", "css3"]
+            technos: [
+                {image: "ionic", col: 2, row: 2 },
+                {image: "gfh", col: 2, row: 2},
+                {image: "ionghfghfgic", col: 2, row: 2},
+                {image: "ionfghfghic", col: 2, row: 2}],
+            missions: [
+                "projects_project_1_mission_1",
+                "projects_project_1_mission_2",
+                "projects_project_1_mission_3",
+                "projects_project_1_mission_4",
+                "projects_project_1_mission_5"
+            ]
         },
         {
             id: 1,
@@ -39,7 +49,14 @@ function projectsController() {
             center: [44.837789, -0.57918],
             zoom: 10,
             technos1: ["node large", "angular ", "css3"],
-            technos2: ["node", "angular", "css3"]
+            technos2: ["node", "angular", "css3"],
+            missions: [
+                "projects_project_2_mission_1",
+                "projects_project_2_mission_2",
+                "projects_project_2_mission_3",
+                "projects_project_2_mission_4",
+                "projects_project_2_mission_5"
+            ]
         },
         {
             id: 2,
@@ -52,7 +69,14 @@ function projectsController() {
             center: [44.837789, -0.57918],
             zoom: 10,
             technos1: ["node large", "angular ", "css3"],
-            technos2: ["node", "angular", "css3"]
+            technos2: ["node", "angular", "css3"],
+            missions: [
+                "projects_project_3_mission_1",
+                "projects_project_3_mission_2",
+                "projects_project_3_mission_3",
+                "projects_project_3_mission_4",
+                "projects_project_3_mission_5"
+            ]
         },
         {
             id: 3,
@@ -65,7 +89,14 @@ function projectsController() {
             center: [44.837789, -0.57918],
             zoom: 10,
             technos1: ["node large", "angular ", "css3"],
-            technos2: ["node", "angular", "css3"]
+            technos2: ["node", "angular", "css3"],
+            missions: [
+                "projects_project_4_mission_1",
+                "projects_project_4_mission_2",
+                "projects_project_4_mission_3",
+                "projects_project_4_mission_4",
+                "projects_project_4_mission_5"
+            ]
         },
         {
             id: 4,
@@ -78,7 +109,14 @@ function projectsController() {
             center: [44.837789, -0.57918],
             zoom: 10,
             technos1: ["node large", "angular ", "css3"],
-            technos2: ["node", "angular", "css3"]
+            technos2: ["node", "angular", "css3"],
+            missions: [
+                "projects_project_5_mission_1",
+                "projects_project_5_mission_2",
+                "projects_project_5_mission_3",
+                "projects_project_5_mission_4",
+                "projects_project_5_mission_5"
+            ]
         },
         {
             id: 5,
@@ -91,7 +129,14 @@ function projectsController() {
             center: [45.501689, -73.567256],
             zoom: 10,
             technos1: ["node large", "angular ", "css3"],
-            technos2: ["node", "angular", "css3"]
+            technos2: ["node", "angular", "css3"],
+            missions: [
+                "projects_project_6_mission_1",
+                "projects_project_6_mission_2",
+                "projects_project_6_mission_3",
+                "projects_project_6_mission_4",
+                "projects_project_6_mission_5"
+            ]
         }
     ];
 

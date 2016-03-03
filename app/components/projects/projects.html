@@ -10,38 +10,37 @@
         <div layout="column" layout-gt-sm="row">
             <div flex="60" layout="column" class="description-container">
                 <div>
-                    <h2 translate="{{projectController.project.name}}"></h2>
-                    <h4 translate="{{projectController.project.subtitle}}" ></h4>
+                    <h2 class="title" translate="{{projectController.project.name}}"></h2>
+                    <!--<h4 translate="{{projectController.project.subtitle}}" ></h4>-->
                     <p translate="{{projectController.project.description}}" ></p>
                 </div>
                 <div>
                     <h4 translate="{{projectController.project.subtitle2}}" ></h4>
                     <p translate="{{projectController.project.description2}}"></p>
+                    <ul class="list-missions">
+                        <li ng-repeat="mission in projectController.project.missions track by $index" translate="{{mission}}" ng-if="mission.length"></li>
+                    </ul>
                 </div>
             </div>
             <div flex="5"></div>
             <div flex="35" layout-gt-sm="column" layout-sm="row" layout-align="space-between"
                  layout-align-gt-sm="space-around" class="images-container">
-                <div flex class="angular-google-map-container md-whiteframe-z2 ">
-                    <ng-map center="{{projectController.project.center}}" zoom="{{projectController.project.zoom}}">
+                <div flex class="angular-google-map-container ">
+                    <ng-map class="map md-whiteframe-z2" center="{{projectController.project.center}}" zoom="{{projectController.project.zoom}}">
                         <marker position="{{projectController.project.marker}}"></marker>
                     </ng-map>
                 </div>
 
-                <div flex layout="column" layout-align="start center" layout-margin
-                     class="skills-container">
+                <div flex layout-align="start center" layout-margin class="skills-container">
                     <h4>{{'projects_technical_subtitle' | translate}}</h4>
-                    <div layout="column" layout-align="center stretch">
-                        <div layout="row" flex>
-
-                            <div ng-class="techno1" class="technical"
-                                 ng-repeat="techno1 in projectController.project.technos1"></div>
-                        </div>
-                        <div layout="row" flex>
-                            <div ng-class="techno2" class="technical"
-                                 ng-repeat="techno2 in projectController.project.technos2"></div>
-                        </div>
-                    </div>
+                    <md-grid-list
+                                  md-cols="6"
+                                  md-row-height="1:1"
+                                  md-gutter="10px">
+                        <md-grid-tile class="tile" ng-class="techno.image" ng-repeat="techno in projectController.project.technos track by $index"
+                                      md-rowspan="{{techno.row}}" md-colspan="{{techno.col}}">
+                        </md-grid-tile>
+                    </md-grid-list>
                 </div>
             </div>
         </div>
