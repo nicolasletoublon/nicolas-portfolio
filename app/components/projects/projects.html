@@ -10,12 +10,12 @@
         <div layout="column" layout-gt-sm="row">
             <div flex="60" layout="column" class="description-container">
                 <div>
-                    <h2 class="title" translate="{{projectController.project.name}}"></h2>
-                    <!--<h4 translate="{{projectController.project.subtitle}}" ></h4>-->
+                    <h2 class="no-margin" translate="{{projectController.project.name}}"></h2>
+                    <h4 class="no-margin light subtitle" translate="{{projectController.project.subtitle}}" ></h4>
                     <p translate="{{projectController.project.description}}" ></p>
                 </div>
                 <div>
-                    <h4 translate="{{projectController.project.subtitle2}}" ></h4>
+                    <h3 class="no-margin" translate="{{projectController.project.subtitle2}}" ></h3>
                     <p translate="{{projectController.project.description2}}"></p>
                     <ul class="list-missions">
                         <li ng-repeat="mission in projectController.project.missions track by $index" translate="{{mission}}" ng-if="mission.length"></li>
@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div flex="5"></div>
-            <div flex="35" layout-gt-sm="column" layout-sm="row" layout-align="space-between"
+            <div flex="35" hide-sm hide-xs layout-gt-sm="column" layout-sm="row" layout-align="space-between"
                  layout-align-gt-sm="space-around" class="images-container">
                 <div flex class="angular-google-map-container ">
                     <ng-map class="map md-whiteframe-z2" center="{{projectController.project.center}}" zoom="{{projectController.project.zoom}}">
@@ -31,11 +31,11 @@
                     </ng-map>
                 </div>
 
-                <div flex layout-align="start center" layout-margin class="skills-container">
-                    <h4>{{'projects_technical_subtitle' | translate}}</h4>
+                <div flex layout-align="start center" class="skills-container">
+                    <h3>{{'projects_technical_subtitle' | translate}}</h3>
                     <md-grid-list
-                                  md-cols="6"
-                                  md-row-height="1:1"
+                                  md-cols="5"
+                                  md-row-height="1:2"
                                   md-gutter="10px">
                         <md-grid-tile class="tile" ng-class="techno.image" ng-repeat="techno in projectController.project.technos track by $index"
                                       md-rowspan="{{techno.row}}" md-colspan="{{techno.col}}">

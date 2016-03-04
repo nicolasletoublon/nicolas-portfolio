@@ -26,10 +26,10 @@ function projectsController() {
             center: [44.774036, -0.706215],
             zoom: 9,
             technos: [
-                {image: "ionic", col: 2, row: 2 },
-                {image: "gfh", col: 2, row: 2},
-                {image: "ionghfghfgic", col: 2, row: 2},
-                {image: "ionfghfghic", col: 2, row: 2}],
+                {image: "play", col: 3, row: 1 },
+                {image: "mongo", col: 2, row: 1},
+                {image: "css3", col: 2, row: 1},
+                {image: "java", col: 3, row: 1}],
             missions: [
                 "projects_project_1_mission_1",
                 "projects_project_1_mission_2",
@@ -46,10 +46,13 @@ function projectsController() {
             subtitle2: 'projects_project_2_second_part_title',
             description2: 'projects_project_2_second_part_text',
             marker: [44.837789, -0.57918],
-            center: [44.837789, -0.57918],
+            center: [44.774036, -0.706215],
             zoom: 10,
-            technos1: ["node large", "angular ", "css3"],
-            technos2: ["node", "angular", "css3"],
+            technos: [
+                {image: "flex", col: 2, row: 1 },
+                {image: "java", col: 3, row: 1},
+                {image: "postgres", col: 2, row: 1},
+                {image: "blazeds", col: 3, row: 1}],
             missions: [
                 "projects_project_2_mission_1",
                 "projects_project_2_mission_2",
@@ -66,10 +69,13 @@ function projectsController() {
             subtitle2: 'projects_project_3_second_part_title',
             description2: 'projects_project_3_second_part_text',
             marker: [44.837789, -0.57918],
-            center: [44.837789, -0.57918],
+            center: [44.774036, -0.706215],
             zoom: 10,
-            technos1: ["node large", "angular ", "css3"],
-            technos2: ["node", "angular", "css3"],
+            technos: [
+                {image: "play", col: 3, row: 1 },
+                {image: "mongo", col: 2, row: 1},
+                {image: "css3", col: 2, row: 1},
+                {image: "java", col: 3, row: 1}],
             missions: [
                 "projects_project_3_mission_1",
                 "projects_project_3_mission_2",
@@ -86,10 +92,13 @@ function projectsController() {
             subtitle2: 'projects_project_4_second_part_title',
             description2: 'projects_project_4_second_part_text',
             marker: [44.837789, -0.57918],
-            center: [44.837789, -0.57918],
+            center: [44.774036, -0.706215],
             zoom: 10,
-            technos1: ["node large", "angular ", "css3"],
-            technos2: ["node", "angular", "css3"],
+            technos: [
+                {image: "play", col: 3, row: 1 },
+                {image: "mongo", col: 2, row: 1},
+                {image: "css3", col: 2, row: 1},
+                {image: "java", col: 3, row: 1}],
             missions: [
                 "projects_project_4_mission_1",
                 "projects_project_4_mission_2",
@@ -106,10 +115,13 @@ function projectsController() {
             subtitle2: 'projects_project_5_second_part_title',
             description2: 'projects_project_5_second_part_text',
             marker: [44.837789, -0.57918],
-            center: [44.837789, -0.57918],
+            center: [44.774036, -0.706215],
             zoom: 10,
-            technos1: ["node large", "angular ", "css3"],
-            technos2: ["node", "angular", "css3"],
+            technos: [
+                {image: "play", col: 3, row: 1 },
+                {image: "mongo", col: 2, row: 1},
+                {image: "css3", col: 2, row: 1},
+                {image: "java", col: 3, row: 1}],
             missions: [
                 "projects_project_5_mission_1",
                 "projects_project_5_mission_2",
@@ -128,8 +140,11 @@ function projectsController() {
             marker: [45.501689, -73.567256], //montreal
             center: [45.501689, -73.567256],
             zoom: 10,
-            technos1: ["node large", "angular ", "css3"],
-            technos2: ["node", "angular", "css3"],
+            technos: [
+                {image: "play", col: 3, row: 1 },
+                {image: "mongo", col: 2, row: 1},
+                {image: "css3", col: 2, row: 1},
+                {image: "java", col: 3, row: 1}],
             missions: [
                 "projects_project_6_mission_1",
                 "projects_project_6_mission_2",
