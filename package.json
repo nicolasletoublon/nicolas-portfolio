@@ -25,7 +25,8 @@
     "karma": "^0.13.19",
     "karma-chrome-launcher": "^0.2.2",
     "karma-jasmine": "^0.3.6",
-    "live-server": "^0.9.1"
+    "live-server": "^0.9.1",
+    "webpack": "^1.12.14"
   },
   "scripts": {
     "prestart": "npm update",
