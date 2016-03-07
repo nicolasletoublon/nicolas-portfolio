@@ -73585,6 +73585,7 @@
 	'use strict';
 	var angular = __webpack_require__(1);
 	__webpack_require__(16);
+	var $ = __webpack_require__(3);
 
 	function navigationDirective() {
 	    return {
@@ -74427,7 +74428,8 @@
 	            "type": "stories_story_1_type",
 	            "shortDescription": "stories_story_1_description",
 	            "grade": "",
-	            "typeId": "edu"
+	            "typeId": "edu",
+	            "icon": "school"
 	        }, {
 	            "name": "stories_story_2_firm",
 	            "template": "exia",
@@ -74439,6 +74441,7 @@
 	            "shortDescription": "stories_story_2_description",
 	            "grade": "Software Engineer",
 	            "typeId": "edu",
+	            "icon": "school",
 	            "projects": [{
 	                "name": "Falcon",
 	                "period": "feb-march",
@@ -74456,7 +74459,8 @@
 	            "website": "www.eurogiciel.com",
 	            "shortDescription": "stories_story_3_description",
 	            "job-title": "Web software engineer",
-	            "typeId": "job",
+	            "typeId": "stage",
+	            "icon": "account_circle",
 	            "projects": [{
 	                "name": "Plan de charges",
 	                "description": "dfjdlj gdfkjgldkfkdfgkldglkdfgdflgld",
@@ -74475,6 +74479,7 @@
 	            "shortDescription": "stories_story_4_description",
 	            "job-title": "Web software engineer",
 	            "typeId": "job",
+	            "icon": "work",
 	            "projects": [{
 	                "name": "Plan de charges",
 	                "description": "dfjdlj gdfkjgldkfkdfgkldgldshfkjdshfjk sdfsdh ds fsdh fkjdshfjsdf jksd hkdfgdflgld",
@@ -74500,6 +74505,7 @@
 	            "shortDescription": "stories_story_5_description",
 	            "job-title": "Web software engineer",
 	            "typeId": "job",
+	            "icon": "work",
 	            "projects": [{
 	                "name": "Falcon",
 	                "period": "feb-march",
@@ -78004,14 +78010,12 @@
 	    var self = this;
 
 	    self.littleLogos = [
-	        {href: "http://ionicframework.com/", image: "ionic", col: 6, row: 2},
 	        {href: "https://angularjs.org/", image: "angular", col: 2, row: 2},
 	        {href: "http://stackoverflow.com/questions/796087/make-a-div-into-a-link", image: "react", col: 2, row: 2},
 	        {href: "http://gruntjs.com/", image: "grunt", col: 2, row: 2},
 	        {href: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3", image: "css3", col: 2, row: 2},
 	        {href: "https://www.mongodb.org/", image: "mongo", col: 2, row: 2},
-	        {href: "http://www.material-ui.com/#/", image: "mui", col: 2, row: 2},
-	        {href: "https://nodejs.org/en/", image: "node", col: 6, row: 2}
+	        {href: "http://www.material-ui.com/#/", image: "mui", col: 2, row: 2}
 	    ];
 
 	    self.bigLogos = [

@@ -137,7 +137,7 @@
   "skills_box_title": "Competences",
   "skills_box_subtitle": "connaissances & expertises",
   "skills_knowledge_title": "Connaissances",
-  "skills_knowledge_text": "Ayant travaille plusieurs annees comme ingenieur Full-stack, me permettant d'aborder des frameworks back-end Php (Zend), Java (Spring, Play) ou encore C# (ASP MVC), puis front-end avec <b><i>AngularJS</i></b>, <b><i>Ionic</i></b> ou <i>ReactJS</i>, j'ai pu me faire une idee du domaine m'attirant le plus. Mon gout pour la creation a sans doute joue un role, et c'est sans hesitation que je me suis tourne vers les technologies Front-end, permettant aujourd'hui de creer des applications web et mobiles de A a Z.",
+  "skills_knowledge_text": "Ayant travaille plusieurs annees comme ingenieur Full-stack, me permettant d'aborder des frameworks back-end <i>Php (Zend), Java (Spring, Play)</i> ou encore <i>C# (ASP MVC)</i>, puis front-end avec <b><i>AngularJS</i></b>, <b><i>Ionic</i></b> ou <b><i>ReactJS</i></b>, j'ai pu me faire une idee du domaine m'attirant le plus. Mon gout pour la creation a sans doute joue un role, et c'est sans hesitation que je me suis tourne vers les technologies Front-end, permettant aujourd'hui de creer des applications web et mobiles de A a Z.",
   "skills_knowledge_1": "Application Web",
   "skills_knowledge_2": "Frameworks Front-end",
   "skills_knowledge_3": "Services Web REST",

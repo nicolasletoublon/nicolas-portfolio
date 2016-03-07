@@ -80,7 +80,8 @@ function storyService() {
             "type": "stories_story_1_type",
             "shortDescription": "stories_story_1_description",
             "grade": "",
-            "typeId": "edu"
+            "typeId": "edu",
+            "icon": "school"
         }, {
             "name": "stories_story_2_firm",
             "template": "exia",
@@ -92,6 +93,7 @@ function storyService() {
             "shortDescription": "stories_story_2_description",
             "grade": "Software Engineer",
             "typeId": "edu",
+            "icon": "school",
             "projects": [{
                 "name": "Falcon",
                 "period": "feb-march",
@@ -109,7 +111,8 @@ function storyService() {
             "website": "www.eurogiciel.com",
             "shortDescription": "stories_story_3_description",
             "job-title": "Web software engineer",
-            "typeId": "job",
+            "typeId": "stage",
+            "icon": "account_circle",
             "projects": [{
                 "name": "Plan de charges",
                 "description": "dfjdlj gdfkjgldkfkdfgkldglkdfgdflgld",
@@ -128,6 +131,7 @@ function storyService() {
             "shortDescription": "stories_story_4_description",
             "job-title": "Web software engineer",
             "typeId": "job",
+            "icon": "work",
             "projects": [{
                 "name": "Plan de charges",
                 "description": "dfjdlj gdfkjgldkfkdfgkldgldshfkjdshfjk sdfsdh ds fsdh fkjdshfjsdf jksd hkdfgdflgld",
@@ -153,6 +157,7 @@ function storyService() {
             "shortDescription": "stories_story_5_description",
             "job-title": "Web software engineer",
             "typeId": "job",
+            "icon": "work",
             "projects": [{
                 "name": "Falcon",
                 "period": "feb-march",

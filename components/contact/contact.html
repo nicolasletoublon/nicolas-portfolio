@@ -10,22 +10,23 @@
         <form flex layout="column" layout-align="start stretch" class="form-container" name="contact-form">
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
-                    <input required ng-model="contact.user.name"
+                    <input aria-label="{{contact.form.name | translate}}" required ng-model="contact.user.name"
                            data-placeholder="{{contact.form.name | translate}}"  >
                 </md-input-container>
                 <div flex="5" hide-xs hide-sm>
                 </div>
                 <md-input-container class="md-block" flex-gt-sm>
-                    <input required ng-model="contact.user.email" type="email" data-placeholder="{{contact.form.email | translate}}">
+                    <input required aria-label="{{contact.form.email | translate}}" ng-model="contact.user.email" type="email" data-placeholder="{{contact.form.email | translate}}">
                 </md-input-container>
             </div>
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
-                    <input required ng-model="contact.user.subject" data-placeholder="{{contact.form.subject | translate}}">
+                    <input required aria-label="{{contact.form.subject | translate}}" ng-model="contact.user.subject" data-placeholder="{{contact.form.subject | translate}}">
                 </md-input-container>
             </div>
             <md-input-container class="md-block">
                 <textarea required
+                          aria-label="{{contact.form.message | translate}}"
                           data-placeholder="{{contact.form.message | translate}}"
                           ng-model="contact.user.message"
                           md-maxlength="500"

@@ -5,5 +5,5 @@ tmp
 .DS_Store
 /node_modules
 .idea
-app/assets/styles/css
-app/jspm_packages
+/assets/styles/css
+jspm_packages

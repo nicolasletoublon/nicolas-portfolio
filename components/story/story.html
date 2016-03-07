@@ -15,12 +15,6 @@
                     <p class="subtitle firm" translate="{{story.name}}"></p>
                     <p class="subtitle location" translate="{{story.localisation}}"></p>
                     <p class="description" translate="{{story.shortDescription}}" ng-show="story.active"></p>
-                    <!--<md-button aria-label="Show more info about this story in a modal"
-                               ng-click="storyCtrl.showAdvanced($event,story)"
-                               ng-show="story.active && story.shortDescription.length"
-                               class="custom-button read-more-button">
-                        {{ 'stories_button_read_more' | translate}}
-                    </md-button>-->
                 </div>
                 <div flex="20" layout="column" layout-align="center center" class="year-container">
                     <div tabindex="0" data-ng-focus="story.focus" role="button"
@@ -47,12 +41,6 @@
                     <p class="subtitle firm" translate="{{story.name}}"></p>
                     <p class="subtitle location" translate="{{story.localisation}}"></p>
                     <p class="description" ng-show="story.active" translate="{{story.shortDescription}}"></p>
-                    <!--<md-button aria-label="Show more info about this story in a modal"
-                               ng-click="storyCtrl.showAdvanced($event, story)"
-                               ng-show="story.active && story.shortDescription.length"
-                               class="custom-button read-more-button">
-                        {{ 'stories_button_read_more' | translate}}
-                    </md-button>-->
                 </div>
             </div>
         </div>
@@ -61,25 +49,12 @@
             <md-list-item aria-label="Display more info about the story" class="secondary-button-padding list-item"
                           ng-click="storyCtrl.activateStory(story)"
                           ng-repeat="story in storyCtrl.stories">
-                <i ng-if="story.typeId === 'edu'" class="icon material-icons">school</i>
-                <i ng-if="story.typeId !== 'edu'" class="icon material-icons">business_center</i>
+                <i class="icon material-icons" ng-bind="story.icon"></i>
                 <div class="story-description-container" ng-click="angular.noop()">
                     <h3 class="title" translate="{{story.highligh}}"></h3>
                     <p class="subtitle firm" translate="{{story.name}}"></p>
                     <p class="subtitle location" translate="{{story.localisation}}"></p>
                     <p ng-show="story.active" translate="{{story.shortDescription}}" class="description" ng-class="{'active' : story.active}"></p>
-                    <!--<md-button aria-label="Show more info about this story in a modal" hide-xs
-                               ng-click="storyCtrl.showAdvanced($event, story)"
-                               ng-if="story.active && story.shortDescription.length"
-                               class="custom-button read-more-button">
-                        {{ 'stories_button_read_more' | translate}}
-                    </md-button>
-                    <md-button aria-label="Show more info about this story in a modal" hide-gt-xs
-                               ng-click="storyCtrl.showPanel('story-side', story)"
-                               ng-if="story.active && story.shortDescription.length"
-                               class="custom-button read-more-button">
-                        {{ 'stories_button_read_more' | translate}}
-                    </md-button>-->
                 </div>
                 <md-button aria-label="Display more info about the story" aria-hidden="true" tabindex="-1"
                            class="md-secondary year-button custom-button" ng-disabled="true"
@@ -87,13 +62,6 @@
             </md-list-item>
         </md-list>
     </div>
-
-    <md-sidenav class="md-sidenav-right md-whiteframe-z2 " md-component-id="story-side">
-        <div layout-margin layout-align="space-around center" layout="column" class="story-container-side">
-            {{storyCtrl.story.country}}
-        </div>
-    </md-sidenav>
-
 </div>
 
 

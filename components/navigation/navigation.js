@@ -1,6 +1,7 @@
 'use strict';
 var angular = require('angular');
 require('angular-scroll');
+var $ = require('jquery');
 
 function navigationDirective() {
     return {
