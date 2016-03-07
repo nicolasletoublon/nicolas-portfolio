@@ -27,26 +27,8 @@
             </md-button>
         </div>
         <div hide-xs hide-sm flex="5"></div>
-        <div hide-xs hide-sm flex="35" layout="column" layout-align="space-around center" class="picture-container">
-            <div class="picture">
-                <img src="../../assets/img/home/profile-picture.png"/>
-            </div>
-            <div layout="column" layout-align="start center" class="description-container">
-                <h3 class="title">
-                    {{ 'profile_picture_title' | translate }}<br>
-                    <b><span class="subtitle">{{ 'profile_picture_subtitle' | translate }}</span></b><br>
-                    <span class="job">{{ 'profile_picture_job' | translate }}</span>
-                </h3>
-                <p class="subtitle">{{ 'profile_picture_description' | translate }}</p>
-            </div>
-            <div layout="row" class="links-container">
-                <div class="link">
-                    <img class="linkedin-picture"/>
-                </div>
-                <div class="link ">
-                    <img class="github-picture"/>
-                </div>
-            </div>
+        <div hide-xs hide-sm flex="35" class="picture-container">
+            <right-profile layout="column" layout-align="space-around center" ></right-profile>
         </div>
         <div hide-gt-sm flex="0" class="sticked-container">
             <md-button aria-label="Show more info about me" class="md-raised custom-button sticked-button "
@@ -56,26 +38,8 @@
         </div>
     </div>
     <md-sidenav class="md-sidenav-right md-whiteframe-z2 " md-component-id="picture-side">
-        <div layout-margin layout-align="space-around center" layout="column" class="picture-container-side">
-            <div class="picture">
-                <img src="../../assets/img/home/profile-picture.png"/>
-            </div>
-            <div layout="column" layout-align="start center" class="description-container">
-                <h3 class="title">
-                    {{ 'profile_picture_title' | translate }}<br>
-                    <b><span class="subtitle">{{ 'profile_picture_subtitle' | translate }}</span></b><br>
-                    <span class="job">{{ 'profile_picture_job' | translate }}</span>
-                </h3>
-                <p class="subtitle">{{ 'profile_picture_description' | translate }}</p>
-            </div>
-            <div layout="row" class="links-container">
-                <div class="link">
-                    <img class="linkedin-picture"/>
-                </div>
-                <div class="link ">
-                    <img class="github-picture"/>
-                </div>
-            </div>
+        <div class="picture-container-side">
+            <right-profile layout-margin layout-align="space-around center" layout="column"></right-profile>
         </div>
     </md-sidenav>
 </div>

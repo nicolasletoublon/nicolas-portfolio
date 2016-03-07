@@ -7,7 +7,7 @@ body {
   font-family: 'Roboto', "Helvetica Neue", sans-serif;
 
   header-dir {
-    background: url('../../img/home/pic-light2.jpg') no-repeat center;
+    background: url('../../img/home/home.jpg') no-repeat center;
     background-size: cover;
     height: 650px;
     position: relative;
@@ -89,13 +89,20 @@ body {
         margin: 40px 0;
       }
     }
-    contact {
+
+    /*contact {
       background: url('../../img/mappemonde.png') no-repeat center;
       background-size: 130%;
+    }*/
+
+    #montreal-wide {
+      background: url('../../img/montreal-bw.JPG') no-repeat center;
+      background-size: cover;
+      height: 500px;
     }
 
-    interest {
-      background: url('../../img/montreal-bw.JPG') no-repeat center;
+    #bordeaux-wide {
+      background: url('../../img/bordeaux-bw.JPG') no-repeat center;
       background-size: cover;
       height: 500px;
     }
@@ -113,7 +120,7 @@ body {
 }
 
 @media (min-width: 480px) and (max-width: 840px) {
-  interest {
+  #montreal-wide, #bordeaux-wide {
     height: 400px !important;
   }
 

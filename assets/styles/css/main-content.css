@@ -8,7 +8,7 @@ body {
 }
 html header-dir,
 body header-dir {
-  background: url('../../img/home/pic-light2.jpg') no-repeat center;
+  background: url('../../img/home/home.jpg') no-repeat center;
   background-size: cover;
   height: 650px;
   position: relative;
@@ -49,6 +49,13 @@ html .locale-container .md-icon-button.france:hover,
 body .locale-container .md-icon-button.france:hover {
   background: url('../../img/countries/France.png') no-repeat center;
   background-size: contain;
+}
+html .main-content,
+body .main-content {
+  /*contact {
+      background: url('../../img/mappemonde.png') no-repeat center;
+      background-size: 130%;
+    }*/
 }
 html .main-content .section-separator,
 body .main-content .section-separator {
@@ -100,14 +107,15 @@ html .main-content .content-container .content-body,
 body .main-content .content-container .content-body {
   margin: 40px 0;
 }
-html .main-content contact,
-body .main-content contact {
-  background: url('../../img/mappemonde.png') no-repeat center;
-  background-size: 130%;
-}
-html .main-content interest,
-body .main-content interest {
+html .main-content #montreal-wide,
+body .main-content #montreal-wide {
   background: url('../../img/montreal-bw.JPG') no-repeat center;
+  background-size: cover;
+  height: 500px;
+}
+html .main-content #bordeaux-wide,
+body .main-content #bordeaux-wide {
+  background: url('../../img/bordeaux-bw.JPG') no-repeat center;
   background-size: cover;
   height: 500px;
 }
@@ -123,7 +131,8 @@ body .main-content interest {
   }
 }
 @media (min-width: 480px) and (max-width: 840px) {
-  interest {
+  #montreal-wide,
+  #bordeaux-wide {
     height: 400px !important;
   }
   header-dir {
