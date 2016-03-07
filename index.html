@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nicolas App</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css"/>
+
+    <link rel="stylesheet" href="assets/styles/css/global.css"/>
+    <link rel="stylesheet" href="assets/styles/css/header.css"/>
+    <link rel="stylesheet" href="assets/styles/css/navigation.css"/>
+    <link rel="stylesheet" href="assets/styles/css/main-content.css"/>
+    <link rel="stylesheet" href="assets/styles/css/profile.css"/>
+    <link rel="stylesheet" href="assets/styles/css/story.css"/>
+    <link rel="stylesheet" href="assets/styles/css/contact.css"/>
+    <link rel="stylesheet" href="assets/styles/css/skills.css"/>
+    <link rel="stylesheet" href="assets/styles/css/footer.css"/>
+    <link rel="stylesheet" href="assets/styles/css/frameworks.css"/>
+    <link rel="stylesheet" href="assets/styles/css/interest.css"/>
+    <link rel="stylesheet" href="assets/styles/css/projects.css"/>
+
+    <style type="text/css">
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak] {
+            display: none !important;
+        }
+    </style>
+
+</head>
+
+<body data-ng-strict-di ng-app="Application" ng-controller="ApplicationController" layout="column" ng-cloak
+      layout-align="start stretch">
+<header-dir id="anchor-home" ng-if="true"></header-dir>
+<navigation></navigation>
+<div class="locale-container" layout-margin layout="row" layout-align="end">
+    <md-button class="canada md-icon-button md-primary" aria-label="Change language to English"
+               ng-click="changeLanguage('en_EN')">
+    </md-button>
+    <md-button class="france md-icon-button md-primary" aria-label="Change language to French"
+               ng-click="changeLanguage('fr_FR')">
+    </md-button>
+</div>
+<div role="main" class="main-content">
+    <profile id="anchor-profile" ng-if="true" layout="column" layout-align="start center"></profile>
+    <div ng-if="true" class="section-separator"></div>
+    <story id="anchor-stories" ng-if="true" layout="column" layout-align="start center"></story>
+    <interest ng-if="true" layout="column" layout-align="start center"></interest>
+    <projects id="anchor-projects" ng-if="true" layout="column"
+                        layout-align="start center"></projects>
+    <div ng-if="true" class="section-separator"></div>
+    <skills id="anchor-skills" ng-if="true" layout="column" layout-align="start center"></skills>
+    <frameworks ng-if="true" layout="column" layout-align="start center"></frameworks>
+    <contact id="anchor-contact" ng-if="true" layout="column" layout-align="start center"></contact>
+</div>
+<footer-dir ng-if="true"></footer-dir>
+<script type="text/javascript" src="bundle.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+</body>
+</html>

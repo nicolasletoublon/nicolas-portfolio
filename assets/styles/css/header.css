@@ -1,0 +1,29 @@
+.intro-container {
+  color: white;
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+}
+.intro-container .intro-separator {
+  height: 1px;
+  background-color: white;
+  width: 25%;
+  margin: 20px 0;
+}
+.intro-container .intro-subtitle {
+  width: 70%;
+  font-weight: normal;
+}
+@media (max-width: 840px) {
+  .intro-title {
+    font-size: 24px;
+  }
+  .intro-subtitle {
+    font-size: 20px;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .intro-container {
+    display: none;
+  }
+}

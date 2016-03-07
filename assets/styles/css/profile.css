@@ -1,0 +1,104 @@
+[data-component='profile-component'] {
+  margin: 20px 0 0 0;
+}
+[data-component='profile-component'] .title-box .icon {
+  top: 2px;
+  left: 1px;
+}
+[data-component='profile-component'] .content-body .text-container .download-cv-btn {
+  margin-top: 50px;
+}
+[data-component='profile-component'] .content-body .sticked-container {
+  margin: 0;
+  position: relative;
+}
+[data-component='profile-component'] .content-body .sticked-container .sticked-button {
+  position: absolute;
+  right: -8px;
+  top: 44%;
+}
+[data-component='profile-component'] .picture-container {
+  border: 1px solid #E2E2E2;
+}
+[data-component='profile-component'] .picture-container,
+[data-component='profile-component'] .picture-container-side {
+  padding: 80px 0 60px 0;
+  position: relative;
+  text-align: center;
+}
+[data-component='profile-component'] .picture-container .picture,
+[data-component='profile-component'] .picture-container-side .picture {
+  border: 1px solid #E2E2E2;
+  height: 200px;
+  width: 200px;
+  transform: rotate(45deg);
+}
+[data-component='profile-component'] .picture-container .picture img,
+[data-component='profile-component'] .picture-container-side .picture img {
+  width: 100%;
+  height: 100%;
+}
+[data-component='profile-component'] .picture-container .description-container .title,
+[data-component='profile-component'] .picture-container-side .description-container .title {
+  margin: 0;
+  padding-top: 60px;
+  font-weight: normal;
+}
+[data-component='profile-component'] .picture-container .description-container .title .job,
+[data-component='profile-component'] .picture-container-side .description-container .title .job {
+  font-variant: small-caps;
+  font-weight: 600;
+}
+[data-component='profile-component'] .picture-container .description-container .subtitle,
+[data-component='profile-component'] .picture-container-side .description-container .subtitle {
+  padding: 0 30px;
+}
+[data-component='profile-component'] .picture-container .links-container,
+[data-component='profile-component'] .picture-container-side .links-container {
+  padding-top: 30px;
+}
+[data-component='profile-component'] .picture-container .links-container .link,
+[data-component='profile-component'] .picture-container-side .links-container .link {
+  cursor: pointer;
+  transform: rotate(45deg);
+  margin: 0 20px;
+}
+[data-component='profile-component'] .picture-container .links-container .link img,
+[data-component='profile-component'] .picture-container-side .links-container .link img {
+  transition: transform 0.3s ease-in-out;
+  background-size: 40px;
+  width: 40px;
+  height: 40px;
+}
+[data-component='profile-component'] .picture-container .links-container .link img:hover,
+[data-component='profile-component'] .picture-container-side .links-container .link img:hover {
+  transform: rotate(-45deg);
+}
+[data-component='profile-component'] .picture-container .links-container .link .linkedin-picture,
+[data-component='profile-component'] .picture-container-side .links-container .link .linkedin-picture {
+  background-image: url('../../img/linkedin-logo-dark.png');
+}
+[data-component='profile-component'] .picture-container .links-container .link .linkedin-picture:hover,
+[data-component='profile-component'] .picture-container-side .links-container .link .linkedin-picture:hover {
+  background-image: url('../../img/linkedin-logo.png');
+}
+[data-component='profile-component'] .picture-container .links-container .link .github-picture,
+[data-component='profile-component'] .picture-container-side .links-container .link .github-picture {
+  background-image: url('../../img/github-logo-dark.png');
+}
+[data-component='profile-component'] .picture-container .links-container .link .github-picture:hover,
+[data-component='profile-component'] .picture-container-side .links-container .link .github-picture:hover {
+  background-image: url('../../img/github-logo.png');
+}
+@media (max-width: 600px) {
+  .picture-container-side .picture {
+    height: 150px !important;
+    width: 150px !important;
+  }
+  .picture-container-side .description-container .title {
+    padding-top: 30px !important;
+  }
+  .picture-container-side .links-container {
+    padding-top: 15px !important;
+  }
+}

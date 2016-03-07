@@ -1,4 +1,22 @@
-/*window.navigator.languages[0] = "fr";*/
+'use strict';
+var angular = require('angular');
+var $ = require('jquery');
+
+require('angular-material');
+require('angular-translate');
+require('angular-sanitize');
+require('angular-translate-loader-static-files');
+
+require('../components/header/header.js');
+require('../components/navigation/navigation.js');
+require('../components/profile/profile.js');
+require('../components/story/story.js');
+require('../components/interest/interest.js');
+require('../components/skills/skills.js');
+require('../components/projects/projects.js');
+require('../components/frameworks/frameworks.js');
+require('../components/contact/contact.js');
+require('../components/footer/footer.js');
 
 angular
     .module('Application',

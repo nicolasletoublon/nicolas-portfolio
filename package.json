@@ -9,8 +9,9 @@
     "angular-sanitize": "^1.5.0",
     "angular-scroll": "^1.0.0",
     "angular-translate": "^2.9.2",
-    "angular-translate-loader-static-files": "^2.9.2",
+    "angular-translate-loader-static-files": "^2.10.0",
     "bootstrap-material-design": "^0.5.8",
+    "google-maps-api": "^2.0.1",
     "jquery": "^2.2.0",
     "lodash": "^4.5.1",
     "ngmap": "^1.17.0"
@@ -30,6 +31,7 @@
   },
   "scripts": {
     "prestart": "npm update",
-    "tests": "karma start ./test/karma.conf.js"
+    "tests": "karma start ./test/karma.conf.js",
+    "build": "webpack"
   }
 }

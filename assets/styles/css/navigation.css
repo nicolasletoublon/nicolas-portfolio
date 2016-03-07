@@ -1,0 +1,68 @@
+#toolbar-nav {
+  background-color: white;
+  color: #262729;
+  display: flex;
+  justify-content: center;
+}
+.navbar-fixed {
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+}
+.navigation-toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navigation-toolbar .toolbar-container {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+}
+.navigation-toolbar .toolbar-container .brand-container {
+  background-color: #262729;
+  max-width: 235px;
+  min-width: 171px;
+}
+.navigation-toolbar .toolbar-container .brand-container .brand-name {
+  color: white;
+}
+.navigation-toolbar .toolbar-container .toolbar-tools {
+  flex: 1;
+}
+.navigation-toolbar .toolbar-container .toolbar-actions {
+  justify-content: flex-end;
+}
+.navigation-toolbar .toolbar-container .toolbar-actions.plain-title {
+  padding-right: 0;
+}
+.navigation-toolbar .toolbar-container .toolbar-actions .nav-button {
+  height: 100%;
+  padding: 0 10px;
+  margin: 0;
+  border-radius: 0;
+}
+.navigation-toolbar .toolbar-container .toolbar-actions .nav-button:hover,
+.navigation-toolbar .toolbar-container .toolbar-actions .nav-button.active {
+  border-bottom: 3px solid #262729;
+  background-color: rgba(158, 158, 158, 0.2);
+}
+.navigation-toolbar .toolbar-container .toolbar-actions .nav-icons {
+  min-width: 55px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.menu-side-panel .list-item:hover,
+.menu-side-panel .list-item.active {
+  border-left: 3px solid #262729;
+}
+.menu-side-panel .list-item:hover button,
+.menu-side-panel .list-item.active button {
+  background-color: rgba(158, 158, 158, 0.2);
+}
+.menu-side-panel .list-item .icon {
+  padding: 0 20px 0 0;
+  opacity: 0.7;
+}

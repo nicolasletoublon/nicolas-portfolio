@@ -1,0 +1,35 @@
+[data-component='skills-component'] {
+  margin: 50px 0 0 0;
+}
+[data-component='skills-component'] .title-box .icon {
+  top: 2px;
+  left: 3px;
+}
+[data-component='skills-component'] .content-body .knowledge-container .domains-container {
+  text-align: left;
+}
+[data-component='skills-component'] .content-body .knowledge-container md-icon {
+  margin-right: 5px;
+}
+[data-component='skills-component'] .content-body .expertise-container md-progress-circular,
+[data-component='skills-component'] .content-body .expertise-container md-progress-linear {
+  opacity: 0.6;
+}
+[data-component='skills-component'] .content-body .expertise-container .skill-container {
+  padding-top: 30px;
+  position: relative;
+  text-align: center;
+}
+[data-component='skills-component'] .content-body .expertise-container .skill-container .skill-second-bar {
+  opacity: .1;
+  top: 29px;
+  position: absolute;
+}
+[data-component='skills-component'] .content-body .expertise-container .skill-container .skill-number-label {
+  top: 36px;
+  left: 23px;
+  position: absolute;
+}
+[data-component='skills-component'] .content-body .expertise-container .framework-label {
+  margin: 20px 0 2px 0;
+}

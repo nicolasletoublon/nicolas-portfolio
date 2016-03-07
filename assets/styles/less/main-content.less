@@ -1,0 +1,129 @@
+html,
+body {
+  margin: 0;
+  height: auto;
+  color: #262729;
+  background-color: white;
+  font-family: 'Roboto', "Helvetica Neue", sans-serif;
+
+  header-dir {
+    background: url('../../img/home/pic-light2.jpg') no-repeat center;
+    background-size: cover;
+    height: 650px;
+    position: relative;
+  }
+
+  .locale-container {
+    width: 100%;
+    margin-right: 31px;
+    max-width: 1024px;
+    align-self: center;
+    .md-icon-button {
+      &.canada {
+        background: url('../../img/countries/Canada-bw.png') no-repeat center;
+        background-size: contain;
+        &:hover {
+          background: url('../../img/countries/Canada.png') no-repeat center;
+          background-size: contain;
+        }
+      }
+      &.france {
+
+        margin-left: 10px;
+        background: url('../../img/countries/France-bw.png') no-repeat center;
+        background-size: contain;
+        &:hover {
+          background: url('../../img/countries/France.png') no-repeat center;
+          background-size: contain;
+        }
+      }
+      margin: 0;
+      height: 0;
+      min-width: 0;
+      padding: 0;
+      width: 35px;
+      border-radius: 0;
+    }
+  }
+
+  .main-content {
+    .section-separator {
+      height: 400px;
+      background-color: #262729;
+    }
+    .content-container {
+      max-width: 1024px;
+      width: 100%;
+      .title-box {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .icon-container {
+          border: 1px solid #262729;
+          background-color: #262729;
+          width: 30px;
+          height: 30px;
+          transform: rotate(45deg);
+          .icon {
+            color: white;
+            transform: rotate(-45deg);
+            position: absolute;
+          }
+        }
+        .title {
+          margin: -16px 0 -12px 0;
+          padding: 25px 25px 15px 25px;
+          font-size: 35px;
+          border: 1px solid #CCCCCC;
+        }
+        .subtitle {
+          background-color: white;
+          padding: 0 15px;
+          margin: 0;
+          font-variant: small-caps;
+          font-weight: normal;
+        }
+      }
+      .content-body {
+        margin: 40px 0;
+      }
+    }
+    contact {
+      background: url('../../img/mappemonde.png') no-repeat center;
+      background-size: 130%;
+    }
+
+    interest {
+      background: url('../../img/montreal-bw.JPG') no-repeat center;
+      background-size: cover;
+      height: 500px;
+    }
+
+    frameworks, interest {
+      background-color: #262729;
+    }
+  }
+}
+
+@media (min-width: 840px) and (max-width: 1024px) {
+  header-dir {
+    height: 450px !important;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 840px) {
+  interest {
+    height: 400px !important;
+  }
+
+  header-dir {
+    height: 400px !important;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  header-dir {
+    height: 230px !important;
+  }
+}

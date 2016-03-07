@@ -1,0 +1,50 @@
+[data-component='projects-component'] {
+  margin: 50px 0 0 0;
+}
+[data-component='projects-component'] .angular-google-map-container .map {
+  min-height: 210px !important;
+  max-height: 210px !important;
+  border: 2px solid #262729;
+}
+[data-component='projects-component'] .title-box .icon {
+  top: 4px;
+  left: 4px;
+}
+[data-component='projects-component'] .content-body .change-project-button {
+  width: 100px;
+}
+[data-component='projects-component'] .content-body .change-project-button.right {
+  margin-left: 15px;
+  padding: 0 25px 0 25px;
+}
+[data-component='projects-component'] .content-body .change-project-button.right i {
+  left: 8px;
+}
+[data-component='projects-component'] .content-body .change-project-button.left {
+  padding: 0 20px 0 21px;
+}
+[data-component='projects-component'] .content-body .description-container .logos {
+  height: 100%;
+}
+[data-component='projects-component'] .content-body .description-container .title {
+  margin: 0;
+}
+[data-component='projects-component'] .content-body .description-container .subtitle {
+  padding-top: 5px;
+  font-style: oblique;
+  font-variant: small-caps;
+}
+[data-component='projects-component'] .content-body .description-container .list-missions {
+  text-align: left;
+  list-style: none;
+}
+[data-component='projects-component'] .content-body .images-container .skills-container .tile {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 600px) {
+  .list-missions {
+    padding-left: 25px;
+  }
+}

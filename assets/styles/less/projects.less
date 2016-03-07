@@ -1,0 +1,64 @@
+[data-component='projects-component'] {
+  margin: 50px 0 0 0;
+  .angular-google-map-container {
+    .map {
+      min-height: 210px !important;
+      max-height: 210px !important;
+      border: 2px solid #262729;
+    }
+  }
+  .title-box {
+    .icon {
+      top: 4px;
+      left: 4px;
+    }
+  }
+  .content-body {
+    .change-project-button {
+      width: 100px;
+      &.right {
+        margin-left: 15px;
+        padding: 0 25px 0 25px;
+        i {
+          left: 8px;
+        }
+      }
+      &.left {
+        padding: 0 20px 0 21px;
+      }
+    }
+    .description-container {
+
+      .logos {
+        height: 100%;
+      }
+      .title {
+        margin: 0;
+      }
+      .subtitle {
+        padding-top: 5px;
+        font-style: oblique;
+        font-variant: small-caps;
+      }
+      .list-missions {
+        text-align: left;
+        list-style: none;
+      }
+    }
+    .images-container {
+      .skills-container {
+        .tile {
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .list-missions {
+    padding-left: 25px;
+  }
+}

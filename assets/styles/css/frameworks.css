@@ -1,0 +1,30 @@
+[data-component='frameworks-component'].content-container {
+  position: relative;
+}
+[data-component='frameworks-component'] .square {
+  background-color: white;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+  top: -15px;
+  left: 48.5%;
+}
+[data-component='frameworks-component'] .content-body {
+  margin: 70px 30px 50px 30px;
+}
+[data-component='frameworks-component'] .content-body .logos {
+  height: 100%;
+}
+[data-component='frameworks-component'] .content-body .tile {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+[data-component='frameworks-component'] .content-body .tile .link {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

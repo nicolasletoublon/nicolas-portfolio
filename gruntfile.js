@@ -5,13 +5,13 @@ module.exports = function(grunt) {
         less: {
             development: {
                 options: {
-                    paths: ["app/assets/styles/"],
+                    paths: ["assets/styles/"]
                 },
                 files: [{
                         expand: true,
-                        cwd: 'app/assets/styles/less',
+                        cwd: 'assets/styles/less',
                         src: ['*.less'],
-                        dest: 'app/assets/styles/css/',
+                        dest: 'assets/styles/css/',
                         ext: '.css'
                     }
                 ]
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         watch: {
             styles: {
                 //files: ['../pres-common-container-fork/common/**'],
-                files: ['app/assets/styles/less/*.less'], // which files to watch
+                files: ['assets/styles/less/*.less'], // which files to watch
                 tasks: ['less'],
                 options: {
                     nospawn: true

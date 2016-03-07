@@ -1,0 +1,81 @@
+<div layout="column"
+     class="content-container"
+     data-component="profile-component">
+    <div class="title-box">
+        <div class="icon-container">
+            <i class="icon material-icons">person_outline</i>
+        </div>
+        <h2 class="title">{{ 'profile_box_title' | translate | uppercase }}</h2>
+        <h4 class="subtitle">{{ 'profile_box_subtitle' | translate }}</h4>
+    </div>
+    <div layout="row" layout-margin class="content-body">
+        <div flex layout="column" layout-align="space-between start" class="text-container">
+            <div flex layout="column" layout-align="space-around">
+                <div>
+                    <h2 class="first-title">{{ 'profile_first_title' | translate }}</h2>
+                    <p class="first-paragraph">{{ 'profile_first_description' | translate }}
+                    </p>
+                </div>
+                <div>
+                    <h2 class="second-title">{{ 'profile_second_title' | translate }}</h2>
+                    <p class="second-paragraph">{{ 'profile_second_description' | translate }}
+                    </p>
+                </div>
+            </div>
+            <md-button aria-label="Download my CV" class="custom-button md-primary md-raised download-cv-btn">
+                <i class="material-icons">cloud_download</i>{{ 'profile_button_download' | translate }}
+            </md-button>
+        </div>
+        <div hide-xs hide-sm flex="5"></div>
+        <div hide-xs hide-sm flex="35" layout="column" layout-align="space-around center" class="picture-container">
+            <div class="picture">
+                <img src="../../assets/img/home/profile-picture.png"/>
+            </div>
+            <div layout="column" layout-align="start center" class="description-container">
+                <h3 class="title">
+                    {{ 'profile_picture_title' | translate }}<br>
+                    <b><span class="subtitle">{{ 'profile_picture_subtitle' | translate }}</span></b><br>
+                    <span class="job">{{ 'profile_picture_job' | translate }}</span>
+                </h3>
+                <p class="subtitle">{{ 'profile_picture_description' | translate }}</p>
+            </div>
+            <div layout="row" class="links-container">
+                <div class="link">
+                    <img class="linkedin-picture"/>
+                </div>
+                <div class="link ">
+                    <img class="github-picture"/>
+                </div>
+            </div>
+        </div>
+        <div hide-gt-sm flex="0" class="sticked-container">
+            <md-button aria-label="Show more info about me" class="md-raised custom-button sticked-button "
+                       ng-click="profile.togglePicture('picture-side')">
+                <i class="material-icons">keyboard_arrow_left</i>
+            </md-button>
+        </div>
+    </div>
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2 " md-component-id="picture-side">
+        <div layout-margin layout-align="space-around center" layout="column" class="picture-container-side">
+            <div class="picture">
+                <img src="../../assets/img/home/profile-picture.png"/>
+            </div>
+            <div layout="column" layout-align="start center" class="description-container">
+                <h3 class="title">
+                    {{ 'profile_picture_title' | translate }}<br>
+                    <b><span class="subtitle">{{ 'profile_picture_subtitle' | translate }}</span></b><br>
+                    <span class="job">{{ 'profile_picture_job' | translate }}</span>
+                </h3>
+                <p class="subtitle">{{ 'profile_picture_description' | translate }}</p>
+            </div>
+            <div layout="row" class="links-container">
+                <div class="link">
+                    <img class="linkedin-picture"/>
+                </div>
+                <div class="link ">
+                    <img class="github-picture"/>
+                </div>
+            </div>
+        </div>
+    </md-sidenav>
+</div>
