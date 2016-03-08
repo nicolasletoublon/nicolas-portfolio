@@ -4,7 +4,7 @@ var angular = require('angular');
 function interestDirective() {
     return {
         restrict        : "E",
-        templateUrl     : "components/interest/interest.html",
+        templateUrl     : require('./interest.html'),
         bindToController: true,
         controllerAs    : "interest",
         controller      : 'interestController'

@@ -4,7 +4,7 @@ var angular = require('angular');
 function footerDirective() {
     return {
         restrict        : "E",
-        templateUrl     : "components/footer/footer.html",
+        templateUrl     : require('./footer.html'),
         bindToController: true,
         controllerAs    : "footer",
         controller      : 'footerController'

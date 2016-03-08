@@ -4,7 +4,7 @@ var angular = require('angular');
 function headerDirective() {
     return {
         restrict        : "E",
-        templateUrl     : "components/header/header.html",
+        templateUrl     : require('./header.html'),
         bindToController: true,
         controllerAs    : "header",
         controller      : 'headerController'

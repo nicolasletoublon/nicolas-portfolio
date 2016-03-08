@@ -97,6 +97,9 @@ li {
 }
 .grunt {
   background-image: url('../../img/frameworks/grunt-bw.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .grunt:hover {
   background-image: url('../../img/frameworks/grunt.png');
@@ -106,6 +109,9 @@ li {
 }
 .angular {
   background-image: url('../../img/frameworks/angular-bw.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .angular:hover {
   background-image: url('../../img/frameworks/angular.png');
@@ -115,6 +121,9 @@ li {
 }
 .react {
   background-image: url('../../img/frameworks/react-bw.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .react:hover {
   background-image: url('../../img/frameworks/react.png');
@@ -124,6 +133,9 @@ li {
 }
 .mui {
   background-image: url('../../img/frameworks/mui-bw.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .mui:hover {
   background-image: url('../../img/frameworks/mui.png');
@@ -133,6 +145,9 @@ li {
 }
 .mongo {
   background-image: url('../../img/frameworks/mongodb-bw.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .mongo:hover {
   background-image: url('../../img/frameworks/mongodb.png');
@@ -142,6 +157,9 @@ li {
 }
 .js {
   background-image: url('../../img/frameworks/js-bw.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .js:hover {
   background-image: url('../../img/frameworks/js.png');
@@ -151,6 +169,9 @@ li {
 }
 .ionic {
   background-image: url('../../img/frameworks/ionic-bw.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .ionic:hover {
   background-image: url('../../img/frameworks/ionic.png');
@@ -160,6 +181,9 @@ li {
 }
 .css3 {
   background-image: url('../../img/frameworks/css3-bw.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .css3:hover {
   background-image: url('../../img/frameworks/css3.png');
@@ -169,6 +193,9 @@ li {
 }
 .node {
   background-image: url('../../img/frameworks/node-bw.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .node:hover {
   background-image: url('../../img/frameworks/node.png');
@@ -178,6 +205,9 @@ li {
 }
 .play {
   background-image: url('../../img/frameworks/play.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .play:hover {
   background-image: url('../../img/frameworks/play.png');

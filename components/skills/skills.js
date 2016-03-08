@@ -4,7 +4,7 @@ var angular = require('angular');
 function skillsDirective() {
     return {
         restrict        : "E",
-        templateUrl     : "components/skills/skills.html",
+        templateUrl     : require('./skills.html'),
         bindToController: true,
         controllerAs    : "skills",
         controller      : 'skillsController'

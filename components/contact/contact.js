@@ -1,10 +1,9 @@
 'use strict';
 var angular = require('angular');
-
 function contactDirective() {
     return {
         restrict        : "E",
-        templateUrl     : "components/contact/contact.html",
+        templateUrl     : require('./contact.html'),
         bindToController: true,
         controllerAs    : "contact",
         controller      : 'contactController'

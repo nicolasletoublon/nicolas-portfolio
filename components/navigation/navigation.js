@@ -6,7 +6,7 @@ var $ = require('jquery');
 function navigationDirective() {
     return {
         restrict: "E",
-        templateUrl: "components/navigation/navigation.html",
+        templateUrl: require('./navigation.html'),
         bindToController: true,
         controllerAs: "navigation",
         controller: 'navigationController'

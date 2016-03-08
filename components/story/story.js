@@ -4,7 +4,7 @@ var angular = require('angular');
 function storyDirective() {
     return {
         restrict: "E",
-        templateUrl: "components/story/story.html",
+        templateUrl: require('./story.html'),
         bindToController: true,
         controllerAs: "storyCtrl",
         controller: 'storyController'

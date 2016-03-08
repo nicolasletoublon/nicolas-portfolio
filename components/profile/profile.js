@@ -5,7 +5,7 @@ var $ = require('jquery');
 function profileDirective() {
     return {
         restrict: "E",
-        templateUrl: "components/profile/profile.html",
+        templateUrl: require('./profile.html'),
         bindToController: true,
         controllerAs: "profile",
         controller: 'profileController'
@@ -25,7 +25,7 @@ function profileController($mdSidenav, $window) {
 function rightProfileDirective() {
     return {
         restrict: "E",
-        templateUrl: "components/profile/right-profile.html"
+        templateUrl: require('./right-profile.html')
     };
 }
 

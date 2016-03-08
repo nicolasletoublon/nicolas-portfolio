@@ -5,7 +5,7 @@ require('ngMap');
 function projectsDirective() {
     return {
         restrict: "E",
-        templateUrl: "components/projects/projects.html",
+        templateUrl: require('./projects.html'),
         bindToController: true,
         controllerAs: "projectController",
         controller: 'projectsController'

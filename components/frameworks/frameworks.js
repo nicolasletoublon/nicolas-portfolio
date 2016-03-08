@@ -4,7 +4,7 @@ var angular = require('angular');
 function frameworksDirective() {
     return {
         restrict        : "E",
-        templateUrl     : "components/frameworks/frameworks.html",
+        templateUrl     : require('./frameworks.html'),
         bindToController: true,
         controllerAs    : "frameworks",
         controller      : 'frameworksController'

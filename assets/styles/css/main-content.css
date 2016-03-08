@@ -36,7 +36,7 @@ body .locale-container .md-icon-button.canada {
 }
 html .locale-container .md-icon-button.canada:hover,
 body .locale-container .md-icon-button.canada:hover {
-  background: url('../../img/countries/Canada.png') no-repeat center;
+  background: url('../../img/countries/canada.png') no-repeat center;
   background-size: contain;
 }
 html .locale-container .md-icon-button.france,
@@ -109,13 +109,13 @@ body .main-content .content-container .content-body {
 }
 html .main-content #montreal-wide,
 body .main-content #montreal-wide {
-  background: url('../../img/montreal-bw.JPG') no-repeat center;
+  background: url('../../img/montreal-bw.jpg') no-repeat center;
   background-size: cover;
   height: 500px;
 }
 html .main-content #bordeaux-wide,
 body .main-content #bordeaux-wide {
-  background: url('../../img/bordeaux-bw.JPG') no-repeat center;
+  background: url('../../img/bordeaux-bw.jpg') no-repeat center;
   background-size: cover;
   height: 500px;
 }
