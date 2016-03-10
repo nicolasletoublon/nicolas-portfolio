@@ -10,6 +10,7 @@ require('angular-translate-loader-static-files');
 require('../components/header/header.js');
 require('../components/navigation/navigation.js');
 require('../components/profile/profile.js');
+require('../components/profile/right-profile.js');
 require('../components/story/story.js');
 require('../components/interest/interest.js');
 require('../components/skills/skills.js');
@@ -18,11 +19,10 @@ require('../components/frameworks/frameworks.js');
 require('../components/contact/contact.js');
 require('../components/footer/footer.js');
 
-var jsonFR = require('json!../i18n/locale-fr_FR');
-var jsonEN = require('json!../i18n/locale-en_EN');
 require('../assets/styles/css/app.css');
 
-
+var jsonFR = require('json!../i18n/locale-fr_FR');
+var jsonEN = require('json!../i18n/locale-en_EN');
 
 angular
     .module('Application',

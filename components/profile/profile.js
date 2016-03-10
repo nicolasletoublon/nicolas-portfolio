@@ -22,14 +22,6 @@ function profileController($mdSidenav, $window) {
     };
 }
 
-function rightProfileDirective() {
-    return {
-        restrict: "E",
-        templateUrl: require('./right-profile.html')
-    };
-}
-
-angular.module('Profile', [])
+angular.module('Profile', ['RightProfile'])
     .directive('profile', profileDirective)
-    .directive('rightProfile', rightProfileDirective)
     .controller('profileController', profileController);
