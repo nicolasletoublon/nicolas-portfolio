@@ -15,6 +15,7 @@ function projectsDirective() {
 projectsController.$inject = [];
 function projectsController() {
     var self = this;
+    self.apiKey = 'AIzaSyC49hRYpSCphd8z1Ahc8ThR4O_jlNOg9QA';
 
     var projects = [
         {
@@ -28,7 +29,7 @@ function projectsController() {
             center: [44.774036, -0.706215],
             zoom: 9,
             technos: [
-                {image: "play", col: 3, row: 1 },
+                {image: "play", col: 3, row: 1},
                 {image: "mongo", col: 2, row: 1},
                 {image: "css3", col: 2, row: 1},
                 {image: "java", col: 3, row: 1}],
@@ -51,7 +52,7 @@ function projectsController() {
             center: [44.774036, -0.706215],
             zoom: 10,
             technos: [
-                {image: "flex", col: 2, row: 1 },
+                {image: "flex", col: 2, row: 1},
                 {image: "java", col: 3, row: 1},
                 {image: "postgres", col: 2, row: 1},
                 {image: "blazeds", col: 3, row: 1}],
@@ -74,7 +75,7 @@ function projectsController() {
             center: [44.774036, -0.706215],
             zoom: 10,
             technos: [
-                {image: "play", col: 3, row: 1 },
+                {image: "play", col: 3, row: 1},
                 {image: "mongo", col: 2, row: 1},
                 {image: "css3", col: 2, row: 1},
                 {image: "java", col: 3, row: 1}],
@@ -97,7 +98,7 @@ function projectsController() {
             center: [44.774036, -0.706215],
             zoom: 10,
             technos: [
-                {image: "play", col: 3, row: 1 },
+                {image: "play", col: 3, row: 1},
                 {image: "mongo", col: 2, row: 1},
                 {image: "css3", col: 2, row: 1},
                 {image: "java", col: 3, row: 1}],
@@ -120,7 +121,7 @@ function projectsController() {
             center: [44.774036, -0.706215],
             zoom: 10,
             technos: [
-                {image: "play", col: 3, row: 1 },
+                {image: "play", col: 3, row: 1},
                 {image: "mongo", col: 2, row: 1},
                 {image: "css3", col: 2, row: 1},
                 {image: "java", col: 3, row: 1}],
@@ -143,7 +144,7 @@ function projectsController() {
             center: [45.501689, -73.567256],
             zoom: 10,
             technos: [
-                {image: "play", col: 3, row: 1 },
+                {image: "play", col: 3, row: 1},
                 {image: "mongo", col: 2, row: 1},
                 {image: "css3", col: 2, row: 1},
                 {image: "java", col: 3, row: 1}],

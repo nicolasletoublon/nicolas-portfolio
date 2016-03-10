@@ -7,7 +7,7 @@
         <h4 class="subtitle" ng-bind="'contact_box_subtitle' | translate"></h4>
     </div>
     <div flex layout-margin layout="row" layout-align="space-between" class="content-body">
-        <form flex layout="column" layout-align="start stretch" class="form-container" name="contact-form">
+        <form flex layout="column" layout-align="start stretch" class="form-container" name="contact-form" >
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
                     <input aria-label="{{contact.form.name | translate}}" required ng-model="contact.user.name"
@@ -33,8 +33,8 @@
                           rows="4"
                           md-select-on-focus></textarea>
             </md-input-container>
-            <md-button aria-label="Submit the contact form"
-                       class="md-raised md-primary custom-button send-message-button" type="submit">
+            <md-button aria-label="{{'contact_button_send' | translate}}"
+                       class="md-raised md-primary custom-button send-message-button" type="submit" ng-click="contact.send()">
                 <i class="material-icons icon">send</i> {{'contact_button_send' | translate}}
             </md-button>
         </form>

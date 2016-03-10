@@ -21,16 +21,13 @@ require('../components/footer/footer.js');
 
 require('../assets/styles/css/app.css');
 
-var jsonFR = require('json!../i18n/locale-fr_FR');
-var jsonEN = require('json!../i18n/locale-en_EN');
-
 angular
     .module('Application',
         ['ngMaterial', 'ngAria', 'ngSanitize', 'pascalprecht.translate', 'Header', 'Navigation', 'Profile', 'Story', 'Contact', 'Skills', 'Footer', 'Frameworks', 'Interest', 'Projects'])
     .config(["$mdThemingProvider", "$translateProvider", function ($mdThemingProvider, $translateProvider) {
 
-        $translateProvider.translations('en_EN', jsonEN);
-        $translateProvider.translations('fr_FR', jsonFR);
+        $translateProvider.translations('en_EN', require('json!../i18n/locale-en_EN'));
+        $translateProvider.translations('fr_FR', require('json!../i18n/locale-fr_FR'));
         $translateProvider.preferredLanguage('en_EN');
 
         $translateProvider.registerAvailableLanguageKeys(['en_EN', 'fr_FR'], {

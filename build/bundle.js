@@ -7703,30 +7703,28 @@
 	__webpack_require__(93);
 	__webpack_require__(95);
 	__webpack_require__(99);
-	__webpack_require__(102);
-	__webpack_require__(104);
-	__webpack_require__(106);
-	__webpack_require__(108);
-	__webpack_require__(111);
-	__webpack_require__(113);
-	__webpack_require__(115);
+	__webpack_require__(101);
+	__webpack_require__(103);
+	__webpack_require__(105);
+	__webpack_require__(107);
+	__webpack_require__(109);
+	__webpack_require__(112);
+	__webpack_require__(114);
+	__webpack_require__(116);
 
-	var json = __webpack_require__(117);
 	__webpack_require__(118);
-	/*require('angular-material');*/
-
-
 
 	angular
 	    .module('Application',
 	        ['ngMaterial', 'ngAria', 'ngSanitize', 'pascalprecht.translate', 'Header', 'Navigation', 'Profile', 'Story', 'Contact', 'Skills', 'Footer', 'Frameworks', 'Interest', 'Projects'])
 	    .config(["$mdThemingProvider", "$translateProvider", function ($mdThemingProvider, $translateProvider) {
 
+	        $translateProvider.translations('en_EN', __webpack_require__(151));
+	        $translateProvider.translations('fr_FR', __webpack_require__(152));
+	        $translateProvider.preferredLanguage('en_EN');
+
 	        $translateProvider.registerAvailableLanguageKeys(['en_EN', 'fr_FR'], {
 	            'en*': 'en_EN', 'fr*': 'fr_FR'
-	        });
-	        $translateProvider.useStaticFilesLoader({
-	            prefix: 'i18n/locale-', suffix: '.json'
 	        });
 	        $translateProvider.useSanitizeValueStrategy('sanitize');
 	        $translateProvider
@@ -82399,16 +82397,8 @@
 	    };
 	}
 
-	function rightProfileDirective() {
-	    return {
-	        restrict: "E",
-	        templateUrl: __webpack_require__(101)
-	    };
-	}
-
-	angular.module('Profile', [])
+	angular.module('Profile', ['RightProfile'])
 	    .directive('profile', profileDirective)
-	    .directive('rightProfile', rightProfileDirective)
 	    .controller('profileController', profileController);
 
 /***/ },
@@ -82422,6 +82412,27 @@
 
 /***/ },
 /* 101 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	/* injects from baggage-loader */
+	__webpack_require__(102);
+
+	'use strict';
+	var angular = __webpack_require__(76);
+
+	function rightProfileDirective() {
+	    return {
+	        restrict: "E",
+	        templateUrl: __webpack_require__(102)
+	    };
+	}
+
+	angular.module('RightProfile', [])
+	    .directive('rightProfile', rightProfileDirective);
+
+/***/ },
+/* 102 */
 /***/ function(module, exports) {
 
 	var path = 'components/profile/right-profile.html';
@@ -82430,12 +82441,12 @@
 	module.exports = path;
 
 /***/ },
-/* 102 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* injects from baggage-loader */
-	__webpack_require__(103);
+	__webpack_require__(104);
 
 	'use strict';
 	var angular = __webpack_require__(76);
@@ -82443,7 +82454,7 @@
 	function storyDirective() {
 	    return {
 	        restrict: "E",
-	        templateUrl: __webpack_require__(103),
+	        templateUrl: __webpack_require__(104),
 	        bindToController: true,
 	        controllerAs: "storyCtrl",
 	        controller: 'storyController'
@@ -82613,7 +82624,7 @@
 	    .service('storyService', storyService);
 
 /***/ },
-/* 103 */
+/* 104 */
 /***/ function(module, exports) {
 
 	var path = 'components/story/story.html';
@@ -82622,12 +82633,12 @@
 	module.exports = path;
 
 /***/ },
-/* 104 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* injects from baggage-loader */
-	__webpack_require__(105);
+	__webpack_require__(106);
 
 	'use strict';
 	var angular = __webpack_require__(76);
@@ -82635,7 +82646,7 @@
 	function interestDirective() {
 	    return {
 	        restrict        : "E",
-	        templateUrl     : __webpack_require__(105),
+	        templateUrl     : __webpack_require__(106),
 	        bindToController: true,
 	        controllerAs    : "interest",
 	        controller      : 'interestController'
@@ -82652,7 +82663,7 @@
 	    .controller('interestController', interestController);
 
 /***/ },
-/* 105 */
+/* 106 */
 /***/ function(module, exports) {
 
 	var path = 'components/interest/interest.html';
@@ -82661,12 +82672,12 @@
 	module.exports = path;
 
 /***/ },
-/* 106 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* injects from baggage-loader */
-	__webpack_require__(107);
+	__webpack_require__(108);
 
 	'use strict';
 	var angular = __webpack_require__(76);
@@ -82674,7 +82685,7 @@
 	function skillsDirective() {
 	    return {
 	        restrict        : "E",
-	        templateUrl     : __webpack_require__(107),
+	        templateUrl     : __webpack_require__(108),
 	        bindToController: true,
 	        controllerAs    : "skills",
 	        controller      : 'skillsController'
@@ -82700,7 +82711,7 @@
 	    .controller('skillsController', skillsController);
 
 /***/ },
-/* 107 */
+/* 108 */
 /***/ function(module, exports) {
 
 	var path = 'components/skills/skills.html';
@@ -82709,21 +82720,21 @@
 	module.exports = path;
 
 /***/ },
-/* 108 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* injects from baggage-loader */
-	__webpack_require__(109);
+	__webpack_require__(110);
 
 	'use strict';
 	var angular = __webpack_require__(76);
-	__webpack_require__(110);
+	__webpack_require__(111);
 
 	function projectsDirective() {
 	    return {
 	        restrict: "E",
-	        templateUrl: __webpack_require__(109),
+	        templateUrl: __webpack_require__(110),
 	        bindToController: true,
 	        controllerAs: "projectController",
 	        controller: 'projectsController'
@@ -82733,6 +82744,7 @@
 	projectsController.$inject = [];
 	function projectsController() {
 	    var self = this;
+	    self.apiKey = 'AIzaSyC49hRYpSCphd8z1Ahc8ThR4O_jlNOg9QA';
 
 	    var projects = [
 	        {
@@ -82746,7 +82758,7 @@
 	            center: [44.774036, -0.706215],
 	            zoom: 9,
 	            technos: [
-	                {image: "play", col: 3, row: 1 },
+	                {image: "play", col: 3, row: 1},
 	                {image: "mongo", col: 2, row: 1},
 	                {image: "css3", col: 2, row: 1},
 	                {image: "java", col: 3, row: 1}],
@@ -82769,7 +82781,7 @@
 	            center: [44.774036, -0.706215],
 	            zoom: 10,
 	            technos: [
-	                {image: "flex", col: 2, row: 1 },
+	                {image: "flex", col: 2, row: 1},
 	                {image: "java", col: 3, row: 1},
 	                {image: "postgres", col: 2, row: 1},
 	                {image: "blazeds", col: 3, row: 1}],
@@ -82792,7 +82804,7 @@
 	            center: [44.774036, -0.706215],
 	            zoom: 10,
 	            technos: [
-	                {image: "play", col: 3, row: 1 },
+	                {image: "play", col: 3, row: 1},
 	                {image: "mongo", col: 2, row: 1},
 	                {image: "css3", col: 2, row: 1},
 	                {image: "java", col: 3, row: 1}],
@@ -82815,7 +82827,7 @@
 	            center: [44.774036, -0.706215],
 	            zoom: 10,
 	            technos: [
-	                {image: "play", col: 3, row: 1 },
+	                {image: "play", col: 3, row: 1},
 	                {image: "mongo", col: 2, row: 1},
 	                {image: "css3", col: 2, row: 1},
 	                {image: "java", col: 3, row: 1}],
@@ -82838,7 +82850,7 @@
 	            center: [44.774036, -0.706215],
 	            zoom: 10,
 	            technos: [
-	                {image: "play", col: 3, row: 1 },
+	                {image: "play", col: 3, row: 1},
 	                {image: "mongo", col: 2, row: 1},
 	                {image: "css3", col: 2, row: 1},
 	                {image: "java", col: 3, row: 1}],
@@ -82861,7 +82873,7 @@
 	            center: [45.501689, -73.567256],
 	            zoom: 10,
 	            technos: [
-	                {image: "play", col: 3, row: 1 },
+	                {image: "play", col: 3, row: 1},
 	                {image: "mongo", col: 2, row: 1},
 	                {image: "css3", col: 2, row: 1},
 	                {image: "java", col: 3, row: 1}],
@@ -82898,7 +82910,7 @@
 	    .controller('projectsController', projectsController);
 
 /***/ },
-/* 109 */
+/* 110 */
 /***/ function(module, exports) {
 
 	var path = 'components/projects/projects.html';
@@ -82907,7 +82919,7 @@
 	module.exports = path;
 
 /***/ },
-/* 110 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -86131,12 +86143,12 @@
 	}));
 
 /***/ },
-/* 111 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* injects from baggage-loader */
-	__webpack_require__(112);
+	__webpack_require__(113);
 
 	'use strict';
 	var angular = __webpack_require__(76);
@@ -86144,7 +86156,7 @@
 	function frameworksDirective() {
 	    return {
 	        restrict        : "E",
-	        templateUrl     : __webpack_require__(112),
+	        templateUrl     : __webpack_require__(113),
 	        bindToController: true,
 	        controllerAs    : "frameworks",
 	        controller      : 'frameworksController'
@@ -86183,7 +86195,7 @@
 	    .controller('frameworksController', frameworksController);
 
 /***/ },
-/* 112 */
+/* 113 */
 /***/ function(module, exports) {
 
 	var path = 'components/frameworks/frameworks.html';
@@ -86192,27 +86204,27 @@
 	module.exports = path;
 
 /***/ },
-/* 113 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* injects from baggage-loader */
-	__webpack_require__(114);
+	__webpack_require__(115);
 
 	'use strict';
 	var angular = __webpack_require__(76);
 	function contactDirective() {
 	    return {
 	        restrict        : "E",
-	        templateUrl     : __webpack_require__(114),
+	        templateUrl     : __webpack_require__(115),
 	        bindToController: true,
 	        controllerAs    : "contact",
 	        controller      : 'contactController'
 	    };
 	}
 
-	contactController.$inject = [];
-	function contactController() {
+	contactController.$inject = ['$http'];
+	function contactController($http) {
 	    var self = this;
 
 	    self.user = {
@@ -86227,6 +86239,39 @@
 	        email: "contact_form_email",
 	        subject: "contact_form_subject",
 	        message: "contact_form_message"
+	    };
+
+	    self.success = false;
+	    self.error = false;
+	    self.send = function () {
+
+	        var htmlBody = '<div>Name: ' + self.user.name + '</div>' +
+	            '<div>Email: ' + self.user.email + '</div>' +
+	            '<div>Message: ' + self.user.body + '</div>' +
+	            '<div>Date: ' + (new Date()).toString() + '</div>';
+
+	        $http({
+	            url: 'https://api.postmarkapp.com/email',
+	            method: 'POST',
+	            data: {
+	                'From': self.user.email,
+	                'To': 'letoublon.nicolas@gmail.com',
+	                'HtmlBody': htmlBody,
+	                'Subject': self.user.subject
+	            },
+	            headers: {
+	                'Accept': 'application/json',
+	                'Content-Type': 'application/json',
+	                'X-Postmark-Server-Token': '8569dcd45-6a1a-4e7b-ae75-ea37629de4'
+	            }
+	        }).success(function (data) {
+	            console.log(data);
+	            self.success = true;
+	            self.user = {};
+	        }).error(function (data) {
+	            console.log(data);
+	            self.error = true;
+	        });
 	    }
 	}
 
@@ -86235,21 +86280,21 @@
 	    .controller('contactController', contactController);
 
 /***/ },
-/* 114 */
+/* 115 */
 /***/ function(module, exports) {
 
 	var path = 'components/contact/contact.html';
-	var html = "<div layout=\"column\" class=\"content-container\" data-component=\"contact-component\">\n    <div class=\"title-box\">\n        <div class=\"icon-container\">\n            <i class=\"icon material-icons\">@</i>\n        </div>\n        <h2 class=\"title\" ng-bind=\"'contact_box_title' | translate | uppercase\"></h2>\n        <h4 class=\"subtitle\" ng-bind=\"'contact_box_subtitle' | translate\"></h4>\n    </div>\n    <div flex layout-margin layout=\"row\" layout-align=\"space-between\" class=\"content-body\">\n        <form flex layout=\"column\" layout-align=\"start stretch\" class=\"form-container\" name=\"contact-form\">\n            <div layout-gt-sm=\"row\">\n                <md-input-container class=\"md-block\" flex-gt-sm>\n                    <input aria-label=\"{{contact.form.name | translate}}\" required ng-model=\"contact.user.name\"\n                           data-placeholder=\"{{contact.form.name | translate}}\"  >\n                </md-input-container>\n                <div flex=\"5\" hide-xs hide-sm>\n                </div>\n                <md-input-container class=\"md-block\" flex-gt-sm>\n                    <input required aria-label=\"{{contact.form.email | translate}}\" ng-model=\"contact.user.email\" type=\"email\" data-placeholder=\"{{contact.form.email | translate}}\">\n                </md-input-container>\n            </div>\n            <div layout-gt-sm=\"row\">\n                <md-input-container class=\"md-block\" flex-gt-sm>\n                    <input required aria-label=\"{{contact.form.subject | translate}}\" ng-model=\"contact.user.subject\" data-placeholder=\"{{contact.form.subject | translate}}\">\n                </md-input-container>\n            </div>\n            <md-input-container class=\"md-block\">\n                <textarea required\n                          aria-label=\"{{contact.form.message | translate}}\"\n                          data-placeholder=\"{{contact.form.message | translate}}\"\n                          ng-model=\"contact.user.message\"\n                          md-maxlength=\"500\"\n                          rows=\"4\"\n                          md-select-on-focus></textarea>\n            </md-input-container>\n            <md-button aria-label=\"Submit the contact form\"\n                       class=\"md-raised md-primary custom-button send-message-button\" type=\"submit\">\n                <i class=\"material-icons icon\">send</i> {{'contact_button_send' | translate}}\n            </md-button>\n        </form>\n    </div>\n</div>";
+	var html = "<div layout=\"column\" class=\"content-container\" data-component=\"contact-component\">\n    <div class=\"title-box\">\n        <div class=\"icon-container\">\n            <i class=\"icon material-icons\">@</i>\n        </div>\n        <h2 class=\"title\" ng-bind=\"'contact_box_title' | translate | uppercase\"></h2>\n        <h4 class=\"subtitle\" ng-bind=\"'contact_box_subtitle' | translate\"></h4>\n    </div>\n    <div flex layout-margin layout=\"row\" layout-align=\"space-between\" class=\"content-body\">\n        <form flex layout=\"column\" layout-align=\"start stretch\" class=\"form-container\" name=\"contact-form\" >\n            <div layout-gt-sm=\"row\">\n                <md-input-container class=\"md-block\" flex-gt-sm>\n                    <input aria-label=\"{{contact.form.name | translate}}\" required ng-model=\"contact.user.name\"\n                           data-placeholder=\"{{contact.form.name | translate}}\"  >\n                </md-input-container>\n                <div flex=\"5\" hide-xs hide-sm>\n                </div>\n                <md-input-container class=\"md-block\" flex-gt-sm>\n                    <input required aria-label=\"{{contact.form.email | translate}}\" ng-model=\"contact.user.email\" type=\"email\" data-placeholder=\"{{contact.form.email | translate}}\">\n                </md-input-container>\n            </div>\n            <div layout-gt-sm=\"row\">\n                <md-input-container class=\"md-block\" flex-gt-sm>\n                    <input required aria-label=\"{{contact.form.subject | translate}}\" ng-model=\"contact.user.subject\" data-placeholder=\"{{contact.form.subject | translate}}\">\n                </md-input-container>\n            </div>\n            <md-input-container class=\"md-block\">\n                <textarea required\n                          aria-label=\"{{contact.form.message | translate}}\"\n                          data-placeholder=\"{{contact.form.message | translate}}\"\n                          ng-model=\"contact.user.message\"\n                          md-maxlength=\"500\"\n                          rows=\"4\"\n                          md-select-on-focus></textarea>\n            </md-input-container>\n            <md-button aria-label=\"{{'contact_button_send' | translate}}\"\n                       class=\"md-raised md-primary custom-button send-message-button\" type=\"submit\" ng-click=\"contact.send()\">\n                <i class=\"material-icons icon\">send</i> {{'contact_button_send' | translate}}\n            </md-button>\n        </form>\n    </div>\n</div>";
 	window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 	module.exports = path;
 
 /***/ },
-/* 115 */
+/* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* injects from baggage-loader */
-	__webpack_require__(116);
+	__webpack_require__(117);
 
 	'use strict';
 	var angular = __webpack_require__(76);
@@ -86257,7 +86302,7 @@
 	function footerDirective() {
 	    return {
 	        restrict        : "E",
-	        templateUrl     : __webpack_require__(116),
+	        templateUrl     : __webpack_require__(117),
 	        bindToController: true,
 	        controllerAs    : "footer",
 	        controller      : 'footerController'
@@ -86272,166 +86317,13 @@
 	    .controller('footerController', footerController);
 
 /***/ },
-/* 116 */
+/* 117 */
 /***/ function(module, exports) {
 
 	var path = 'components/footer/footer.html';
 	var html = "<footer class=\"footer-part\">\n    <h3 class=\"message\" ng-bind=\"'footer_message' | translate\"></h3>\n    <div class=\"copyright-container\">\n        <div class=\"separator\"></div>\n        <p class=\"copyright\" ng-bind=\"'footer_rights' | translate\"></p>\n    </div>\n</footer>";
 	window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 	module.exports = path;
-
-/***/ },
-/* 117 */
-/***/ function(module, exports) {
-
-	module.exports = {
-		"header_title": "Salut! Moi c'est Nicolas,",
-		"header_job": "Developpeur",
-		"header_job2": "Web",
-		"header_subtitle2": "Bienvenue sur mon site web, cree avant tout pour me faire plaisir, mais aussi pour permettre d'en savoir un peu plus sur moi, mes travaux et mes aspirations !",
-		"header_subtitle": "Bienvenue sur mon site web, cree pour en savoir un peu plus sur moi, mes travaux et mes aspirations !",
-		"header_subtitle_short": "Bienvenue sur mon site web, cree pour en savoir un peu plus sur moi, mes travaux et mes aspirations !",
-		"header_subtitle_short2": "La bonne place pour en apprendre un peu plus sur moi !",
-		"menu_home": "ACCUEIL",
-		"menu_profile": "PROFIL",
-		"menu_stories": "PARCOURS",
-		"menu_projects": "PROJETS",
-		"menu_skills": "COMPETENCES",
-		"menu_contact": "CONTACT",
-		"profile_box_title": "Profil",
-		"profile_box_subtitle": "a propos",
-		"profile_first_title": "A propos de moi",
-		"profile_first_description": "Je suis un jeune ingenieur de 25 ans, specialise dans le developpement logiciel. Passionne, j'aime apprendre de nouveaux concepts, de nouveaux langages, communiquer et surtout creer. Je me suis lance dans l'aventure du developpement non seulement car j'aime fabriquer, mais parce que j'aime fabriquer de belles choses, intuitives et rapides. C'est une des raison de ma residence actuelle a Montreal, une ville en pleine expansion et a la pointe. Je suis venu me perfectionner afin de maitriser mon nouveau terrain de jeu : le Web.",
-		"profile_second_title": "Missions et Objectifs",
-		"profile_second_description": "Innover, progresser et faire de chacun de mes appentissages une force. Mon principal objectif est d'apprendre toujours plus afin de maitriser mon sujet et ameliorer mes travaux. C'est pour cela que le travail d'equipe est pour moi primordial: pouvoir confronter sa production aux autres est un moyen de se remettre en question constamment et de continuer a progresser.",
-		"profile_button_download": "Telecharger mon CV",
-		"profile_picture_title": "Ca, c'est moi",
-		"profile_picture_subtitle": "Nicolas Letoublon",
-		"profile_picture_job": "Developpeur Web",
-		"profile_picture_description": "Dynamique et novateur, j'aime mettre en oeuvre mes nouveaux acquis pour faire avancer mes projets.",
-		"stories_box_title": "Parcours",
-		"stories_box_subtitle": "formation & experience",
-		"stories_button_read_more": "En savoir plus",
-		"stories_story_1_type": "formation",
-		"stories_story_1_highlight": "Baccalaureat Scientifique",
-		"stories_story_1_firm": "Saint Joseph de Tivoli",
-		"stories_story_1_localisation": "Bordeaux, France",
-		"stories_story_1_description": "",
-		"stories_story_2_type": "formation",
-		"stories_story_2_highlight": "Diplome d'ingenieur logiciel",
-		"stories_story_2_firm": "Exia CESI",
-		"stories_story_2_localisation": "Bordeaux, France",
-		"stories_story_2_description": "Specialisation dans la programmation logicielle, management de projet et des risques sous le referentiel PMI.",
-		"stories_story_3_type": "stage",
-		"stories_story_3_highlight": "Developpeur Full stack",
-		"stories_story_3_firm": "Eurogiciel",
-		"stories_story_3_localisation": "Bordeaux, France",
-		"stories_story_3_description": "Stage de fin d'etude de 6 mois dans une societe de service informatique. J'ai essentiellement travaille sur un projet traitant des technologies Big Data durant cette periode.",
-		"stories_story_4_type": "experience professionnelle",
-		"stories_story_4_highlight": "Ingenieur logiciel",
-		"stories_story_4_firm": "Eurogiciel",
-		"stories_story_4_localisation": "Bordeaux, France",
-		"stories_story_4_description": "Poste d'ingenieur logiciel Full-stack, j'ai pu travailler sur plusieurs projets, me permettant de manipuler un grand nombre de frameworks / base de donnees. ",
-		"stories_story_5_type": "experience professionnelle",
-		"stories_story_5_highlight": "Ingenieur Front-end",
-		"stories_story_5_firm": "Kronos Canadian Inc.",
-		"stories_story_5_localisation": "Montreal, Canada",
-		"stories_story_5_description": "Je suis actuellement en poste en tant que developpeur Front-end, avec l'objectif de maitriser les frameworks Front-end en appliquant les meilleurs pratiques et concepts dans le projet.",
-		"projects_box_title": "Mes Projets",
-		"projects_box_subtitle": "derniers travaux",
-		"projects_technical_subtitle": "Environnement technique",
-		"projects_button_previous": "Prec",
-		"projects_button_next": "Suiv",
-		"projects_project_1_name": "Requeteur multi base de donnees",
-		"projects_project_1_first_part_title": "EUROGICIEL  le haillan, france - 8 mois",
-		"projects_project_1_first_part_text": "Ce projet se concentre sur la fouille et l'analyse de donnees. Ce projet a eu pour but de creer une application web permettant de correller des donnees provenant de n'importe quelles sources. <br/> Le but du projet fut de manipuler un nouveau framework web, <i>Play Framework</i>, ainsi que le concept de base de donnees NoSQL avec <i>MongoDB</i>. Un des plus gros challenge a ete la realisation d'un requeteur graphique multi base de donnees. Ce dernier integrait en effet un moteur de generation de requetes dynamique.",
-		"projects_project_1_second_part_title": "Mes missions",
-		"projects_project_1_second_part_text": "Sous le couvert d'un chef de projet et d'outils SCRUM, j'ai essentiellement participe aux taches suivantes :",
-		"projects_project_1_mission_1": "- Definition du besoin",
-		"projects_project_1_mission_2": "- Conception de l'architecture technique - Java",
-		"projects_project_1_mission_3": "- Participation au moteur de requete",
-		"projects_project_1_mission_4": "- Creation de l'API REST",
-		"projects_project_1_mission_5": "- Design de la partie UI/UX de l'application",
-		"projects_project_2_name": "Logiciel de protection de l'environnement",
-		"projects_project_2_first_part_title": "THALES  le haillan / paris, france - 5 mois",
-		"projects_project_2_first_part_text": "Le secteur aeronautique est extremement controle. L'application de gestion sur laquelle j'ai travaille permet de certifier qu'une nomenclature (comprendre une arborescence de composants d'un appareil) est conforme aux differents risques environnementaux Europeens et Internationnaux. L'application a ete initialement developpe a l'aide du couple <i>Java / Flex</i>. ",
-		"projects_project_2_second_part_title": "Mon role",
-		"projects_project_2_second_part_text": "Pendant plusieurs mois j'ai ete en relation direct avec les clients, afin de recueillir les nouvelles fontionnalites a implementer. J'ai donc eu l'ocasion d'acquerir une experience dans differents domaines :",
-		"projects_project_2_mission_1": "- Relation cliente, recueil du besoin",
-		"projects_project_2_mission_2": "- Methodologie SCRUM",
-		"projects_project_2_mission_3": "- Developpement Full stack Java / Flex",
-		"projects_project_2_mission_4": "- Prise en charge des livraisons du produit",
-		"projects_project_2_mission_5": "",
-		"projects_project_3_name": "Application web de management de ressources",
-		"projects_project_3_first_part_title": "EUROGICIEL  bordeaux, france - 4 mois",
-		"projects_project_3_first_part_text": "Le client avait besoin d'un moyen de visualiser, gerer et planifier la charge des ressources de l'entreprise. Nous avons realises une solution web avec <i>AngularJS, Bootstrap 3 et Grunt</i> pour la partie cliente. Le back-end et l'API REST fut developpe a l'aide du framework Java <i>Spring</i>. L'application comporte plusieurs vues importantes, comme le planning global annuel, mensuel ou hebdomadaire et une matrice des competences dynamique.",
-		"projects_project_3_second_part_title": "Mes missions",
-		"projects_project_3_second_part_text": "Ce projet permis avant tout d'expirementer AngularJS, couple avec une API REST. J'ai ete present durant toutes les phases du projet :",
-		"projects_project_3_mission_1": "- Definition des fonctionnalites",
-		"projects_project_3_mission_2": "- Design / Maquettages de l'application",
-		"projects_project_3_mission_3": "- Conception de la partie Front-end modulaire",
-		"projects_project_3_mission_4": "- Developpement Angular / Boostrap",
-		"projects_project_3_mission_5": "",
-		"projects_project_4_name": "Application de gestion de stock",
-		"projects_project_4_first_part_title": "CULTURA  le haillan, france - 3 mois",
-		"projects_project_4_first_part_text": "Projet assez court, l'objectif etait de realiser une application web pour la gestion des stocks pour une chaine de magasins. L'application, apres avoir ete configuree, permet de parcourir les catalogues de produits pour l'ajouter ou le retirer de son assortiment (stock) local. Nous etions en charge de la partie Front-end, tandis qu'une entreprise tierce developpait une API REST pour satisfaire les besoins de l'application. Elle fut realisee a l'aide du <i>Framework Play</i> et une librairie javascript appartenant au client.",
-		"projects_project_4_second_part_title": "Mes missions",
-		"projects_project_4_second_part_text": "Le cote le plus enrichissant fut de travailler sur une quantite de donnees importantes, obligeant a trouver des axes d'optimisations pousses.",
-		"projects_project_4_mission_1": "- Participation a la redaction de l'appel d'offre",
-		"projects_project_4_mission_2": "- Redaction des specifications techniques",
-		"projects_project_4_mission_3": "- Realisation de l'application Front-end",
-		"projects_project_4_mission_4": "- Redaction et developpement des tests unitaires et d'integration",
-		"projects_project_4_mission_5": "- Support a la recette client",
-		"projects_project_5_name": "Moteur de recherche",
-		"projects_project_5_first_part_title": "DEKRA AUTOMOTIVE SOLUTION  bordeaux, france - 1 an",
-		"projects_project_5_first_part_text": "Ce projet de grosse envergure, permet aujourd'hui de requeter une immense quantite de donnees, avec un large choix de criteres, en quelques dizaines de milisecondes. Durant une annee, nous avons mis au point une solution de recherche ultra-rapide pour epauler un ERP. Il atteignait les limites du SQL avec des requetes composees de jointures et de dizaines de criteres. Nous avons donc batis un moteur de recherche avec <i>Elastic</i>, sous forme d'une API REST en <i>ASP MVC 5</i>, permettant de creer et d'executer dynamiquement n'importe quelle type de requete pour l'ERP client.",
-		"projects_project_5_second_part_title": "Mon role",
-		"projects_project_5_second_part_text": "De l'appel d'offre jusqu'a la mise a disposition de l'API, j'ai ete directement implique dans toutes les phases du projet :",
-		"projects_project_5_mission_1": "- Participation a la redaction de l'appel d'offre / Choix des technologies",
-		"projects_project_5_mission_2": "- Realisation de POCs avec Elastic / AngularJS",
-		"projects_project_5_mission_3": "- Recueil du besoin / Chiffrage des travaux",
-		"projects_project_5_mission_4": "- Conception et realisation des composantes d'indexation / requetage",
-		"projects_project_5_mission_5": "- Realisation d'une interface de traitement des logs",
-		"projects_project_6_name": "Application de gestion de la main d'oeuvre",
-		"projects_project_6_first_part_title": "KRONOS CANADIAN INC. - montreal, canada - en cours",
-		"projects_project_6_first_part_text": "Kronos est un editeur de logiciels specialises dans les domaines de la gestion des effectifs, du temps de travail et du recrutement. Je suis actuellement en poste dans les equipes Front-End pour travailler sur les nouvelles versions des produits. Je travaille en collaboration avec les equipes UI/UX pour permettre de realiser des interfaces intuitives et optimisees. Je travaille essentiellement avec Angular 1.x, Bootstrap et NodeJS.",
-		"projects_project_6_second_part_title": "Mes responsabilites",
-		"projects_project_6_second_part_text": "En charge d'un module UI complet, je peux perfectionner aux cotes de leads techniques sur beaucoup de nouveaux concepts et technologies :",
-		"projects_project_6_mission_1": "- Travail en collaboration avec plusieurs zones geographiques",
-		"projects_project_6_mission_2": "- Tester et redaction de code de haute qualite",
-		"projects_project_6_mission_3": "- Travail en environnement totalement agile",
-		"projects_project_6_mission_4": "- Realisation de modules Angular",
-		"projects_project_6_mission_5": "",
-		"skills_box_title": "Competences",
-		"skills_box_subtitle": "connaissances & expertises",
-		"skills_knowledge_title": "Connaissances",
-		"skills_knowledge_text": "Ayant travaille plusieurs annees comme ingenieur Full-stack, me permettant d'aborder des frameworks back-end <i>Php (Zend), Java (Spring, Play)</i> ou encore <i>C# (ASP MVC)</i>, puis front-end avec <b><i>AngularJS</i></b>, <b><i>Ionic</i></b> ou <b><i>ReactJS</i></b>, j'ai pu me faire une idee du domaine m'attirant le plus. Mon gout pour la creation a sans doute joue un role, et c'est sans hesitation que je me suis tourne vers les technologies Front-end, permettant aujourd'hui de creer des applications web et mobiles de A a Z.",
-		"skills_knowledge_1": "Application Web",
-		"skills_knowledge_2": "Frameworks Front-end",
-		"skills_knowledge_3": "Services Web REST",
-		"skills_knowledge_4": "Design d'interfaces",
-		"skills_knowledge_5": "Interfaces responsive",
-		"skills_knowledge_6": "Best practices Front-end",
-		"skills_expertise_title": "Expertises",
-		"skills_expertise_bar_1": "Angular JS 1.x",
-		"skills_expertise_bar_2": "Bootstrap 3 / Material Design",
-		"skills_expertise_bar_3": "Node JS",
-		"skills_expertise_bar_4": "React JS",
-		"skills_expertise_bar_5": "ASP MVC 5",
-		"skills_expertise_circle_1": "Javascript",
-		"skills_expertise_circle_2": "Html 5",
-		"skills_expertise_circle_3": "Css 3",
-		"skills_expertise_circle_4": "C#",
-		"contact_box_title": "Contact",
-		"contact_box_subtitle": "contactez moi",
-		"contact_form_name": "Nom / Prenom",
-		"contact_form_email": "Email",
-		"contact_form_subject": "Sujet",
-		"contact_form_message": "Ce que vous allez me dire !",
-		"contact_button_send": "Envoyer",
-		"footer_message": "Eh oui, c'est deja fini :(",
-		"footer_rights": "Nicolas Letoublon, Tous droits reserves 2016"
-	};
 
 /***/ },
 /* 118 */
@@ -86468,7 +86360,7 @@
 
 
 	// module
-	exports.push([module.id, "/* Rules for sizing the icon. */\n.material-icons.md-18 {\n  font-size: 18px;\n}\n.material-icons.md-24 {\n  font-size: 24px;\n}\n.material-icons.md-36 {\n  font-size: 36px;\n}\n.material-icons.md-48 {\n  font-size: 48px;\n}\n/* Rules for using icons as black on a light background. */\n.material-icons.md-dark {\n  color: rgba(0, 0, 0, 0.54);\n}\n.material-icons.md-dark.md-inactive {\n  color: rgba(0, 0, 0, 0.26);\n}\n/* Rules for using icons as white on a dark background. */\n.material-icons.md-light {\n  color: #ffffff;\n}\n.material-icons.md-light.md-inactive {\n  color: rgba(255, 255, 255, 0.3);\n}\n/* Palette generated by Material Palette - materialpalette.com/blue-grey/blue */\n.dark-primary-color {\n  background: #908D8D;\n}\n.default-primary-color {\n  background: #908D8D;\n}\n.light-primary-color {\n  background: #908D8D;\n}\n.text-primary-color {\n  color: #908D8D;\n}\n.accent-color {\n  background: #908D8D;\n}\n.primary-text-color {\n  color: #908D8D;\n}\n.secondary-text-color {\n  color: #908D8D;\n}\n.divider-color {\n  border-color: #908D8D;\n}\nP,\nli {\n  font-size: 16px;\n  font-weight: 400;\n  letter-spacing: 0.16px;\n  line-height: 25.6px;\n  color: black;\n  opacity: 0.7;\n}\n.custom-button {\n  text-transform: none;\n  font-weight: normal;\n  margin: 0;\n  border-radius: 0;\n  padding: 0 20px 0 30px;\n}\n.custom-button i {\n  left: -10px;\n  top: 7px;\n  position: relative;\n}\n.custom-button:hover {\n  color: #262729 !important ;\n  background-color: white !important;\n}\n.sticked-button {\n  min-width: 40px;\n  min-height: 60px;\n  padding: 0;\n  z-index: 1;\n}\n.sticked-button i {\n  left: 0;\n  top: 7px;\n  position: relative;\n}\n.no-margin {\n  margin: 0;\n}\n.no-padding {\n  padding: 0;\n}\n.light {\n  color: #99999A;\n}\n.grunt {\n  background-image: url(" + __webpack_require__(120) + ");\n}\n.grunt:hover {\n  background-image: url(" + __webpack_require__(121) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.angular {\n  background-image: url(" + __webpack_require__(122) + ");\n}\n.angular:hover {\n  background-image: url(" + __webpack_require__(123) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.react {\n  background-image: url(" + __webpack_require__(124) + ");\n}\n.react:hover {\n  background-image: url(" + __webpack_require__(125) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.mui {\n  background-image: url(" + __webpack_require__(126) + ");\n}\n.mui:hover {\n  background-image: url(" + __webpack_require__(127) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.mongo {\n  background-image: url(" + __webpack_require__(128) + ");\n}\n.mongo:hover {\n  background-image: url(" + __webpack_require__(129) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.js {\n  background-image: url(" + __webpack_require__(130) + ");\n}\n.js:hover {\n  background-image: url(" + __webpack_require__(131) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.ionic {\n  background-image: url(" + __webpack_require__(132) + ");\n}\n.ionic:hover {\n  background-image: url(" + __webpack_require__(133) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.css3 {\n  background-image: url(" + __webpack_require__(134) + ");\n}\n.css3:hover {\n  background-image: url(" + __webpack_require__(135) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.node {\n  background-image: url(" + __webpack_require__(136) + ");\n}\n.node:hover {\n  background-image: url(" + __webpack_require__(137) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.play {\n  background-image: url(" + __webpack_require__(138) + ");\n}\n.play:hover {\n  background-image: url(" + __webpack_require__(138) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n[data-component='contact-component'] {\n  margin: 50px 0 0 0;\n}\n[data-component='contact-component'].content-container {\n  max-width: 700px !important;\n}\n[data-component='contact-component'] .title-box .icon {\n  top: 3px;\n  left: 3px;\n  font-size: 20px;\n}\n[data-component='contact-component'] .send-message-button {\n  align-self: center;\n}\n.footer-part {\n  min-height: 175px;\n  background-color: #262729;\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.footer-part .message {\n  margin-top: 40px;\n  color: white;\n  font-variant: small-caps;\n}\n.footer-part .copyright-container {\n  opacity: 0.8;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.footer-part .copyright-container .separator {\n  height: 1px;\n  background-color: white;\n  width: 50%;\n}\n.footer-part .copyright-container .copyright {\n  font-size: 14px;\n  color: white;\n}\n.intro-container {\n  color: white;\n  position: absolute;\n  left: 50px;\n  bottom: 50px;\n}\n.intro-container .intro-separator {\n  height: 1px;\n  background-color: white;\n  width: 25%;\n  margin: 20px 0;\n}\n.intro-container .intro-subtitle {\n  width: 70%;\n  font-weight: normal;\n}\n@media (max-width: 840px) {\n  .intro-title {\n    font-size: 24px;\n  }\n  .intro-subtitle {\n    font-size: 20px;\n  }\n}\n@media (min-width: 320px) and (max-width: 480px) {\n  .intro-container {\n    display: none;\n  }\n}\nhtml,\nbody {\n  margin: 0;\n  height: auto;\n  color: #262729;\n  background-color: white;\n  font-family: 'Roboto', \"Helvetica Neue\", sans-serif;\n}\nhtml header-dir,\nbody header-dir {\n  background: url(" + __webpack_require__(139) + ") no-repeat center;\n  background-size: cover;\n  height: 650px;\n  position: relative;\n}\nhtml .locale-container,\nbody .locale-container {\n  width: 100%;\n  margin-right: 31px;\n  max-width: 1024px;\n  align-self: center;\n}\nhtml .locale-container .md-icon-button,\nbody .locale-container .md-icon-button {\n  margin: 0;\n  height: 0;\n  min-width: 0;\n  padding: 0;\n  width: 35px;\n  border-radius: 0;\n}\nhtml .locale-container .md-icon-button.canada,\nbody .locale-container .md-icon-button.canada {\n  background: url(" + __webpack_require__(140) + ") no-repeat center;\n  background-size: contain;\n}\nhtml .locale-container .md-icon-button.canada:hover,\nbody .locale-container .md-icon-button.canada:hover {\n  background: url(" + __webpack_require__(141) + ") no-repeat center;\n  background-size: contain;\n}\nhtml .locale-container .md-icon-button.france,\nbody .locale-container .md-icon-button.france {\n  margin-left: 10px;\n  background: url(" + __webpack_require__(142) + ") no-repeat center;\n  background-size: contain;\n}\nhtml .locale-container .md-icon-button.france:hover,\nbody .locale-container .md-icon-button.france:hover {\n  background: url(" + __webpack_require__(143) + ") no-repeat center;\n  background-size: contain;\n}\nhtml .main-content,\nbody .main-content {\n  /*contact {\n      background: url('../../img/mappemonde.png') no-repeat center;\n      background-size: 130%;\n    }*/\n}\nhtml .main-content .section-separator,\nbody .main-content .section-separator {\n  height: 400px;\n  background-color: #262729;\n}\nhtml .main-content .content-container,\nbody .main-content .content-container {\n  max-width: 1024px;\n  width: 100%;\n}\nhtml .main-content .content-container .title-box,\nbody .main-content .content-container .title-box {\n  align-self: center;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\nhtml .main-content .content-container .title-box .icon-container,\nbody .main-content .content-container .title-box .icon-container {\n  border: 1px solid #262729;\n  background-color: #262729;\n  width: 30px;\n  height: 30px;\n  transform: rotate(45deg);\n}\nhtml .main-content .content-container .title-box .icon-container .icon,\nbody .main-content .content-container .title-box .icon-container .icon {\n  color: white;\n  transform: rotate(-45deg);\n  position: absolute;\n}\nhtml .main-content .content-container .title-box .title,\nbody .main-content .content-container .title-box .title {\n  margin: -16px 0 -12px 0;\n  padding: 25px 25px 15px 25px;\n  font-size: 35px;\n  border: 1px solid #CCCCCC;\n}\nhtml .main-content .content-container .title-box .subtitle,\nbody .main-content .content-container .title-box .subtitle {\n  background-color: white;\n  padding: 0 15px;\n  margin: 0;\n  font-variant: small-caps;\n  font-weight: normal;\n}\nhtml .main-content .content-container .content-body,\nbody .main-content .content-container .content-body {\n  margin: 40px 0;\n}\nhtml .main-content #montreal-wide,\nbody .main-content #montreal-wide {\n  background: url(" + __webpack_require__(144) + ") no-repeat center;\n  background-size: cover;\n  height: 500px;\n}\nhtml .main-content #bordeaux-wide,\nbody .main-content #bordeaux-wide {\n  background: url(" + __webpack_require__(145) + ") no-repeat center;\n  background-size: cover;\n  height: 500px;\n}\nhtml .main-content frameworks,\nbody .main-content frameworks,\nhtml .main-content interest,\nbody .main-content interest {\n  background-color: #262729;\n}\n@media (min-width: 840px) and (max-width: 1024px) {\n  header-dir {\n    height: 450px !important;\n  }\n}\n@media (min-width: 480px) and (max-width: 840px) {\n  #montreal-wide,\n  #bordeaux-wide {\n    height: 400px !important;\n  }\n  header-dir {\n    height: 400px !important;\n  }\n}\n@media (min-width: 320px) and (max-width: 480px) {\n  header-dir {\n    height: 230px !important;\n  }\n}\n#toolbar-nav {\n  background-color: white;\n  color: #262729;\n  display: flex;\n  justify-content: center;\n}\n.navbar-fixed {\n  top: 0;\n  z-index: 100;\n  position: fixed;\n  width: 100%;\n}\n.navigation-toolbar {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n}\n.navigation-toolbar .toolbar-container {\n  width: 100%;\n  max-width: 1024px;\n  display: flex;\n}\n.navigation-toolbar .toolbar-container .brand-container {\n  background-color: #262729;\n  max-width: 235px;\n  min-width: 171px;\n}\n.navigation-toolbar .toolbar-container .brand-container .brand-name {\n  color: white;\n}\n.navigation-toolbar .toolbar-container .toolbar-tools {\n  flex: 1;\n}\n.navigation-toolbar .toolbar-container .toolbar-actions {\n  justify-content: flex-end;\n}\n.navigation-toolbar .toolbar-container .toolbar-actions.plain-title {\n  padding-right: 0;\n}\n.navigation-toolbar .toolbar-container .toolbar-actions .nav-button {\n  height: 100%;\n  padding: 0 10px;\n  margin: 0;\n  border-radius: 0;\n}\n.navigation-toolbar .toolbar-container .toolbar-actions .nav-button:hover,\n.navigation-toolbar .toolbar-container .toolbar-actions .nav-button.active {\n  border-bottom: 3px solid #262729;\n  background-color: rgba(158, 158, 158, 0.2);\n}\n.navigation-toolbar .toolbar-container .toolbar-actions .nav-icons {\n  min-width: 55px;\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n}\n.menu-side-panel .list-item:hover,\n.menu-side-panel .list-item.active {\n  border-left: 3px solid #262729;\n}\n.menu-side-panel .list-item:hover button,\n.menu-side-panel .list-item.active button {\n  background-color: rgba(158, 158, 158, 0.2);\n}\n.menu-side-panel .list-item .icon {\n  padding: 0 20px 0 0;\n  opacity: 0.7;\n}\n[data-component='profile-component'] {\n  margin: 20px 0 0 0;\n}\n[data-component='profile-component'] .title-box .icon {\n  top: 2px;\n  left: 1px;\n}\n[data-component='profile-component'] .content-body .text-container .download-cv-btn {\n  margin-top: 50px;\n}\n[data-component='profile-component'] .content-body .sticked-container {\n  margin: 0;\n  position: relative;\n}\n[data-component='profile-component'] .content-body .sticked-container .sticked-button {\n  position: absolute;\n  right: -8px;\n  top: 44%;\n}\n[data-component='profile-component'] .picture-container {\n  border: 1px solid #E2E2E2;\n}\n[data-component='profile-component'] .picture-container,\n[data-component='profile-component'] .picture-container-side {\n  padding: 80px 0 60px 0;\n  position: relative;\n  text-align: center;\n}\n[data-component='profile-component'] .picture-container .picture,\n[data-component='profile-component'] .picture-container-side .picture {\n  background: url(" + __webpack_require__(146) + ") no-repeat;\n  background-size: 200px;\n  border: 1px solid #E2E2E2;\n  height: 200px;\n  width: 200px;\n  transform: rotate(45deg);\n}\n[data-component='profile-component'] .picture-container .description-container .title,\n[data-component='profile-component'] .picture-container-side .description-container .title {\n  margin: 0;\n  padding-top: 60px;\n  font-weight: normal;\n}\n[data-component='profile-component'] .picture-container .description-container .title .job,\n[data-component='profile-component'] .picture-container-side .description-container .title .job {\n  font-variant: small-caps;\n  font-weight: 600;\n}\n[data-component='profile-component'] .picture-container .description-container .subtitle,\n[data-component='profile-component'] .picture-container-side .description-container .subtitle {\n  padding: 0 30px;\n}\n[data-component='profile-component'] .picture-container .links-container,\n[data-component='profile-component'] .picture-container-side .links-container {\n  padding-top: 30px;\n}\n[data-component='profile-component'] .picture-container .links-container .link,\n[data-component='profile-component'] .picture-container-side .links-container .link {\n  cursor: pointer;\n  transform: rotate(45deg);\n  margin: 0 20px;\n}\n[data-component='profile-component'] .picture-container .links-container .link img,\n[data-component='profile-component'] .picture-container-side .links-container .link img {\n  transition: transform 0.3s ease-in-out;\n  background-size: 40px;\n  width: 40px;\n  height: 40px;\n}\n[data-component='profile-component'] .picture-container .links-container .link img:hover,\n[data-component='profile-component'] .picture-container-side .links-container .link img:hover {\n  transform: rotate(-45deg);\n}\n[data-component='profile-component'] .picture-container .links-container .link .linkedin-picture,\n[data-component='profile-component'] .picture-container-side .links-container .link .linkedin-picture {\n  background-image: url(" + __webpack_require__(147) + ");\n}\n[data-component='profile-component'] .picture-container .links-container .link .linkedin-picture:hover,\n[data-component='profile-component'] .picture-container-side .links-container .link .linkedin-picture:hover {\n  background-image: url(" + __webpack_require__(148) + ");\n}\n[data-component='profile-component'] .picture-container .links-container .link .github-picture,\n[data-component='profile-component'] .picture-container-side .links-container .link .github-picture {\n  background-image: url(" + __webpack_require__(149) + ");\n}\n[data-component='profile-component'] .picture-container .links-container .link .github-picture:hover,\n[data-component='profile-component'] .picture-container-side .links-container .link .github-picture:hover {\n  background-image: url(" + __webpack_require__(150) + ");\n}\n@media (max-width: 600px) {\n  .picture-container-side .picture {\n    background-size: 150px !important;\n    height: 150px !important;\n    width: 150px !important;\n  }\n  .picture-container-side .description-container .title {\n    padding-top: 30px !important;\n  }\n  .picture-container-side .links-container {\n    padding-top: 15px !important;\n  }\n}\n[data-component='projects-component'] {\n  margin: 50px 0 0 0;\n}\n[data-component='projects-component'] .angular-google-map-container .map {\n  min-height: 210px !important;\n  max-height: 210px !important;\n  border: 2px solid #262729;\n}\n[data-component='projects-component'] .title-box .icon {\n  top: 4px;\n  left: 4px;\n}\n[data-component='projects-component'] .content-body .change-project-button {\n  width: 100px;\n}\n[data-component='projects-component'] .content-body .change-project-button.right {\n  margin-left: 15px;\n  padding: 0 25px 0 25px;\n}\n[data-component='projects-component'] .content-body .change-project-button.right i {\n  left: 8px;\n}\n[data-component='projects-component'] .content-body .change-project-button.left {\n  padding: 0 20px 0 21px;\n}\n[data-component='projects-component'] .content-body .description-container .logos {\n  height: 100%;\n}\n[data-component='projects-component'] .content-body .description-container .title {\n  margin: 0;\n}\n[data-component='projects-component'] .content-body .description-container .subtitle {\n  padding-top: 5px;\n  font-style: oblique;\n  font-variant: small-caps;\n}\n[data-component='projects-component'] .content-body .description-container .list-missions {\n  text-align: left;\n  list-style: none;\n}\n[data-component='projects-component'] .content-body .images-container .skills-container .tile {\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n@media (max-width: 600px) {\n  .list-missions {\n    padding-left: 25px;\n  }\n}\n[data-component='skills-component'] {\n  margin: 50px 0 0 0;\n}\n[data-component='skills-component'] .title-box .icon {\n  top: 2px;\n  left: 3px;\n}\n[data-component='skills-component'] .content-body .knowledge-container .domains-container {\n  text-align: left;\n}\n[data-component='skills-component'] .content-body .knowledge-container md-icon {\n  margin-right: 5px;\n}\n[data-component='skills-component'] .content-body .expertise-container md-progress-circular,\n[data-component='skills-component'] .content-body .expertise-container md-progress-linear {\n  opacity: 0.6;\n}\n[data-component='skills-component'] .content-body .expertise-container .skill-container {\n  padding-top: 30px;\n  position: relative;\n  text-align: center;\n}\n[data-component='skills-component'] .content-body .expertise-container .skill-container .skill-second-bar {\n  opacity: .1;\n  top: 29px;\n  position: absolute;\n}\n[data-component='skills-component'] .content-body .expertise-container .skill-container .skill-number-label {\n  top: 36px;\n  left: 23px;\n  position: absolute;\n}\n[data-component='skills-component'] .content-body .expertise-container .framework-label {\n  margin: 20px 0 2px 0;\n}\n[data-component='story-component'] {\n  margin: 50px 0 80px 0;\n}\n[data-component='story-component'] .title-box .icon {\n  top: 3px;\n  left: 2px;\n}\n[data-component='story-component'] .content-body .story-container {\n  height: 80px;\n}\n[data-component='story-component'] .content-body .story-container .year-container .year-square {\n  border: 1px solid #E2E2E2;\n  transform: rotate(45deg);\n  background-color: white;\n  width: 70px;\n  height: 70px;\n  cursor: pointer;\n  outline: none;\n}\n[data-component='story-component'] .content-body .story-container .year-container .year-square:focus {\n  background-color: #E2E2E2;\n}\n[data-component='story-component'] .content-body .story-container .year-container .year-square .year {\n  transform: rotate(-45deg);\n  margin: 0;\n  position: absolute;\n  left: 14px;\n  top: 24px;\n}\n[data-component='story-component'] .content-body .story-container .year-container .year-square.active,\n[data-component='story-component'] .content-body .story-container .year-container .year-square:hover {\n  cursor: pointer;\n  background: #262729;\n  color: white;\n  font-size: 20px;\n  width: 85px;\n  height: 85px;\n  z-index: 1;\n  margin-top: -8px;\n}\n[data-component='story-component'] .content-body .story-container .year-container .year-square.active .year,\n[data-component='story-component'] .content-body .story-container .year-container .year-square:hover .year {\n  left: 17px;\n  top: 29px;\n}\n[data-component='story-component'] .content-body .list-item {\n  border-top: 1px solid #E2E2E2;\n}\n[data-component='story-component'] .content-body .list-item:last-child {\n  border-bottom: 1px solid #E2E2E2;\n}\n[data-component='story-component'] .content-body .list-item.active {\n  background-color: rgba(0, 0, 0, 0.04);\n}\n[data-component='story-component'] .content-body .list-item button {\n  padding: 16px;\n}\n[data-component='story-component'] .content-body .list-item .icon {\n  padding-right: 16px;\n}\n[data-component='story-component'] .content-body .list-item .story-description-container {\n  padding-right: 60px;\n}\n[data-component='story-component'] .content-body .list-item .story-description-container .title {\n  line-height: 20px;\n}\n[data-component='story-component'] .content-body .list-item .year-button {\n  margin-bottom: -16px;\n  margin-right: -16px;\n  height: 100%;\n  color: white !important;\n  background-color: #262729;\n  min-width: 65px;\n}\n[data-component='story-component'] .content-body .list-item .year-button:hover {\n  color: white !important;\n  background-color: #262729 !important;\n}\n[data-component='story-component'] .content-body .story-description-container {\n  outline: none;\n}\n[data-component='story-component'] .content-body .story-description-container.left {\n  text-align: right;\n}\n[data-component='story-component'] .content-body .story-description-container .type,\n[data-component='story-component'] .content-body .story-description-container .subtitle,\n[data-component='story-component'] .content-body .story-description-container .title,\n[data-component='story-component'] .content-body .story-description-container .description {\n  margin: 0;\n}\n[data-component='story-component'] .content-body .story-description-container .type {\n  font-variant: small-caps;\n}\n[data-component='story-component'] .content-body .story-description-container .subtitle {\n  font-weight: bold;\n  font-size: 12px;\n  line-height: 20px;\n}\n[data-component='story-component'] .content-body .story-description-container .subtitle.location {\n  line-height: 10px;\n}\n[data-component='story-component'] .content-body .story-description-container .description {\n  padding-top: 5px;\n  font-size: 12px;\n  line-height: 20px;\n  width: 70%;\n}\n[data-component='story-component'] .content-body .story-description-container .read-more-button {\n  border: 1px solid #262729;\n  padding: 0;\n  margin-top: 3px;\n  font-size: 12px;\n  line-height: 25px;\n  min-height: 25px;\n}\n@media (min-width: 600px) and (max-width: 840px) {\n  .year-container {\n    margin: 0 15px;\n  }\n}\n", ""]);
+	exports.push([module.id, "/* Rules for sizing the icon. */\n.material-icons.md-18 {\n  font-size: 18px;\n}\n.material-icons.md-24 {\n  font-size: 24px;\n}\n.material-icons.md-36 {\n  font-size: 36px;\n}\n.material-icons.md-48 {\n  font-size: 48px;\n}\n/* Rules for using icons as black on a light background. */\n.material-icons.md-dark {\n  color: rgba(0, 0, 0, 0.54);\n}\n.material-icons.md-dark.md-inactive {\n  color: rgba(0, 0, 0, 0.26);\n}\n/* Rules for using icons as white on a dark background. */\n.material-icons.md-light {\n  color: #ffffff;\n}\n.material-icons.md-light.md-inactive {\n  color: rgba(255, 255, 255, 0.3);\n}\n/* Palette generated by Material Palette - materialpalette.com/blue-grey/blue */\n.dark-primary-color {\n  background: #908D8D;\n}\n.default-primary-color {\n  background: #908D8D;\n}\n.light-primary-color {\n  background: #908D8D;\n}\n.text-primary-color {\n  color: #908D8D;\n}\n.accent-color {\n  background: #908D8D;\n}\n.primary-text-color {\n  color: #908D8D;\n}\n.secondary-text-color {\n  color: #908D8D;\n}\n.divider-color {\n  border-color: #908D8D;\n}\nP,\nli {\n  font-size: 16px;\n  font-weight: 400;\n  letter-spacing: 0.16px;\n  line-height: 25.6px;\n  color: black;\n  opacity: 0.7;\n}\n.custom-button {\n  text-transform: none;\n  font-weight: normal;\n  margin: 0;\n  border-radius: 0;\n  padding: 0 20px 0 30px;\n}\n.custom-button i {\n  left: -10px;\n  top: 7px;\n  position: relative;\n}\n.custom-button:hover {\n  color: #262729 !important ;\n  background-color: white !important;\n}\n.sticked-button {\n  min-width: 40px;\n  min-height: 60px;\n  padding: 0;\n  z-index: 1;\n}\n.sticked-button i {\n  left: 0;\n  top: 7px;\n  position: relative;\n}\n.no-margin {\n  margin: 0;\n}\n.no-padding {\n  padding: 0;\n}\n.light {\n  color: #99999A;\n}\n.grunt {\n  background-image: url(" + __webpack_require__(120) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.grunt:hover {\n  background-image: url(" + __webpack_require__(121) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.angular {\n  background-image: url(" + __webpack_require__(122) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.angular:hover {\n  background-image: url(" + __webpack_require__(123) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.react {\n  background-image: url(" + __webpack_require__(124) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.react:hover {\n  background-image: url(" + __webpack_require__(125) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.mui {\n  background-image: url(" + __webpack_require__(126) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.mui:hover {\n  background-image: url(" + __webpack_require__(127) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.mongo {\n  background-image: url(" + __webpack_require__(128) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.mongo:hover {\n  background-image: url(" + __webpack_require__(129) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.js {\n  background-image: url(" + __webpack_require__(130) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.js:hover {\n  background-image: url(" + __webpack_require__(131) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.ionic {\n  background-image: url(" + __webpack_require__(132) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.ionic:hover {\n  background-image: url(" + __webpack_require__(133) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.css3 {\n  background-image: url(" + __webpack_require__(134) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.css3:hover {\n  background-image: url(" + __webpack_require__(135) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.node {\n  background-image: url(" + __webpack_require__(136) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.node:hover {\n  background-image: url(" + __webpack_require__(137) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.play {\n  background-image: url(" + __webpack_require__(138) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.play:hover {\n  background-image: url(" + __webpack_require__(138) + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n[data-component='contact-component'] {\n  margin: 50px 0 0 0;\n}\n[data-component='contact-component'].content-container {\n  max-width: 700px !important;\n}\n[data-component='contact-component'] .title-box .icon {\n  top: 3px;\n  left: 3px;\n  font-size: 20px;\n}\n[data-component='contact-component'] .send-message-button {\n  align-self: center;\n}\n.footer-part {\n  min-height: 175px;\n  background-color: #262729;\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.footer-part .message {\n  margin-top: 40px;\n  color: white;\n  font-variant: small-caps;\n}\n.footer-part .copyright-container {\n  opacity: 0.8;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.footer-part .copyright-container .separator {\n  height: 1px;\n  background-color: white;\n  width: 50%;\n}\n.footer-part .copyright-container .copyright {\n  font-size: 14px;\n  color: white;\n}\n.intro-container {\n  color: white;\n  position: absolute;\n  left: 50px;\n  bottom: 50px;\n}\n.intro-container .intro-separator {\n  height: 1px;\n  background-color: white;\n  width: 25%;\n  margin: 20px 0;\n}\n.intro-container .intro-subtitle {\n  width: 70%;\n  font-weight: normal;\n}\n@media (max-width: 840px) {\n  .intro-title {\n    font-size: 24px;\n  }\n  .intro-subtitle {\n    font-size: 20px;\n  }\n}\n@media (min-width: 320px) and (max-width: 480px) {\n  .intro-container {\n    display: none;\n  }\n}\nhtml,\nbody {\n  margin: 0;\n  height: auto;\n  color: #262729;\n  background-color: white;\n  font-family: 'Roboto', \"Helvetica Neue\", sans-serif;\n}\nhtml header-dir,\nbody header-dir {\n  background: url(" + __webpack_require__(139) + ") no-repeat center;\n  background-size: cover;\n  height: 650px;\n  position: relative;\n}\nhtml .locale-container,\nbody .locale-container {\n  width: 100%;\n  margin-right: 31px;\n  max-width: 1024px;\n  align-self: center;\n}\nhtml .locale-container .md-icon-button,\nbody .locale-container .md-icon-button {\n  margin: 0;\n  height: 0;\n  min-width: 0;\n  padding: 0;\n  width: 35px;\n  border-radius: 0;\n}\nhtml .locale-container .md-icon-button.canada,\nbody .locale-container .md-icon-button.canada {\n  background: url(" + __webpack_require__(140) + ") no-repeat center;\n  background-size: contain;\n}\nhtml .locale-container .md-icon-button.canada:hover,\nbody .locale-container .md-icon-button.canada:hover {\n  background: url(" + __webpack_require__(141) + ") no-repeat center;\n  background-size: contain;\n}\nhtml .locale-container .md-icon-button.france,\nbody .locale-container .md-icon-button.france {\n  margin-left: 10px;\n  background: url(" + __webpack_require__(142) + ") no-repeat center;\n  background-size: contain;\n}\nhtml .locale-container .md-icon-button.france:hover,\nbody .locale-container .md-icon-button.france:hover {\n  background: url(" + __webpack_require__(143) + ") no-repeat center;\n  background-size: contain;\n}\nhtml .main-content,\nbody .main-content {\n  /*contact {\n      background: url('../../img/mappemonde.png') no-repeat center;\n      background-size: 130%;\n    }*/\n}\nhtml .main-content .section-separator,\nbody .main-content .section-separator {\n  height: 400px;\n  background-color: #262729;\n}\nhtml .main-content .content-container,\nbody .main-content .content-container {\n  max-width: 1024px;\n  width: 100%;\n}\nhtml .main-content .content-container .title-box,\nbody .main-content .content-container .title-box {\n  align-self: center;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\nhtml .main-content .content-container .title-box .icon-container,\nbody .main-content .content-container .title-box .icon-container {\n  border: 1px solid #262729;\n  background-color: #262729;\n  width: 30px;\n  height: 30px;\n  transform: rotate(45deg);\n}\nhtml .main-content .content-container .title-box .icon-container .icon,\nbody .main-content .content-container .title-box .icon-container .icon {\n  color: white;\n  transform: rotate(-45deg);\n  position: absolute;\n}\nhtml .main-content .content-container .title-box .title,\nbody .main-content .content-container .title-box .title {\n  margin: -16px 0 -12px 0;\n  padding: 25px 25px 15px 25px;\n  font-size: 35px;\n  border: 1px solid #CCCCCC;\n}\nhtml .main-content .content-container .title-box .subtitle,\nbody .main-content .content-container .title-box .subtitle {\n  background-color: white;\n  padding: 0 15px;\n  margin: 0;\n  font-variant: small-caps;\n  font-weight: normal;\n}\nhtml .main-content .content-container .content-body,\nbody .main-content .content-container .content-body {\n  margin: 40px 0;\n}\nhtml .main-content #montreal-wide,\nbody .main-content #montreal-wide {\n  background: url(" + __webpack_require__(144) + ") no-repeat center;\n  background-size: cover;\n  height: 500px;\n}\nhtml .main-content #bordeaux-wide,\nbody .main-content #bordeaux-wide {\n  background: url(" + __webpack_require__(145) + ") no-repeat center;\n  background-size: cover;\n  height: 500px;\n}\nhtml .main-content frameworks,\nbody .main-content frameworks,\nhtml .main-content interest,\nbody .main-content interest {\n  background-color: #262729;\n}\n@media (min-width: 840px) and (max-width: 1024px) {\n  header-dir {\n    height: 450px !important;\n  }\n}\n@media (min-width: 480px) and (max-width: 840px) {\n  #montreal-wide,\n  #bordeaux-wide {\n    height: 400px !important;\n  }\n  header-dir {\n    height: 400px !important;\n  }\n}\n@media (min-width: 320px) and (max-width: 480px) {\n  header-dir {\n    height: 230px !important;\n  }\n}\n#toolbar-nav {\n  background-color: white;\n  color: #262729;\n  display: flex;\n  justify-content: center;\n}\n.navbar-fixed {\n  top: 0;\n  z-index: 100;\n  position: fixed;\n  width: 100%;\n}\n.navigation-toolbar {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n}\n.navigation-toolbar .toolbar-container {\n  width: 100%;\n  max-width: 1024px;\n  display: flex;\n}\n.navigation-toolbar .toolbar-container .brand-container {\n  background-color: #262729;\n  max-width: 235px;\n  min-width: 171px;\n}\n.navigation-toolbar .toolbar-container .brand-container .brand-name {\n  color: white;\n}\n.navigation-toolbar .toolbar-container .toolbar-tools {\n  flex: 1;\n}\n.navigation-toolbar .toolbar-container .toolbar-actions {\n  justify-content: flex-end;\n}\n.navigation-toolbar .toolbar-container .toolbar-actions.plain-title {\n  padding-right: 0;\n}\n.navigation-toolbar .toolbar-container .toolbar-actions .nav-button {\n  height: 100%;\n  padding: 0 10px;\n  margin: 0;\n  border-radius: 0;\n}\n.navigation-toolbar .toolbar-container .toolbar-actions .nav-button:hover,\n.navigation-toolbar .toolbar-container .toolbar-actions .nav-button.active {\n  border-bottom: 3px solid #262729;\n  background-color: rgba(158, 158, 158, 0.2);\n}\n.navigation-toolbar .toolbar-container .toolbar-actions .nav-icons {\n  min-width: 55px;\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n}\n.menu-side-panel .list-item:hover,\n.menu-side-panel .list-item.active {\n  border-left: 3px solid #262729;\n}\n.menu-side-panel .list-item:hover button,\n.menu-side-panel .list-item.active button {\n  background-color: rgba(158, 158, 158, 0.2);\n}\n.menu-side-panel .list-item .icon {\n  padding: 0 20px 0 0;\n  opacity: 0.7;\n}\n[data-component='profile-component'] {\n  margin: 20px 0 0 0;\n}\n[data-component='profile-component'] .title-box .icon {\n  top: 2px;\n  left: 1px;\n}\n[data-component='profile-component'] .content-body .text-container .download-cv-btn {\n  margin-top: 50px;\n}\n[data-component='profile-component'] .content-body .sticked-container {\n  margin: 0;\n  position: relative;\n}\n[data-component='profile-component'] .content-body .sticked-container .sticked-button {\n  position: absolute;\n  right: -8px;\n  top: 44%;\n}\n[data-component='profile-component'] .picture-container {\n  border: 1px solid #E2E2E2;\n}\n[data-component='profile-component'] .picture-container,\n[data-component='profile-component'] .picture-container-side {\n  padding: 80px 0 60px 0;\n  position: relative;\n  text-align: center;\n}\n[data-component='profile-component'] .picture-container .picture,\n[data-component='profile-component'] .picture-container-side .picture {\n  background: url(" + __webpack_require__(146) + ") no-repeat;\n  background-size: 200px;\n  border: 1px solid #E2E2E2;\n  height: 200px;\n  width: 200px;\n  transform: rotate(45deg);\n}\n[data-component='profile-component'] .picture-container .description-container .title,\n[data-component='profile-component'] .picture-container-side .description-container .title {\n  margin: 0;\n  padding-top: 60px;\n  font-weight: normal;\n}\n[data-component='profile-component'] .picture-container .description-container .title .job,\n[data-component='profile-component'] .picture-container-side .description-container .title .job {\n  font-variant: small-caps;\n  font-weight: 600;\n}\n[data-component='profile-component'] .picture-container .description-container .subtitle,\n[data-component='profile-component'] .picture-container-side .description-container .subtitle {\n  padding: 0 30px;\n}\n[data-component='profile-component'] .picture-container .links-container,\n[data-component='profile-component'] .picture-container-side .links-container {\n  padding-top: 30px;\n}\n[data-component='profile-component'] .picture-container .links-container .link,\n[data-component='profile-component'] .picture-container-side .links-container .link {\n  cursor: pointer;\n  transform: rotate(45deg);\n  margin: 0 20px;\n}\n[data-component='profile-component'] .picture-container .links-container .link img,\n[data-component='profile-component'] .picture-container-side .links-container .link img {\n  transition: transform 0.3s ease-in-out;\n  background-size: 40px;\n  width: 40px;\n  height: 40px;\n}\n[data-component='profile-component'] .picture-container .links-container .link img:hover,\n[data-component='profile-component'] .picture-container-side .links-container .link img:hover {\n  transform: rotate(-45deg);\n}\n[data-component='profile-component'] .picture-container .links-container .link .linkedin-picture,\n[data-component='profile-component'] .picture-container-side .links-container .link .linkedin-picture {\n  background-image: url(" + __webpack_require__(147) + ");\n}\n[data-component='profile-component'] .picture-container .links-container .link .linkedin-picture:hover,\n[data-component='profile-component'] .picture-container-side .links-container .link .linkedin-picture:hover {\n  background-image: url(" + __webpack_require__(148) + ");\n}\n[data-component='profile-component'] .picture-container .links-container .link .github-picture,\n[data-component='profile-component'] .picture-container-side .links-container .link .github-picture {\n  background-image: url(" + __webpack_require__(149) + ");\n}\n[data-component='profile-component'] .picture-container .links-container .link .github-picture:hover,\n[data-component='profile-component'] .picture-container-side .links-container .link .github-picture:hover {\n  background-image: url(" + __webpack_require__(150) + ");\n}\n@media (max-width: 600px) {\n  .picture-container-side .picture {\n    background-size: 150px !important;\n    height: 150px !important;\n    width: 150px !important;\n  }\n  .picture-container-side .description-container .title {\n    padding-top: 30px !important;\n  }\n  .picture-container-side .links-container {\n    padding-top: 15px !important;\n  }\n}\n[data-component='projects-component'] {\n  margin: 50px 0 0 0;\n}\n[data-component='projects-component'] .angular-google-map-container .map {\n  min-height: 210px !important;\n  max-height: 210px !important;\n  border: 2px solid #262729;\n}\n[data-component='projects-component'] .title-box .icon {\n  top: 4px;\n  left: 4px;\n}\n[data-component='projects-component'] .content-body .change-project-button {\n  width: 100px;\n}\n[data-component='projects-component'] .content-body .change-project-button.right {\n  margin-left: 15px;\n  padding: 0 25px 0 25px;\n}\n[data-component='projects-component'] .content-body .change-project-button.right i {\n  left: 8px;\n}\n[data-component='projects-component'] .content-body .change-project-button.left {\n  padding: 0 20px 0 21px;\n}\n[data-component='projects-component'] .content-body .description-container .logos {\n  height: 100%;\n}\n[data-component='projects-component'] .content-body .description-container .title {\n  margin: 0;\n}\n[data-component='projects-component'] .content-body .description-container .subtitle {\n  padding-top: 5px;\n  font-style: oblique;\n  font-variant: small-caps;\n}\n[data-component='projects-component'] .content-body .description-container .list-missions {\n  text-align: left;\n  list-style: none;\n}\n[data-component='projects-component'] .content-body .images-container .skills-container .tile {\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n@media (max-width: 600px) {\n  .list-missions {\n    padding-left: 25px;\n  }\n}\n[data-component='skills-component'] {\n  margin: 50px 0 0 0;\n}\n[data-component='skills-component'] .title-box .icon {\n  top: 2px;\n  left: 3px;\n}\n[data-component='skills-component'] .content-body .knowledge-container .domains-container {\n  text-align: left;\n}\n[data-component='skills-component'] .content-body .knowledge-container md-icon {\n  margin-right: 5px;\n}\n[data-component='skills-component'] .content-body .expertise-container md-progress-circular,\n[data-component='skills-component'] .content-body .expertise-container md-progress-linear {\n  opacity: 0.6;\n}\n[data-component='skills-component'] .content-body .expertise-container .skill-container {\n  padding-top: 30px;\n  position: relative;\n  text-align: center;\n}\n[data-component='skills-component'] .content-body .expertise-container .skill-container .skill-second-bar {\n  opacity: .1;\n  top: 29px;\n  position: absolute;\n}\n[data-component='skills-component'] .content-body .expertise-container .skill-container .skill-number-label {\n  top: 36px;\n  left: 23px;\n  position: absolute;\n}\n[data-component='skills-component'] .content-body .expertise-container .framework-label {\n  margin: 20px 0 2px 0;\n}\n[data-component='story-component'] {\n  margin: 50px 0 80px 0;\n}\n[data-component='story-component'] .title-box .icon {\n  top: 3px;\n  left: 2px;\n}\n[data-component='story-component'] .content-body .story-container {\n  height: 80px;\n}\n[data-component='story-component'] .content-body .story-container .year-container .year-square {\n  border: 1px solid #E2E2E2;\n  transform: rotate(45deg);\n  background-color: white;\n  width: 70px;\n  height: 70px;\n  cursor: pointer;\n  outline: none;\n}\n[data-component='story-component'] .content-body .story-container .year-container .year-square:focus {\n  background-color: #E2E2E2;\n}\n[data-component='story-component'] .content-body .story-container .year-container .year-square .year {\n  transform: rotate(-45deg);\n  margin: 0;\n  position: absolute;\n  left: 14px;\n  top: 24px;\n}\n[data-component='story-component'] .content-body .story-container .year-container .year-square.active,\n[data-component='story-component'] .content-body .story-container .year-container .year-square:hover {\n  cursor: pointer;\n  background: #262729;\n  color: white;\n  font-size: 20px;\n  width: 85px;\n  height: 85px;\n  z-index: 1;\n  margin-top: -8px;\n}\n[data-component='story-component'] .content-body .story-container .year-container .year-square.active .year,\n[data-component='story-component'] .content-body .story-container .year-container .year-square:hover .year {\n  left: 17px;\n  top: 29px;\n}\n[data-component='story-component'] .content-body .list-item {\n  border-top: 1px solid #E2E2E2;\n}\n[data-component='story-component'] .content-body .list-item:last-child {\n  border-bottom: 1px solid #E2E2E2;\n}\n[data-component='story-component'] .content-body .list-item.active {\n  background-color: rgba(0, 0, 0, 0.04);\n}\n[data-component='story-component'] .content-body .list-item button {\n  padding: 16px;\n}\n[data-component='story-component'] .content-body .list-item .icon {\n  padding-right: 16px;\n}\n[data-component='story-component'] .content-body .list-item .story-description-container {\n  padding-right: 60px;\n}\n[data-component='story-component'] .content-body .list-item .story-description-container .title {\n  line-height: 20px;\n}\n[data-component='story-component'] .content-body .list-item .year-button {\n  margin-bottom: -16px;\n  margin-right: -16px;\n  height: 100%;\n  color: white !important;\n  background-color: #262729;\n  min-width: 65px;\n}\n[data-component='story-component'] .content-body .list-item .year-button:hover {\n  color: white !important;\n  background-color: #262729 !important;\n}\n[data-component='story-component'] .content-body .story-description-container {\n  outline: none;\n}\n[data-component='story-component'] .content-body .story-description-container.left {\n  text-align: right;\n}\n[data-component='story-component'] .content-body .story-description-container .type,\n[data-component='story-component'] .content-body .story-description-container .subtitle,\n[data-component='story-component'] .content-body .story-description-container .title,\n[data-component='story-component'] .content-body .story-description-container .description {\n  margin: 0;\n}\n[data-component='story-component'] .content-body .story-description-container .type {\n  font-variant: small-caps;\n}\n[data-component='story-component'] .content-body .story-description-container .subtitle {\n  font-weight: bold;\n  font-size: 12px;\n  line-height: 20px;\n}\n[data-component='story-component'] .content-body .story-description-container .subtitle.location {\n  line-height: 10px;\n}\n[data-component='story-component'] .content-body .story-description-container .description {\n  padding-top: 5px;\n  font-size: 12px;\n  line-height: 20px;\n  width: 70%;\n}\n[data-component='story-component'] .content-body .story-description-container .read-more-button {\n  border: 1px solid #262729;\n  padding: 0;\n  margin-top: 3px;\n  font-size: 12px;\n  line-height: 25px;\n  min-height: 25px;\n}\n@media (min-width: 600px) and (max-width: 840px) {\n  .year-container {\n    margin: 0 15px;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -86658,6 +86550,282 @@
 /***/ function(module, exports) {
 
 	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpFNzM5OTBEMzUzRDBFMjExOUY3MTg2NzAyNUZGMzlCRiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGRkFDNzdGQUQ5NDUxMUUyOTdCM0VFREZCMUJDNDFDMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGRkFDNzdGOUQ5NDUxMUUyOTdCM0VFREZCMUJDNDFDMSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTU5Njk4OTMxMkQyRTIxMTkyNERCMUM3RTBGMTI0NDUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTczOTkwRDM1M0QwRTIxMTlGNzE4NjcwMjVGRjM5QkYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz62wlN5AAAIV0lEQVR42uyafWwb5RnAfR8+nz/ixI5jx2nSpHbTxG1KmgRK0jRlZYx+SG0H26qSFcEoICEk0MQG0iRUVUggKkAgPloxULVB2vK1AoKtrGMoDW1IQkPWorTOR5slcZ04TtzEjp0739k8yYnjiM8+2+cEKuX5w7be13fv83vf530+3jvklpc6FNezoIrrXJYAlgCWAJYAlgCWAK5rwTN+x+j3wv3m2xEE4T45+dkBgK4YEnVYtNVFertJU2Qg83QqkkBB0xDNeqfpwYlQ/1jw3NBk98g0w86SoCgqnwSRn8xFIhG7Sb2jIu+2cpOelJ6RAMWc6vZ8fMHj9ATROZGzJrIAYNZB9X21yzbYDWmMf7Z//NDpgT7vDI7jaa8GnrbqSgy5v65wd3U+mu7kbbDn3rzC+E77wOEzLiaCgaSxFGh62lv1xKHdjj01VlSeEWMo0li74o271uThoXA4DNYo3PcLAgADlOapX9u9utSszZQDWFVg+NsD9TYtnQYDmqr2ZWbNi78pN2qVmXW+2RrVG/c32FNnQFO1nIO7VulUmY8eIGoCP3zfRjM2nRJDCqrgqOLAdnuO5kdzv+NA00Rg5tZK2+9/sba80JTkrfrdE29/cf5U15VsrerT/Y18e5aaeKHxpj2vNiPZZqVSmcyGxpOf/gfqC8ssOmHjsHeqvdetUqmaWi4d+9K5parkyd0bzTnayyM+UNEfov1BCqaRVOK5ek2JJceeb/AFQgeONZ9odaIYBt7z6uTM6LVpS84P22ml1fjHX5U+e7Iny2RNxiklC2DPJcFjxk4kKAEABEHASJ9/6zrrfA+JRsYmpxGB8PkFGHokGvGHwqRaDRMM10Jjr9snBABp3FTxQavzis+jy82XjA94ktO/r64w1mMG6TA2N5GgDfeDYdlIFNHpdMLMh0+KmNmvqFZLYHMCyoGtM+x8W4cr/rRr/b2vnIT/aAzmDADYckmItbHtBcYsTks+I4Ah+UwudmC+Xbg4Bh0pEuMcRRVFxkvuMbihOidPlheCUSHPEZ0Eu9WoxDFhvgkY3FKAYDHCt/OGAYHMZskWHbexYTXDMDNT47R/QhYAqohCliba9fiRU7MWIyMYw+VP/6NNtGv7jSuVqIJjCAd86QOssepEc8zzA6PgTLgZTT+XRJBPOwc6et2xXRqVssZmZmFTRSKUfyIeAyppP+uWZYl2HWu+wHkSOWk9t20++rpftLeuvJADgN90wCfKIA2w0qwR7frK6eJtWg4A8HcNeEV7HYW5AMB7BVEGaYBig1q0a9jr57amzKoKLvdMhUS7IKhF5oRPK2IZpPdAvLxtJszKLKZ4AJqJiHZZDDpOe2FeNI9BegXUBCbalSPmv9MTTZzsUImhUDbFZnVCBukViDe9VoMuUwD5OdoE6yOalvIM0gAhmhVtr7Llx65vevWdzawX7QqzkRmaiXchxyANMD4dFm2/9YaSeTssbYC6VVbRLs+1gGhKImRAJXfYoC8o2rX5hhKjVsX7aTkb4PbKYtGuPrdPMshIr0D/mDgAgWNP3FkLoV4OA0z/w7evhTpGtNc57JU8yZNega7hqXi9v6137PtlBVSA6THAJXs3rtpTXxb34OjikORZCy4J8D9XIEAx8+rgd1u+NejUt62zP3Fn3dpi80v//MZ9LSRMMxMMye17s558dNu6rVUlcZ0HFW51ujBMmdiKpOsBqDdOdXvuqCoQNl4d9z/6+snNlbY3H9m5vca+tdrWesnV2jtyYdA74PH7KUZ01Cy1stCodRQYGhwFtaVWHEu0/v861xukWa2WhFslOlkq2fZg4hWA2RrzU7+u/FE9WVteVGzJ+eu/u0Z801uqbfC35Xn6DWUFd6xfiSGKlovDokF6R3XJc3c3NDiWLTfpUVQifv/l7//1+CmoVyFlTMCQRD2Aok5PsLVvfr71u/rVW6rtJ9p6Xv/sG96RUmH25U86uAws1nLeOdvT1HIxme3R5hxu67nKVz+ySkouYTzUMnCzPXdeWfzQturPz///4IftH3f0lRUYvFNByOzpiAKmTfQ+IMfPOPduckgO+sx7XyrnBAAycLAFAL1e6viZnnntNXbr9ppZ++kbnfqkc6C1d5RFMIIg4hUJ0OKaCEgOd7z5QkffSIL7pAwAt4B7HW4dvTw6OX+q7t58k90yu5RzZxPLTNkJKgTQJqqQMP3Bscn9R5uJOUkmV8eTBICxGVT5+InuI/fUCOOOXqM6+tiu7iHvkNefb9BWLDdVPvZWguQisUL+EHXfix+FmKgG4nNypVKyZ6Nc7efyRx4+2hWKSbBWF5m2VK2oLDHDjqMoCsJzGnGNZth7XvjQ6b5GkiRnP8lUGikc7nKG1DNOP/R252SQiqsHTYt6ocQSCNF3HXy/vW8EtAcfkKT2KQOAIYGhX/LS9x75+opnUjzwpZ5W9Lsndj51rL1vVK1W844/8wBCBvd0dO+b55pOd0fk5tKzpxtb9zeBHwPtOeNJ6Zgj5ZN+noFBkOebr37wVc+fd95YV16YhvbtPa6njp/uvDwKSsOuTdJvygUQMsDnEIX94dB/1lizGjet2Vpt15JK7pw0weUzYfazzv63vjgPyeac6hr45GJWGkcEch+zgrmHaSrgGaRCQQJD1pdaWy66OEsQDaKwQwhUMTEVgAtBV+5o7Cd4zCpcCkJFZltXBL3D9EyorX8MtE/gQ+D/FMvCfwCec80yz2bkPu3ixgaILEsxMLBhOnENxSutELw9IUeBjL2tgmK4Nq+IINXCsibBumXkUEyR2ddtEBQjjQUonuEnsIsH8JMwZP6Fp0VmWJA3thaTYaFeOVs0hgV8Z25xGBb2pb9FYPhOgAEAvQWllm++H7IAAAAASUVORK5CYII="
+
+/***/ },
+/* 151 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"header_title": "Hi, I am nicolas,",
+		"header_job": "Web",
+		"header_job_2": "Developer",
+		"header_subtitle": "sous titre long",
+		"header_subtitle_short": "sous titre court",
+		"menu_home": "HOME",
+		"menu_profile": "PROFILE",
+		"menu_stories": "STORIES",
+		"menu_projects": "PROJECTS",
+		"menu_skills": "SKILLS",
+		"menu_contact": "CONTACT",
+		"profile_box_title": "Profile",
+		"profile_box_subtitle": "about myself",
+		"profile_first_title": "About me",
+		"profile_first_description": "description du profil",
+		"profile_second_title": "Objectives",
+		"profile_second_description": "description des objectifs",
+		"profile_button_download": "Download my CV",
+		"profile_picture_title": "Hi, I'm",
+		"profile_picture_subtitle": "Nicolas Letoublon",
+		"profile_picture_job": "Web Developer",
+		"profile_picture_description": "description",
+		"stories_box_title": "My story",
+		"stories_box_subtitle1": "education",
+		"stories_box_subtitle2": "experience",
+		"stories_button_read_more": "Read more",
+		"stories_story_1_type": "education",
+		"stories_story_1_highlight": "French Scientific Baccalaureat",
+		"stories_story_1_firm": "Saint Joseph de Tivoli",
+		"stories_story_1_localisation": "Bordeaux, France",
+		"stories_story_1_description": "",
+		"stories_story_2_type": "education",
+		"stories_story_2_highlight": "Computer Engineering Degree",
+		"stories_story_2_firm": "Exia CESI",
+		"stories_story_2_localisation": "Bordeaux, France",
+		"stories_story_2_description": "",
+		"stories_story_3_type": "internship",
+		"stories_story_3_highlight": "Full stack developer",
+		"stories_story_3_firm": "Eurogiciel",
+		"stories_story_3_localisation": "Bordeaux, France",
+		"stories_story_3_description": "Description Description Description Description Description Description Description Description Description Description ",
+		"stories_story_4_type": "job experience",
+		"stories_story_4_highlight": "Software engineer",
+		"stories_story_4_firm": "Eurogiciel",
+		"stories_story_4_localisation": "Bordeaux, France",
+		"stories_story_4_description": "",
+		"stories_story_5_type": "job experience",
+		"stories_story_5_highlight": "Front-end engineer",
+		"stories_story_5_firm": "Kronos Canadian Inc.",
+		"stories_story_5_localisation": "Montreal, Canada",
+		"stories_story_5_description": "",
+		"projects_box_title": "My Projects",
+		"projects_box_subtitle": "latest works",
+		"projects_technical_subtitle": "Technical environment",
+		"projects_button_previous": "Prev",
+		"projects_button_next": "Next",
+		"projects_project_1_name": "Big data",
+		"projects_project_1_first_part_title": "",
+		"projects_project_1_first_part_text": "",
+		"projects_project_1_second_part_title": "",
+		"projects_project_1_second_part_text": "",
+		"projects_project_2_name": "Environmental application",
+		"projects_project_2_first_part_title": "",
+		"projects_project_2_first_part_text": "",
+		"projects_project_2_second_part_title": "",
+		"projects_project_2_second_part_text": "",
+		"projects_project_3_name": "Management application",
+		"projects_project_3_first_part_title": "",
+		"projects_project_3_first_part_text": "",
+		"projects_project_3_second_part_title": "",
+		"projects_project_3_second_part_text": "",
+		"projects_project_4_name": "Storage application",
+		"projects_project_4_first_part_title": "",
+		"projects_project_4_first_part_text": "",
+		"projects_project_4_second_part_title": "",
+		"projects_project_4_second_part_text": "",
+		"projects_project_5_name": "Search engine",
+		"projects_project_5_first_part_title": "",
+		"projects_project_5_first_part_text": "",
+		"projects_project_5_second_part_title": "",
+		"projects_project_5_second_part_text": "",
+		"projects_project_6_name": "Workforce management application",
+		"projects_project_6_first_part_title": "",
+		"projects_project_6_first_part_text": "",
+		"projects_project_6_second_part_title": "",
+		"projects_project_6_second_part_text": "",
+		"skills_box_title": "My skills",
+		"skills_box_subtitle1": "knowledge",
+		"skills_box_subtitle2": "expertise",
+		"skills_knowledge_title": "Knowledge",
+		"skills_knowledge_text": "knowledge text",
+		"skills_knowledge_1": "Web application",
+		"skills_knowledge_2": "Front-end Frameworks",
+		"skills_knowledge_3": "Web services REST",
+		"skills_knowledge_4": "Interface design",
+		"skills_knowledge_5": "Responsive web application",
+		"skills_knowledge_6": "Front-end best pratices",
+		"skills_expertise_title": "Expertise",
+		"skills_expertise_bar_1": "Angular JS 1.x",
+		"skills_expertise_bar_2": "Bootstrap 3 / Material Design",
+		"skills_expertise_bar_3": "Node JS",
+		"skills_expertise_bar_4": "React JS",
+		"skills_expertise_bar_5": "ASP MVC 5",
+		"skills_expertise_circle_1": "Javascript",
+		"skills_expertise_circle_2": "Html 5",
+		"skills_expertise_circle_3": "Css 3",
+		"skills_expertise_circle_4": "C#",
+		"contact_box_title": "Contact",
+		"contact_box_subtitle": "get in touch",
+		"contact_form_name": "Name",
+		"contact_form_email": "Email",
+		"contact_form_subject": "Subject",
+		"contact_form_message": "What are you going to tell me !",
+		"contact_button_send": "Send",
+		"footer_message": "I know, already over...",
+		"footer_rights": "Nicolas Letoublon, All rights reserved 2016"
+	};
+
+/***/ },
+/* 152 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"header_title": "Salut! Moi c'est Nicolas,",
+		"header_job": "Developpeur",
+		"header_job2": "Web",
+		"header_subtitle2": "Bienvenue sur mon site web, cree avant tout pour me faire plaisir, mais aussi pour permettre d'en savoir un peu plus sur moi, mes travaux et mes aspirations !",
+		"header_subtitle": "Bienvenue sur mon site web, cree pour en savoir un peu plus sur moi, mes travaux et mes aspirations !",
+		"header_subtitle_short": "Bienvenue sur mon site web, cree pour en savoir un peu plus sur moi, mes travaux et mes aspirations !",
+		"header_subtitle_short2": "La bonne place pour en apprendre un peu plus sur moi !",
+		"menu_home": "ACCUEIL",
+		"menu_profile": "PROFIL",
+		"menu_stories": "PARCOURS",
+		"menu_projects": "PROJETS",
+		"menu_skills": "COMPETENCES",
+		"menu_contact": "CONTACT",
+		"profile_box_title": "Profil",
+		"profile_box_subtitle": "a propos",
+		"profile_first_title": "A propos de moi",
+		"profile_first_description": "Je suis un jeune ingenieur de 25 ans, specialise dans le developpement logiciel. Passionne, j'aime apprendre de nouveaux concepts, de nouveaux langages, communiquer et surtout creer. Je me suis lance dans l'aventure du developpement non seulement car j'aime fabriquer, mais parce que j'aime fabriquer de belles choses, intuitives et rapides. C'est une des raison de ma residence actuelle a Montreal, une ville en pleine expansion et a la pointe. Je suis venu me perfectionner afin de maitriser mon nouveau terrain de jeu : le Web.",
+		"profile_second_title": "Missions et Objectifs",
+		"profile_second_description": "Innover, progresser et faire de chacun de mes appentissages une force. Mon principal objectif est d'apprendre toujours plus afin de maitriser mon sujet et ameliorer mes travaux. C'est pour cela que le travail d'equipe est pour moi primordial: pouvoir confronter sa production aux autres est un moyen de se remettre en question constamment et de continuer a progresser.",
+		"profile_button_download": "Telecharger mon CV",
+		"profile_picture_title": "Ca, c'est moi",
+		"profile_picture_subtitle": "Nicolas Letoublon",
+		"profile_picture_job": "Developpeur Web",
+		"profile_picture_description": "Dynamique et novateur, j'aime mettre en oeuvre mes nouveaux acquis pour faire avancer mes projets.",
+		"stories_box_title": "Parcours",
+		"stories_box_subtitle": "formation & experience",
+		"stories_button_read_more": "En savoir plus",
+		"stories_story_1_type": "formation",
+		"stories_story_1_highlight": "Baccalaureat Scientifique",
+		"stories_story_1_firm": "Saint Joseph de Tivoli",
+		"stories_story_1_localisation": "Bordeaux, France",
+		"stories_story_1_description": "",
+		"stories_story_2_type": "formation",
+		"stories_story_2_highlight": "Diplome d'ingenieur logiciel",
+		"stories_story_2_firm": "Exia CESI",
+		"stories_story_2_localisation": "Bordeaux, France",
+		"stories_story_2_description": "Specialisation dans la programmation logicielle, management de projet et des risques sous le referentiel PMI.",
+		"stories_story_3_type": "stage",
+		"stories_story_3_highlight": "Developpeur Full stack",
+		"stories_story_3_firm": "Eurogiciel",
+		"stories_story_3_localisation": "Bordeaux, France",
+		"stories_story_3_description": "Stage de fin d'etude de 6 mois dans une societe de service informatique. J'ai essentiellement travaille sur un projet traitant des technologies Big Data durant cette periode.",
+		"stories_story_4_type": "experience professionnelle",
+		"stories_story_4_highlight": "Ingenieur logiciel",
+		"stories_story_4_firm": "Eurogiciel",
+		"stories_story_4_localisation": "Bordeaux, France",
+		"stories_story_4_description": "Poste d'ingenieur logiciel Full-stack, j'ai pu travailler sur plusieurs projets, me permettant de manipuler un grand nombre de frameworks / base de donnees. ",
+		"stories_story_5_type": "experience professionnelle",
+		"stories_story_5_highlight": "Ingenieur Front-end",
+		"stories_story_5_firm": "Kronos Canadian Inc.",
+		"stories_story_5_localisation": "Montreal, Canada",
+		"stories_story_5_description": "Je suis actuellement en poste en tant que developpeur Front-end, avec l'objectif de maitriser les frameworks Front-end en appliquant les meilleurs pratiques et concepts dans le projet.",
+		"projects_box_title": "Mes Projets",
+		"projects_box_subtitle": "derniers travaux",
+		"projects_technical_subtitle": "Environnement technique",
+		"projects_button_previous": "Prec",
+		"projects_button_next": "Suiv",
+		"projects_project_1_name": "Requeteur multi base de donnees",
+		"projects_project_1_first_part_title": "EUROGICIEL  le haillan, france - 8 mois",
+		"projects_project_1_first_part_text": "Ce projet se concentre sur la fouille et l'analyse de donnees. Ce projet a eu pour but de creer une application web permettant de correller des donnees provenant de n'importe quelles sources. <br/> Le but du projet fut de manipuler un nouveau framework web, <i>Play Framework</i>, ainsi que le concept de base de donnees NoSQL avec <i>MongoDB</i>. Un des plus gros challenge a ete la realisation d'un requeteur graphique multi base de donnees. Ce dernier integrait en effet un moteur de generation de requetes dynamique.",
+		"projects_project_1_second_part_title": "Mes missions",
+		"projects_project_1_second_part_text": "Sous le couvert d'un chef de projet et d'outils SCRUM, j'ai essentiellement participe aux taches suivantes :",
+		"projects_project_1_mission_1": "- Definition du besoin",
+		"projects_project_1_mission_2": "- Conception de l'architecture technique - Java",
+		"projects_project_1_mission_3": "- Participation au moteur de requete",
+		"projects_project_1_mission_4": "- Creation de l'API REST",
+		"projects_project_1_mission_5": "- Design de la partie UI/UX de l'application",
+		"projects_project_2_name": "Logiciel de protection de l'environnement",
+		"projects_project_2_first_part_title": "THALES  le haillan / paris, france - 5 mois",
+		"projects_project_2_first_part_text": "Le secteur aeronautique est extremement controle. L'application de gestion sur laquelle j'ai travaille permet de certifier qu'une nomenclature (comprendre une arborescence de composants d'un appareil) est conforme aux differents risques environnementaux Europeens et Internationnaux. L'application a ete initialement developpe a l'aide du couple <i>Java / Flex</i>. ",
+		"projects_project_2_second_part_title": "Mon role",
+		"projects_project_2_second_part_text": "Pendant plusieurs mois j'ai ete en relation direct avec les clients, afin de recueillir les nouvelles fontionnalites a implementer. J'ai donc eu l'ocasion d'acquerir une experience dans differents domaines :",
+		"projects_project_2_mission_1": "- Relation cliente, recueil du besoin",
+		"projects_project_2_mission_2": "- Methodologie SCRUM",
+		"projects_project_2_mission_3": "- Developpement Full stack Java / Flex",
+		"projects_project_2_mission_4": "- Prise en charge des livraisons du produit",
+		"projects_project_2_mission_5": "",
+		"projects_project_3_name": "Application web de management de ressources",
+		"projects_project_3_first_part_title": "EUROGICIEL  bordeaux, france - 4 mois",
+		"projects_project_3_first_part_text": "Le client avait besoin d'un moyen de visualiser, gerer et planifier la charge des ressources de l'entreprise. Nous avons realises une solution web avec <i>AngularJS, Bootstrap 3 et Grunt</i> pour la partie cliente. Le back-end et l'API REST fut developpe a l'aide du framework Java <i>Spring</i>. L'application comporte plusieurs vues importantes, comme le planning global annuel, mensuel ou hebdomadaire et une matrice des competences dynamique.",
+		"projects_project_3_second_part_title": "Mes missions",
+		"projects_project_3_second_part_text": "Ce projet permis avant tout d'expirementer AngularJS, couple avec une API REST. J'ai ete present durant toutes les phases du projet :",
+		"projects_project_3_mission_1": "- Definition des fonctionnalites",
+		"projects_project_3_mission_2": "- Design / Maquettages de l'application",
+		"projects_project_3_mission_3": "- Conception de la partie Front-end modulaire",
+		"projects_project_3_mission_4": "- Developpement Angular / Boostrap",
+		"projects_project_3_mission_5": "",
+		"projects_project_4_name": "Application de gestion de stock",
+		"projects_project_4_first_part_title": "CULTURA  le haillan, france - 3 mois",
+		"projects_project_4_first_part_text": "Projet assez court, l'objectif etait de realiser une application web pour la gestion des stocks pour une chaine de magasins. L'application, apres avoir ete configuree, permet de parcourir les catalogues de produits pour l'ajouter ou le retirer de son assortiment (stock) local. Nous etions en charge de la partie Front-end, tandis qu'une entreprise tierce developpait une API REST pour satisfaire les besoins de l'application. Elle fut realisee a l'aide du <i>Framework Play</i> et une librairie javascript appartenant au client.",
+		"projects_project_4_second_part_title": "Mes missions",
+		"projects_project_4_second_part_text": "Le cote le plus enrichissant fut de travailler sur une quantite de donnees importantes, obligeant a trouver des axes d'optimisations pousses.",
+		"projects_project_4_mission_1": "- Participation a la redaction de l'appel d'offre",
+		"projects_project_4_mission_2": "- Redaction des specifications techniques",
+		"projects_project_4_mission_3": "- Realisation de l'application Front-end",
+		"projects_project_4_mission_4": "- Redaction et developpement des tests unitaires et d'integration",
+		"projects_project_4_mission_5": "- Support a la recette client",
+		"projects_project_5_name": "Moteur de recherche",
+		"projects_project_5_first_part_title": "DEKRA AUTOMOTIVE SOLUTION  bordeaux, france - 1 an",
+		"projects_project_5_first_part_text": "Ce projet de grosse envergure, permet aujourd'hui de requeter une immense quantite de donnees, avec un large choix de criteres, en quelques dizaines de milisecondes. Durant une annee, nous avons mis au point une solution de recherche ultra-rapide pour epauler un ERP. Il atteignait les limites du SQL avec des requetes composees de jointures et de dizaines de criteres. Nous avons donc batis un moteur de recherche avec <i>Elastic</i>, sous forme d'une API REST en <i>ASP MVC 5</i>, permettant de creer et d'executer dynamiquement n'importe quelle type de requete pour l'ERP client.",
+		"projects_project_5_second_part_title": "Mon role",
+		"projects_project_5_second_part_text": "De l'appel d'offre jusqu'a la mise a disposition de l'API, j'ai ete directement implique dans toutes les phases du projet :",
+		"projects_project_5_mission_1": "- Participation a la redaction de l'appel d'offre / Choix des technologies",
+		"projects_project_5_mission_2": "- Realisation de POCs avec Elastic / AngularJS",
+		"projects_project_5_mission_3": "- Recueil du besoin / Chiffrage des travaux",
+		"projects_project_5_mission_4": "- Conception et realisation des composantes d'indexation / requetage",
+		"projects_project_5_mission_5": "- Realisation d'une interface de traitement des logs",
+		"projects_project_6_name": "Application de gestion de la main d'oeuvre",
+		"projects_project_6_first_part_title": "KRONOS CANADIAN INC. - montreal, canada - en cours",
+		"projects_project_6_first_part_text": "Kronos est un editeur de logiciels specialises dans les domaines de la gestion des effectifs, du temps de travail et du recrutement. Je suis actuellement en poste dans les equipes Front-End pour travailler sur les nouvelles versions des produits. Je travaille en collaboration avec les equipes UI/UX pour permettre de realiser des interfaces intuitives et optimisees. Je travaille essentiellement avec Angular 1.x, Bootstrap et NodeJS.",
+		"projects_project_6_second_part_title": "Mes responsabilites",
+		"projects_project_6_second_part_text": "En charge d'un module UI complet, je peux perfectionner aux cotes de leads techniques sur beaucoup de nouveaux concepts et technologies :",
+		"projects_project_6_mission_1": "- Travail en collaboration avec plusieurs zones geographiques",
+		"projects_project_6_mission_2": "- Tester et redaction de code de haute qualite",
+		"projects_project_6_mission_3": "- Travail en environnement totalement agile",
+		"projects_project_6_mission_4": "- Realisation de modules Angular",
+		"projects_project_6_mission_5": "",
+		"skills_box_title": "Competences",
+		"skills_box_subtitle": "connaissances & expertises",
+		"skills_knowledge_title": "Connaissances",
+		"skills_knowledge_text": "Ayant travaille plusieurs annees comme ingenieur Full-stack, me permettant d'aborder des frameworks back-end <i>Php (Zend), Java (Spring, Play)</i> ou encore <i>C# (ASP MVC)</i>, puis front-end avec <b><i>AngularJS</i></b>, <b><i>Ionic</i></b> ou <b><i>ReactJS</i></b>, j'ai pu me faire une idee du domaine m'attirant le plus. Mon gout pour la creation a sans doute joue un role, et c'est sans hesitation que je me suis tourne vers les technologies Front-end, permettant aujourd'hui de creer des applications web et mobiles de A a Z.",
+		"skills_knowledge_1": "Application Web",
+		"skills_knowledge_2": "Frameworks Front-end",
+		"skills_knowledge_3": "Services Web REST",
+		"skills_knowledge_4": "Design d'interfaces",
+		"skills_knowledge_5": "Interfaces responsive",
+		"skills_knowledge_6": "Best practices Front-end",
+		"skills_expertise_title": "Expertises",
+		"skills_expertise_bar_1": "Angular JS 1.x",
+		"skills_expertise_bar_2": "Bootstrap 3 / Material Design",
+		"skills_expertise_bar_3": "Node JS",
+		"skills_expertise_bar_4": "React JS",
+		"skills_expertise_bar_5": "ASP MVC 5",
+		"skills_expertise_circle_1": "Javascript",
+		"skills_expertise_circle_2": "Html 5",
+		"skills_expertise_circle_3": "Css 3",
+		"skills_expertise_circle_4": "C#",
+		"contact_box_title": "Contact",
+		"contact_box_subtitle": "contactez moi",
+		"contact_form_name": "Nom / Prenom",
+		"contact_form_email": "Email",
+		"contact_form_subject": "Sujet",
+		"contact_form_message": "Ce que vous allez me dire !",
+		"contact_button_send": "Envoyer",
+		"footer_message": "Eh oui, c'est deja fini :(",
+		"footer_rights": "Nicolas Letoublon, Tous droits reserves 2016"
+	};
 
 /***/ }
 /******/ ]);
