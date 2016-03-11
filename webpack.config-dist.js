@@ -1,35 +1,37 @@
 var path = require('path');
-
+var webpack = require('webpack');
 
 module.exports = {
     entry: [
-        'webpack/hot/dev-server',
-        'webpack-dev-server/client?http://localhost:8080',
         path.resolve(__dirname, 'app/main.js')
     ],
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js'
+        filename: 'bundle.min.js'
     },
     modulesDirectories: [
         'node_modules'
     ],
     module: {
-        preLoaders: [{
+        preLoaders: [
+            {
                 test: /\.js$/,
                 loader: 'baggage?[file].html&[file].css'
             }
         ],
         loaders: [{
-            test: /\.css$/,
-            loader: 'style!css'
+            test: /\.css$/, // Only .css files
+            loader: 'style!css' // Run both loaders
         }, {
             test: /\.(png|jpg)$/,
             loader: 'url?limit=25000'
         },
-        {
-            test: /\.html$/,
-            loader: 'ngtemplate?relativeTo=' + __dirname + '/!html'
-        }]
-    }
+            {
+                test: /\.html$/,
+                loader: 'ngtemplate?relativeTo=' + __dirname + '/!html'
+            }]
+    },
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin()
+    ]
 };

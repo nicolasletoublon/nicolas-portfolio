@@ -1,6 +1,7 @@
 'use strict';
 var angular = require('angular');
 require('angular-scroll');
+require('angular-sticky');
 var $ = require('jquery');
 
 function navigationDirective() {
@@ -52,8 +53,8 @@ function navigationController($mdSidenav, $window) {
     }
 }
 
-angular.module('Navigation', ["duScroll"])
+angular.module('Navigation', ["duScroll", "sticky"])
     .value('duScrollDuration', 1000)
-    .value('duScrollOffset', 50)
+    .value('duScrollOffset', 40)
     .directive('navigation', navigationDirective)
     .controller('navigationController', navigationController);
