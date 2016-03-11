@@ -1,6 +1,5 @@
 'use strict';
 var angular = require('angular');
-var $ = require('jquery');
 require('angular-material');
 require('angular-translate');
 require('angular-sanitize');
@@ -18,13 +17,11 @@ require('../components/contact/contact.js');
 require('../components/footer/footer.js');
 require('../assets/styles/css/app.css');
 
-mainController.$inject = ['$scope', '$translate', '$window', '$timeout'];
-function mainController($scope, $translate, $window, $timeout) {
+mainController.$inject = ['$scope', '$translate'];
+function mainController($scope, $translate) {
     $scope.changeLanguage = function (langKey) {
         $translate.use(langKey);
     };
-    $('html, body').scrollTop(0);
-    //$window.pageYOffset = 0;
 }
 
 mainConfig.$inject = ["$mdThemingProvider", "$translateProvider"];
@@ -56,14 +53,11 @@ function mainConfig($mdThemingProvider, $translateProvider) {
         'A200': 'ff5252',
         'A400': 'ff1744',
         'A700': '262729',
-        'contrastDefaultColor': 'light',    // whether, by default, text (contrast)
-                                            // on this palette should be dark or light
-        'contrastDarkColors': ['50', '100', //hues which contrast should be 'dark' by default
-            '200', '300', '400', 'A100'],
-        'contrastLightColors': undefined    // could also specify this if default was 'dark'
+        'contrastDefaultColor': 'light',
+        'contrastDarkColors': ['50', '100', '200', '300', '400', 'A100'],
+        'contrastLightColors': undefined
     });
-    $mdThemingProvider.theme('default')
-        .primaryPalette('amazingPaletteName', {
+    $mdThemingProvider.theme('default').primaryPalette('amazingPaletteName', {
             'default': 'A700'
         })
 }
@@ -85,11 +79,3 @@ angular.module('Application', [
         'Projects'])
     .controller('MainController', mainController)
     .config(mainConfig);
-
-
-$(window).load(function(){
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
-
-
-
-});

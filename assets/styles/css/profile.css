@@ -1,5 +1,5 @@
 [data-component='profile-component'] {
-  margin: 20px 0 0 0;
+  margin: 70px 0 0 0;
 }
 [data-component='profile-component'] .title-box .icon {
   top: 2px;
@@ -52,40 +52,14 @@
 }
 [data-component='profile-component'] .picture-container .links-container,
 [data-component='profile-component'] .picture-container-side .links-container {
-  padding-top: 30px;
+  padding-top: 15px;
 }
 [data-component='profile-component'] .picture-container .links-container .link,
 [data-component='profile-component'] .picture-container-side .links-container .link {
   cursor: pointer;
-  transform: rotate(45deg);
-  margin: 0 20px;
-}
-[data-component='profile-component'] .picture-container .links-container .link img,
-[data-component='profile-component'] .picture-container-side .links-container .link img {
-  transition: transform 0.3s ease-in-out;
-  background-size: 40px;
-  width: 40px;
+  margin: 0 10px;
   height: 40px;
-}
-[data-component='profile-component'] .picture-container .links-container .link img:hover,
-[data-component='profile-component'] .picture-container-side .links-container .link img:hover {
-  transform: rotate(-45deg);
-}
-[data-component='profile-component'] .picture-container .links-container .link .linkedin-picture,
-[data-component='profile-component'] .picture-container-side .links-container .link .linkedin-picture {
-  background-image: url('../../img/linkedin-logo-dark.png');
-}
-[data-component='profile-component'] .picture-container .links-container .link .linkedin-picture:hover,
-[data-component='profile-component'] .picture-container-side .links-container .link .linkedin-picture:hover {
-  background-image: url('../../img/linkedin-logo.png');
-}
-[data-component='profile-component'] .picture-container .links-container .link .github-picture,
-[data-component='profile-component'] .picture-container-side .links-container .link .github-picture {
-  background-image: url('../../img/github-logo-dark.png');
-}
-[data-component='profile-component'] .picture-container .links-container .link .github-picture:hover,
-[data-component='profile-component'] .picture-container-side .links-container .link .github-picture:hover {
-  background-image: url('../../img/github-logo.png');
+  width: 40px;
 }
 @media (max-width: 600px) {
   .picture-container-side .picture {

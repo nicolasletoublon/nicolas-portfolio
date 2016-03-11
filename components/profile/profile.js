@@ -17,7 +17,7 @@ function profileController($mdSidenav, $window) {
     var self = this;
 
     self.togglePicture = function (id) {
-        $('.picture-container-side').css('padding-top', $window.scrollY + 110);
+        $('.picture-container-side').css('padding-top', $window.scrollY + 50);
         $mdSidenav(id).toggle();
     };
 }

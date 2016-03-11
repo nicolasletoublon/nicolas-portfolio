@@ -1,7 +1,7 @@
 'use strict';
 var angular = require('angular');
 require('angular-scroll');
-require('angular-sticky');
+require('../dist/custom-sticky');
 var $ = require('jquery');
 
 function navigationDirective() {
@@ -24,7 +24,7 @@ function navigationController($mdSidenav, $window) {
         {name: 'menu_stories', icon: 'timelapse', anchor: "anchor-stories"},
         {name: 'menu_projects', icon: 'format_paint', anchor: "anchor-projects"},
         {name: 'menu_skills', icon: 'palette', anchor: "anchor-skills"},
-        {name: 'menu_contact', icon: 'contact_mail', anchor: "anchor-contact"}
+        /*{name: 'menu_contact', icon: 'contact_mail', anchor: "anchor-contact"}*/
     ];
 
     self.toggleMenu = function (id) {
@@ -53,7 +53,7 @@ function navigationController($mdSidenav, $window) {
     }
 }
 
-angular.module('Navigation', ["duScroll", "sticky"])
+angular.module('Navigation', ["duScroll", "customSticky"])
     .value('duScrollDuration', 1000)
     .value('duScrollOffset', 40)
     .directive('navigation', navigationDirective)

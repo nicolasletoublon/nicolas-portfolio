@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Nicolas App</title>
-
+    <title>Nicolas Letoublon</title>
+    <link rel="icon"
+          type="image/png"
+          href="favicon.png">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
@@ -18,7 +20,7 @@
 
 </head>
 
-<body data-ng-strict-di ng-app="Application" ng-controller="ApplicationController" layout="column" ng-cloak
+<body data-ng-strict-di ng-app="Application" ng-controller="MainController" layout="column" ng-cloak
       layout-align="start stretch">
 <header-dir id="anchor-home" ng-if="true"></header-dir>
 <navigation></navigation>
@@ -32,15 +34,14 @@
 </div>
 <div role="main" class="main-content">
     <profile id="anchor-profile" ng-if="true" layout="column" layout-align="start center"></profile>
-    <div ng-if="true" class="section-separator"></div>
+    <frameworks ng-if="true" layout="column" layout-align="start center"></frameworks>
     <story id="anchor-stories" ng-if="true" layout="column" layout-align="start center"></story>
     <div id="montreal-wide" layout="column" layout-align="start center"></div>
     <projects id="anchor-projects" ng-if="true" layout="column"
-                        layout-align="start center"></projects>
+              layout-align="start center"></projects>
     <div id="bordeaux-wide" layout="column" layout-align="start center"></div>
     <skills id="anchor-skills" ng-if="true" layout="column" layout-align="start center"></skills>
-    <frameworks ng-if="true" layout="column" layout-align="start center"></frameworks>
-    <contact id="anchor-contact" ng-if="true" layout="column" layout-align="start center"></contact>
+    <contact id="anchor-contact" ng-if="false" layout="column" layout-align="start center"></contact>
 </div>
 <footer-dir ng-if="true"></footer-dir>
 <script type="text/javascript" src="bundle.js"></script>

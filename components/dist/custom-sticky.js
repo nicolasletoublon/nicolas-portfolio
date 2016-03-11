@@ -78,7 +78,7 @@ angular
 			};
 
 			function getStart() {
-				var size = $window.offsetWidth;
+				var size = $window.innerWidth;
 				if(size > 1024) return 650;
 				else if(size > 840 && size < 1024 ) return 450;
 				else if(size > 480 && size < 840 ) return 400;

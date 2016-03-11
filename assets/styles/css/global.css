@@ -75,6 +75,10 @@ li {
   color: #262729 !important ;
   background-color: white !important;
 }
+.stuck {
+  position: fixed;
+  top: 0;
+}
 .sticked-button {
   min-width: 40px;
   min-height: 60px;
@@ -211,6 +215,30 @@ li {
 }
 .play:hover {
   background-image: url('../../img/frameworks/play.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.linkedin {
+  background-image: url('../../img/linkedin-logo-dark.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.linkedin:hover {
+  background-image: url('../../img/linkedin-logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.github {
+  background-image: url('../../img/github-logo-dark.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.github:hover {
+  background-image: url('../../img/github-logo.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
