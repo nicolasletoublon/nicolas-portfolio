@@ -10,26 +10,32 @@
 }
 [data-component='skills-component'] .content-body .knowledge-container md-icon {
   margin-right: 5px;
+  min-width: 30px;
 }
 [data-component='skills-component'] .content-body .expertise-container md-progress-circular,
 [data-component='skills-component'] .content-body .expertise-container md-progress-linear {
   opacity: 0.6;
 }
+[data-component='skills-component'] .content-body .expertise-container .framework-container {
+  min-height: 60px;
+}
+[data-component='skills-component'] .content-body .expertise-container .framework-container .framework-label {
+  margin: 0 0 2px 0;
+}
 [data-component='skills-component'] .content-body .expertise-container .skill-container {
-  padding-top: 30px;
+  padding-top: 20px;
+}
+[data-component='skills-component'] .content-body .expertise-container .skill-container .skill {
   position: relative;
   text-align: center;
 }
-[data-component='skills-component'] .content-body .expertise-container .skill-container .skill-second-bar {
+[data-component='skills-component'] .content-body .expertise-container .skill-container .skill .skill-second-bar {
   opacity: .1;
-  top: 29px;
+  top: 0;
   position: absolute;
 }
-[data-component='skills-component'] .content-body .expertise-container .skill-container .skill-number-label {
-  top: 36px;
+[data-component='skills-component'] .content-body .expertise-container .skill-container .skill .skill-number-label {
+  top: 7px;
   left: 23px;
   position: absolute;
-}
-[data-component='skills-component'] .content-body .expertise-container .framework-label {
-  margin: 20px 0 2px 0;
 }

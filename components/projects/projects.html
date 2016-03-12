@@ -7,8 +7,8 @@
         <h4 class="subtitle">{{'projects_box_subtitle' | translate }}</h4>
     </div>
     <div layout-margin layout="column" class="content-body">
-        <div layout-margin layout="column" layout-gt-sm="row">
-            <div flex="60" layout="column" class="description-container">
+        <div layout-margin layout-gt-sm="row">
+            <div flex="100" flex-gt-sm="60" layout="column" class="description-container">
                 <div>
                     <h2 class="no-margin" translate="{{projectController.project.name}}"></h2>
                     <h4 class="no-margin light subtitle" translate="{{projectController.project.subtitle}}"></h4>
@@ -23,7 +23,7 @@
                     </ul>
                 </div>
             </div>
-            <div flex="5"></div>
+            <div flex="5" hide-sm hide-xs></div>
             <div flex="35" hide-sm hide-xs layout-gt-sm="column" layout-sm="row" layout-align="space-between"
                  layout-align-gt-sm="space-around" class="images-container">
                 <div flex class="angular-google-map-container ">

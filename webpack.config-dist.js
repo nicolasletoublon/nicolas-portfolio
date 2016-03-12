@@ -23,7 +23,7 @@ module.exports = {
             test: /\.css$/, // Only .css files
             loader: 'style!css' // Run both loaders
         }, {
-            test: /\.(png|jpg)$/,
+            test: /\.(png|jpg|svg)$/,
             loader: 'url?limit=25000'
         },
             {

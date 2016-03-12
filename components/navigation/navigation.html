@@ -18,8 +18,7 @@
                        ng-click="navigation.activate(section)">
             </md-button>
             <md-button aria-label="{{section.name | translate}}" du-smooth-scroll="{{section.anchor}}"
-                       ng-class="{'active' : section.active}" title="{{section.name}}" layout-align="center center"
-                       layout="column"
+                       ng-class="{'active' : section.active}" title="{{section.name}}"
                        hide-gt-sm ng-repeat="section in navigation.sections track by $index"
                        ng-click="navigation.activate(section)"
                        class="nav-button nav-icons">
@@ -43,3 +42,8 @@
         </md-list-item>
     </md-list>
 </md-sidenav>
+
+<md-button du-smooth-scroll="anchor-profile" ng-click="navigation.activateTop()" aria-label="Return to the top"
+           id="return-to-top-btn">
+    <i class="material-icons">expand_less</i>
+</md-button>

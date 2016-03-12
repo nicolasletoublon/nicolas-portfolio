@@ -13,29 +13,35 @@
       }
       md-icon {
         margin-right: 5px;
+        min-width: 30px;
       }
     }
     .expertise-container {
       md-progress-circular, md-progress-linear {
         opacity: 0.6;
       }
-      .skill-container {
-        padding-top: 30px;
-        position: relative;
-        text-align: center;
-        .skill-second-bar {
-          opacity: .1;
-          top: 29px;
-          position: absolute;
-        }
-        .skill-number-label {
-          top: 36px;
-          left: 23px;
-          position: absolute;
+      .framework-container {
+        min-height: 60px;
+        .framework-label {
+          margin: 0 0 2px 0;
         }
       }
-      .framework-label {
-        margin: 20px 0 2px 0;
+      .skill-container {
+        padding-top: 20px;
+        .skill {
+          position: relative;
+          text-align: center;
+          .skill-second-bar {
+            opacity: .1;
+            top: 0;
+            position: absolute;
+          }
+          .skill-number-label {
+            top: 7px;
+            left: 23px;
+            position: absolute;
+          }
+        }
       }
     }
   }

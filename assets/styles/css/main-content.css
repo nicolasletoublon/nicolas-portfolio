@@ -31,7 +31,7 @@ body .locale-container .md-icon-button {
 }
 html .locale-container .md-icon-button.canada,
 body .locale-container .md-icon-button.canada {
-  background: url('../../img/countries/Canada-bw.png') no-repeat center;
+  background: url('../../img/countries/canada-bw.png') no-repeat center;
   background-size: contain;
 }
 html .locale-container .md-icon-button.canada:hover,
@@ -42,80 +42,68 @@ body .locale-container .md-icon-button.canada:hover {
 html .locale-container .md-icon-button.france,
 body .locale-container .md-icon-button.france {
   margin-left: 10px;
-  background: url('../../img/countries/France-bw.png') no-repeat center;
+  background: url('../../img/countries/france-bw.png') no-repeat center;
   background-size: contain;
 }
 html .locale-container .md-icon-button.france:hover,
 body .locale-container .md-icon-button.france:hover {
-  background: url('../../img/countries/France.png') no-repeat center;
+  background: url('../../img/countries/france.png') no-repeat center;
   background-size: contain;
 }
-html .main-content .section-separator,
-body .main-content .section-separator {
+.main-content .section-separator {
   height: 400px;
   background-color: #262729;
 }
-html .main-content .content-container,
-body .main-content .content-container {
+.main-content .content-container {
   max-width: 1024px;
   width: 100%;
 }
-html .main-content .content-container .title-box,
-body .main-content .content-container .title-box {
+.main-content .content-container .title-box {
   align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-html .main-content .content-container .title-box .icon-container,
-body .main-content .content-container .title-box .icon-container {
+.main-content .content-container .title-box .icon-container {
   border: 1px solid #262729;
   background-color: #262729;
   width: 30px;
   height: 30px;
   transform: rotate(45deg);
 }
-html .main-content .content-container .title-box .icon-container .icon,
-body .main-content .content-container .title-box .icon-container .icon {
+.main-content .content-container .title-box .icon-container .icon {
   color: white;
   transform: rotate(-45deg);
   position: absolute;
 }
-html .main-content .content-container .title-box .title,
-body .main-content .content-container .title-box .title {
+.main-content .content-container .title-box .title {
   margin: -16px 0 -12px 0;
   padding: 25px 25px 15px 25px;
   font-size: 35px;
   border: 1px solid #CCCCCC;
 }
-html .main-content .content-container .title-box .subtitle,
-body .main-content .content-container .title-box .subtitle {
+.main-content .content-container .title-box .subtitle {
   background-color: white;
   padding: 0 15px;
   margin: 0;
   font-variant: small-caps;
   font-weight: normal;
 }
-html .main-content .content-container .content-body,
-body .main-content .content-container .content-body {
-  margin: 40px 0;
+.main-content .content-container .content-body {
+  margin: 40px 0 40px 0;
 }
-html .main-content #montreal-wide,
-body .main-content #montreal-wide {
+.main-content #montreal-wide {
   background: url('../../img/montreal-bw.jpg') no-repeat center;
   background-size: cover;
   height: 500px;
 }
-html .main-content #bordeaux-wide,
-body .main-content #bordeaux-wide {
+.main-content #bordeaux-wide {
   background: url('../../img/bordeaux-bw.jpg') no-repeat center;
   background-size: cover;
   height: 500px;
 }
-html .main-content frameworks,
-body .main-content frameworks,
-html .main-content interest,
-body .main-content interest {
+.main-content frameworks,
+.main-content interest {
   background-color: #262729;
 }
 @media (min-width: 840px) and (max-width: 1024px) {

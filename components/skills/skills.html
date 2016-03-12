@@ -54,7 +54,7 @@
             </div>
         </div>
         <div flex="3"></div>
-        <div flex layout="column" layout-align="space-around" class="expertise-container">
+        <div flex layout-align="space-around" class="expertise-container">
             <h2>{{ 'skills_expertise_title' | translate}}</h2>
             <div flex layout="column" layout-align="space-around" class="frameworks-container">
                 <div class="framework-container">
@@ -79,11 +79,11 @@
                 </div>
             </div>
             <div flex class="separator"></div>
-            <div flex layout="row" layout-xs="column" layout-align="space-around stretch" layout-margin
+            <div flex layout="row" layout-align="space-between" layout-align-gt-xs="space-around"
                  class="skills-container">
 
-                <div flex layout="row" layout-align="space-around center">
-                    <div layout="column" class="skill-container">
+                <div flex layout="row" layout-align="space-around center" class="skill-container">
+                    <div layout="column" class="skill">
                         <md-progress-circular md-diameter="70" class="skill-first-bar" md-mode="determinate"
                                               value="85"></md-progress-circular>
                         <md-progress-circular md-diameter="70" class="skill-second-bar" md-mode="determinate"
@@ -91,7 +91,7 @@
                         <p class="skill-number-label">85%</p>
                         <p>Javascript</p>
                     </div>
-                    <div layout="column" class="skill-container">
+                    <div layout="column" class="skill">
                         <md-progress-circular md-diameter="70" class="skill-first-bar" md-mode="determinate"
                                               value="70"></md-progress-circular>
                         <md-progress-circular md-diameter="70" class="skill-second-bar" md-mode="determinate"
@@ -100,8 +100,8 @@
                         <p>Html 5</p>
                     </div>
                 </div>
-                <div flex layout="row" layout-align="space-around center">
-                    <div layout="column" class="skill-container">
+                <div flex layout="row" layout-align="space-around center" class="skill-container">
+                    <div layout="column" class="skill">
                         <md-progress-circular md-diameter="70" class="skill-first-bar" md-mode="determinate"
                                               value="90"></md-progress-circular>
                         <md-progress-circular md-diameter="70" class="skill-second-bar" md-mode="determinate"
@@ -109,7 +109,7 @@
                         <p class="skill-number-label">90%</p>
                         <p>Css 3</p>
                     </div>
-                    <div layout="column" class="skill-container">
+                    <div layout="column" class="skill">
                         <md-progress-circular md-diameter="70" class="skill-first-bar" md-mode="determinate"
                                               value="65"></md-progress-circular>
                         <md-progress-circular md-diameter="70" class="skill-second-bar" md-mode="determinate"
@@ -118,8 +118,6 @@
                         <p>Java</p>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>

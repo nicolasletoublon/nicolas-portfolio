@@ -72,6 +72,7 @@ storyService.$inject = [];
 function storyService() {
     return {
         stories: [{
+            "id": 1,
             "name": "stories_story_1_firm",
             "template": "tivoli",
             "highligh": "stories_story_1_highlight",
@@ -83,6 +84,7 @@ function storyService() {
             "typeId": "edu",
             "icon": "school"
         }, {
+            "id": 2,
             "name": "stories_story_2_firm",
             "template": "exia",
             "year": 2012,
@@ -93,14 +95,9 @@ function storyService() {
             "shortDescription": "stories_story_2_description",
             "grade": "Software Engineer",
             "typeId": "edu",
-            "icon": "school",
-            "projects": [{
-                "name": "Falcon",
-                "period": "feb-march",
-                "missions": ["jfsodijf oidsfjiosdjfs", "sdfks dfhs dfosihisdho"],
-                "tools": ["Anglar JS", "NodeJS", "Grunt"]
-            }]
+            "icon": "school"
         }, {
+            "id": 3,
             "name": "stories_story_3_firm",
             "template": "eurogiciel-intern",
             "year": 2013,
@@ -112,15 +109,9 @@ function storyService() {
             "shortDescription": "stories_story_3_description",
             "job-title": "Web software engineer",
             "typeId": "stage",
-            "icon": "account_circle",
-            "projects": [{
-                "name": "Plan de charges",
-                "description": "dfjdlj gdfkjgldkfkdfgkldglkdfgdflgld",
-                "period": "feb-march",
-                "missions": ["jfsodijf oidsfjiosdjfs", "sdfks dfhs dfosihisdho"],
-                "tools": ["Anglar JS", "NodeJS", "Grunt"]
-            }]
+            "icon": "account_circle"
         }, {
+            "id": 4,
             "name": "stories_story_4_firm",
             "template": "eurogiciel-job",
             "year": 2014,
@@ -131,21 +122,9 @@ function storyService() {
             "shortDescription": "stories_story_4_description",
             "job-title": "Web software engineer",
             "typeId": "job",
-            "icon": "work",
-            "projects": [{
-                "name": "Plan de charges",
-                "description": "dfjdlj gdfkjgldkfkdfgkldgldshfkjdshfjk sdfsdh ds fsdh fkjdshfjsdf jksd hkdfgdflgld",
-                "period": "feb-march",
-                "missions": ["jfsodijf oidsfjiosdjfs", "sdfks dfhs dfosihisdho"],
-                "tools": ["Anglar JS", "NodeJS", "Grunt"]
-            }, {
-                "name": "Aslo",
-                "description": "dfjdlj gdfkjdshfkjdshfjk sdfsdh ds fsdh fkjdshfjsdf jksd hgldkfkdfgkldglkdfgdflgld",
-                "period": "feb-march",
-                "missions": ["jfsodijf oidsfjiosdjfs", "sdfks dfhs dfosihisdho"],
-                "tools": ["Anglar JS", "NodeJS", "Grunt"]
-            }]
+            "icon": "work"
         }, {
+            "id": 5,
             "name": "stories_story_5_firm",
             "template": "kronos",
             "active": true,
@@ -157,13 +136,7 @@ function storyService() {
             "shortDescription": "stories_story_5_description",
             "job-title": "Web software engineer",
             "typeId": "job",
-            "icon": "work",
-            "projects": [{
-                "name": "Falcon",
-                "period": "feb-march",
-                "missions": ["jfsodijf oidsfjiosdjfs", "sdfks dfhs dfosihisdho"],
-                "tools": ["Anglar JS", "NodeJS", "Grunt"]
-            }]
+            "icon": "work"
         }]
     }
 }

@@ -5,11 +5,24 @@
   justify-content: center;
 }
 
-.navbar-fixed {
-  top: 0;
-  z-index: 100;
+#return-to-top-btn {
   position: fixed;
-  width: 100%;
+  background-color: #fff;
+  opacity: 0.4;
+  border-radius: 50%;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  padding-top: 9px;
+  min-width: 70px;
+  min-height: 70px;
+  display: none;
+  &.show {
+    display: block;
+  }
+  i {
+    font-size: 40px;
+  }
 }
 
 .navigation-toolbar {
@@ -49,8 +62,9 @@
       .nav-icons {
         min-width: 55px;
         display: flex;
-        justify-content: center;
-        flex-direction: column;
+        i {
+          margin: auto;
+        }
       }
     }
   }

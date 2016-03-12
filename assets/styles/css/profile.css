@@ -60,9 +60,12 @@
   margin: 0 10px;
   height: 40px;
   width: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
-@media (max-width: 600px) {
-  .picture-container-side .picture {
+@media (max-width: 840px) {
+  .picture {
     background-size: 150px !important;
     height: 150px !important;
     width: 150px !important;

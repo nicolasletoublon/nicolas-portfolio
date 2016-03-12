@@ -7,11 +7,12 @@
 }
 .footer-part .copyright-container .separator {
   height: 1px;
-  background-color: white;
-  width: 120%;
+  background-color: #fff;
+  width: 80%;
+  margin: auto;
 }
 .footer-part .copyright-container .copyright {
   text-align: center;
   font-size: 14px;
-  color: white;
+  color: #fff;
 }

@@ -7,14 +7,14 @@
         <h4 class="subtitle" translate="stories_box_subtitle" translate-compile></h4>
     </div>
     <div class="content-body">
-        <div hide-xs hide-sm ng-repeat="story in storyCtrl.stories track by $index">
+        <div hide-xs hide-sm ng-repeat="story in storyCtrl.stories.slice().reverse() track by $index">
             <div ng-if="$odd" layout="row" class="story-container">
                 <div flex layout="column" layout-align="center end" class="story-description-container left">
-                    <h4 class="type" translate="{{story.type}}"></h4>
-                    <h3 class="title" translate="{{story.highligh}}"></h3>
-                    <p class="subtitle firm" translate="{{story.name}}"></p>
-                    <p class="subtitle location" translate="{{story.localisation}}"></p>
-                    <p class="description" translate="{{story.shortDescription}}" ng-show="story.active"></p>
+                    <h4 class="type no-margin" translate="{{story.type}}"></h4>
+                    <h3 class="title no-margin" translate="{{story.highligh}}"></h3>
+                    <p class="subtitle firm no-margin" translate="{{story.name}}"></p>
+                    <p class="subtitle location no-margin" translate="{{story.localisation}}"></p>
+                    <p class="description no-margin" translate="{{story.shortDescription}}" ng-show="story.active"></p>
                 </div>
                 <div flex="20" layout="column" layout-align="center center" class="year-container">
                     <div tabindex="0" data-ng-focus="story.focus" role="button"
@@ -36,11 +36,11 @@
                     </div>
                 </div>
                 <div flex layout="column" layout-align="center start" class="story-description-container right">
-                    <h4 class="type" translate="{{story.type}}"></h4>
-                    <h3 class="title" translate="{{story.highligh}}"></h3>
-                    <p class="subtitle firm" translate="{{story.name}}"></p>
-                    <p class="subtitle location" translate="{{story.localisation}}"></p>
-                    <p class="description" ng-show="story.active" translate="{{story.shortDescription}}"></p>
+                    <h4 class="type no-margin" translate="{{story.type}}"></h4>
+                    <h3 class="title no-margin" translate="{{story.highligh}}"></h3>
+                    <p class="subtitle firm no-margin" translate="{{story.name}}"></p>
+                    <p class="subtitle location no-margin" translate="{{story.localisation}}"></p>
+                    <p class="description no-margin" ng-show="story.active" translate="{{story.shortDescription}}"></p>
                 </div>
             </div>
         </div>
@@ -48,13 +48,13 @@
         <md-list hide-gt-sm ng-cloak class="list-story-container">
             <md-list-item aria-label="Display more info about the story" class="secondary-button-padding list-item"
                           ng-click="storyCtrl.activateStory(story)"
-                          ng-repeat="story in storyCtrl.stories">
+                          ng-repeat="story in storyCtrl.stories.slice().reverse()">
                 <i class="icon material-icons" ng-bind="story.icon"></i>
                 <div class="story-description-container" ng-click="angular.noop()">
-                    <h3 class="title" translate="{{story.highligh}}"></h3>
-                    <p class="subtitle firm" translate="{{story.name}}"></p>
-                    <p class="subtitle location" translate="{{story.localisation}}"></p>
-                    <p ng-show="story.active" translate="{{story.shortDescription}}" class="description" ng-class="{'active' : story.active}"></p>
+                    <h3 class="title no-margin" translate="{{story.highligh}}"></h3>
+                    <p class="subtitle firm no-margin" translate="{{story.name}}"></p>
+                    <p class="subtitle location no-margin" translate="{{story.localisation}}"></p>
+                    <p ng-show="story.active" translate="{{story.shortDescription}}" class="description no-margin" ng-class="{'active' : story.active}"></p>
                 </div>
                 <md-button aria-label="Display more info about the story" aria-hidden="true" tabindex="-1"
                            class="md-secondary year-button custom-button" ng-disabled="true"

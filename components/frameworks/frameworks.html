@@ -18,7 +18,7 @@
             <md-grid-tile
                     class="tile" ng-class="logo.image" ng-repeat="logo in frameworks.littleLogos track by $index"
                           md-rowspan="{{logo.row}}" md-colspan="{{logo.col}}">
-                <a class="link" href="{{logo.href}}" target="_blank"></a>
+                <a hide-xs hide-sm class="link" href="{{logo.href}}" target="_blank"></a>
             </md-grid-tile>
         </md-grid-list>
     </div>

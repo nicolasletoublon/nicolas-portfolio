@@ -31,7 +31,7 @@ function projectsController() {
             technos: [
                 {image: "play", col: 3, row: 1},
                 {image: "mongo", col: 2, row: 1},
-                {image: "css3", col: 2, row: 1},
+                {image: "bootstrap", col: 2, row: 1},
                 {image: "java", col: 3, row: 1}],
             missions: [
                 "projects_project_1_mission_1",
@@ -52,10 +52,10 @@ function projectsController() {
             center: [44.774036, -0.706215],
             zoom: 10,
             technos: [
-                {image: "flex", col: 2, row: 1},
+                {image: "flexx", col: 2, row: 1},
                 {image: "java", col: 3, row: 1},
-                {image: "postgres", col: 2, row: 1},
-                {image: "blazeds", col: 3, row: 1}],
+                {image: "postgres", col: 3, row: 1},
+                {image: "actionscript", col: 2, row: 1}],
             missions: [
                 "projects_project_2_mission_1",
                 "projects_project_2_mission_2",
@@ -75,10 +75,10 @@ function projectsController() {
             center: [44.774036, -0.706215],
             zoom: 10,
             technos: [
-                {image: "play", col: 3, row: 1},
-                {image: "mongo", col: 2, row: 1},
-                {image: "css3", col: 2, row: 1},
-                {image: "java", col: 3, row: 1}],
+                {image: "spring", col: 3, row: 1},
+                {image: "angular", col: 2, row: 1},
+                {image: "bootstrap", col: 2, row: 1},
+                {image: "postgres", col: 3, row: 1}],
             missions: [
                 "projects_project_3_mission_1",
                 "projects_project_3_mission_2",
@@ -98,10 +98,10 @@ function projectsController() {
             center: [44.774036, -0.706215],
             zoom: 10,
             technos: [
-                {image: "play", col: 3, row: 1},
-                {image: "mongo", col: 2, row: 1},
-                {image: "css3", col: 2, row: 1},
-                {image: "java", col: 3, row: 1}],
+                {image: "sqlserver", col: 3, row: 1},
+                {image: "bootstrap", col: 2, row: 1},
+                {image: "java", col: 2, row: 1},
+                {image: "play", col: 3, row: 1}],
             missions: [
                 "projects_project_4_mission_1",
                 "projects_project_4_mission_2",
@@ -121,10 +121,10 @@ function projectsController() {
             center: [44.774036, -0.706215],
             zoom: 10,
             technos: [
-                {image: "play", col: 3, row: 1},
-                {image: "mongo", col: 2, row: 1},
-                {image: "css3", col: 2, row: 1},
-                {image: "java", col: 3, row: 1}],
+                {image: "angular", col: 3, row: 1},
+                {image: "bootstrap", col: 2, row: 1},
+                {image: "elastic", col: 2, row: 1},
+                {image: "aspmvc", col: 3, row: 1}],
             missions: [
                 "projects_project_5_mission_1",
                 "projects_project_5_mission_2",
@@ -144,10 +144,10 @@ function projectsController() {
             center: [45.501689, -73.567256],
             zoom: 10,
             technos: [
-                {image: "play", col: 3, row: 1},
-                {image: "mongo", col: 2, row: 1},
-                {image: "css3", col: 2, row: 1},
-                {image: "java", col: 3, row: 1}],
+                {image: "angular", col: 3, row: 1},
+                {image: "grunt", col: 2, row: 1},
+                {image: "bootstrap", col: 2, row: 1},
+                {image: "nodeblack", col: 3, row: 1}],
             missions: [
                 "projects_project_6_mission_1",
                 "projects_project_6_mission_2",

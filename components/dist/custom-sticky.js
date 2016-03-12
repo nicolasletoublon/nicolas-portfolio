@@ -1,3 +1,5 @@
+var $ = require('jquery');
+
 angular
 	.module('customSticky', [])
 	.directive('customSticky',['$window', '$document', function ($window, $document) {
@@ -31,6 +33,7 @@ angular
 						var item = scope._stickyElements[i];
 
 						if (!item.isStuck && pos > item.start) {
+							$('#return-to-top-btn').addClass('show');
 							item.element.addClass('stuck');
 							item.isStuck = true;
 
@@ -41,6 +44,7 @@ angular
 							}
 						}
 						else if (item.isStuck && pos < item.start) {
+							$('#return-to-top-btn').removeClass('show');
 							item.element.removeClass('stuck');
 							item.isStuck = false;
 
@@ -86,7 +90,6 @@ angular
 			}
 
 			scope._stickyElements.push(item);
-
 		}
 	};
 }]);

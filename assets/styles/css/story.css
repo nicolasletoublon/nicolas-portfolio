@@ -1,12 +1,15 @@
 [data-component='story-component'] {
-  margin: 50px 0 80px 0;
+  margin: 50px 0;
 }
 [data-component='story-component'] .title-box .icon {
   top: 3px;
   left: 2px;
 }
+[data-component='story-component'] .content-body {
+  margin: 80px 0 30px 0 !important;
+}
 [data-component='story-component'] .content-body .story-container {
-  height: 80px;
+  height: 90px;
 }
 [data-component='story-component'] .content-body .story-container .year-container .year-square {
   border: 1px solid #E2E2E2;
@@ -56,10 +59,10 @@
   padding: 16px;
 }
 [data-component='story-component'] .content-body .list-item .icon {
-  padding-right: 16px;
+  min-width: 30px;
 }
 [data-component='story-component'] .content-body .list-item .story-description-container {
-  padding-right: 60px;
+  padding: 0 60px 0 10px;
 }
 [data-component='story-component'] .content-body .list-item .story-description-container .title {
   line-height: 20px;
@@ -82,25 +85,27 @@
 [data-component='story-component'] .content-body .story-description-container.left {
   text-align: right;
 }
-[data-component='story-component'] .content-body .story-description-container .type,
-[data-component='story-component'] .content-body .story-description-container .subtitle,
-[data-component='story-component'] .content-body .story-description-container .title,
-[data-component='story-component'] .content-body .story-description-container .description {
-  margin: 0;
+[data-component='story-component'] .content-body .story-description-container .title {
+  min-height: 20px;
+  line-height: 20px;
 }
 [data-component='story-component'] .content-body .story-description-container .type {
   font-variant: small-caps;
+  min-height: 20px;
+  line-height: 20px;
 }
 [data-component='story-component'] .content-body .story-description-container .subtitle {
   font-weight: bold;
   font-size: 12px;
+  min-height: 20px;
   line-height: 20px;
 }
 [data-component='story-component'] .content-body .story-description-container .subtitle.location {
-  line-height: 10px;
+  min-height: 15px;
+  line-height: 15px;
 }
 [data-component='story-component'] .content-body .story-description-container .description {
-  padding-top: 5px;
+  padding-top: 7px;
   font-size: 12px;
   line-height: 20px;
   width: 70%;

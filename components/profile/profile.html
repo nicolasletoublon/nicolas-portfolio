@@ -27,17 +27,17 @@
             </md-button>
         </div>
         <div hide-xs hide-sm flex="5"></div>
-        <div hide-xs hide-sm flex="35" class="picture-container">
+        <div hide-xs flex="35" flex-sm="45" class="picture-container">
             <right-profile layout="column" layout-align="space-around center" ></right-profile>
         </div>
-        <div hide-gt-sm flex="0" class="sticked-container">
+        <div hide-gt-xs flex="0" class="sticked-container">
             <md-button aria-label="Show more info about me" class="md-raised custom-button sticked-button "
                        ng-click="profile.togglePicture('picture-side')">
                 <i class="material-icons">keyboard_arrow_left</i>
             </md-button>
         </div>
     </div>
-    <md-sidenav class="md-sidenav-right md-whiteframe-z2 " md-component-id="picture-side">
+    <md-sidenav hide-gt-sm class="md-sidenav-right md-whiteframe-z2 " md-component-id="picture-side">
         <div class="picture-container-side">
             <right-profile layout-margin layout-align="space-around center" layout="column"></right-profile>
         </div>
