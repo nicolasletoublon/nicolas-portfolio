@@ -25,12 +25,6 @@
 <header-dir id="anchor-home" ng-if="true"></header-dir>
 <navigation></navigation>
 <div class="locale-container" layout-margin layout="row" layout-align="end">
-    <!--    <md-button class="canada md-icon-button md-primary" aria-label="Change language to English"
-                   ng-click="changeLanguage('en_EN')">
-        </md-button>
-        <md-button class="france md-icon-button md-primary" aria-label="Change language to French"
-                   ng-click="changeLanguage('fr_FR')">
-        </md-button>-->
 </div>
 <div role="main" class="main-content">
     <profile id="anchor-profile" ng-if="true" layout="column" layout-align="start center"></profile>
@@ -45,8 +39,19 @@
     <contact id="anchor-contact" ng-if="false" layout="column" layout-align="start center"></contact>
 </div>
 <footer-dir ng-if="true"></footer-dir>
-<script src="http://localhost:8080/webpack-dev-server.js"></script>
-<script type="text/javascript" src="bundle.js"></script>
+<script type="text/javascript" src="bundle.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-74999453-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
 </body>
 </html>

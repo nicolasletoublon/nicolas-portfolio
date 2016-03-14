@@ -19,8 +19,7 @@ module.exports = function(grunt) {
         },
         watch: {
             styles: {
-                //files: ['../pres-common-container-fork/common/**'],
-                files: ['assets/styles/less/*.less'], // which files to watch
+                files: ['assets/styles/less/*.less'],
                 tasks: ['less'],
                 options: {
                     nospawn: true

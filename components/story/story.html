@@ -48,13 +48,14 @@
         <md-list hide-gt-sm ng-cloak class="list-story-container">
             <md-list-item aria-label="Display more info about the story" class="secondary-button-padding list-item"
                           ng-click="storyCtrl.activateStory(story)"
-                          ng-repeat="story in storyCtrl.stories.slice().reverse()">
+                          ng-repeat="story in storyCtrl.stories.slice().reverse()"
+                          ng-class="{'active' : story.active}">
                 <i class="icon material-icons" ng-bind="story.icon"></i>
                 <div class="story-description-container" ng-click="angular.noop()">
                     <h3 class="title no-margin" translate="{{story.highligh}}"></h3>
                     <p class="subtitle firm no-margin" translate="{{story.name}}"></p>
                     <p class="subtitle location no-margin" translate="{{story.localisation}}"></p>
-                    <p ng-show="story.active" translate="{{story.shortDescription}}" class="description no-margin" ng-class="{'active' : story.active}"></p>
+                    <p ng-show="story.active" translate="{{story.shortDescription}}" class="description no-margin"></p>
                 </div>
                 <md-button aria-label="Display more info about the story" aria-hidden="true" tabindex="-1"
                            class="md-secondary year-button custom-button" ng-disabled="true"
