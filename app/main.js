@@ -27,7 +27,7 @@ function mainController($scope, $translate) {
 mainConfig.$inject = ["$mdThemingProvider", "$translateProvider"];
 function mainConfig($mdThemingProvider, $translateProvider) {
     //$translateProvider.translations('en_EN', require('json!../i18n/locale-en_EN'));
-    $translateProvider.translations('fr_FR', require('json!../i18n/locale-fr_FR'));
+    $translateProvider.translations('fr_FR', require('../i18n/locale-fr_FR'));
     $translateProvider.preferredLanguage('fr_FR');
 
 /*    $translateProvider.registerAvailableLanguageKeys(['en_EN', 'fr_FR'], {

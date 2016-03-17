@@ -15,10 +15,13 @@ module.exports = {
         'node_modules'
     ],
     module: {
-        preLoaders: [{
+        preLoaders: [
+            {test: /\.json$/, loader: 'json'},
+            {
                 test: /\.js$/,
                 loader: 'baggage?[file].html&[file].css'
-            }
+            },
+
         ],
         loaders: [{
             test: /\.css$/,
@@ -27,9 +30,9 @@ module.exports = {
             test: /\.(png|jpg|svg)$/,
             loader: 'url?limit=25000'
         },
-        {
-            test: /\.html$/,
-            loader: 'ngtemplate?relativeTo=' + __dirname + '/!html'
-        }]
+            {
+                test: /\.html$/,
+                loader: 'ngtemplate?relativeTo=' + __dirname + '/!html'
+            }]
     }
 };

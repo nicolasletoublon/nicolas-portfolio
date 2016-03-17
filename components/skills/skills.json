@@ -1,0 +1,68 @@
+{
+  "knowledge": {
+    "first": [
+      {
+        "name": "skills_knowledge_1"
+      },
+      {
+        "name": "skills_knowledge_2"
+      },
+      {
+        "name": "skills_knowledge_3"
+      }
+    ],
+    "second": [
+      {
+        "name": "skills_knowledge_4"
+      },
+      {
+        "name": "skills_knowledge_5"
+      },
+      {
+        "name": "skills_knowledge_6"
+      }
+    ]
+  },
+  "expertise": {
+    "frameworks": [
+      {
+        "name": "Angular JS 1.x",
+        "value": 80
+      },
+      {
+        "name": "Bootstrap 3 / Material Design",
+        "value": 90
+      },
+      {
+        "name": "Node JS",
+        "value": 70
+      },
+      {
+        "name": "React JS",
+        "value": 50
+      },
+      {
+        "name": "ASP MVC 5",
+        "value": 60
+      }
+    ],
+    "technos": [
+      {
+        "name": "Javascript",
+        "value": 85
+      },
+      {
+        "name": "Css 3",
+        "value": 90
+      },
+      {
+        "name": "Html 5",
+        "value": 70
+      },
+      {
+        "name": "Java",
+        "value": 65
+      }
+    ]
+  }
+}

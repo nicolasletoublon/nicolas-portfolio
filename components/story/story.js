@@ -11,8 +11,8 @@ function storyDirective() {
     };
 }
 
-storyController.$inject = ["storyService", "$mdDialog", "$mdSidenav", "$window"];
-function storyController(storyService, $mdDialog, $mdSidenav, $window) {
+storyController.$inject = ["$mdDialog", "$mdSidenav", "$window"];
+function storyController($mdDialog, $mdSidenav, $window) {
     var self = this;
 
     self.showAdvanced = function (ev, story) {
@@ -25,16 +25,18 @@ function storyController(storyService, $mdDialog, $mdSidenav, $window) {
             locals: {story: story}
         });
     };
-    self.toggleMenu = function(id) {
+
+    self.toggleMenu = function (id) {
         $mdSidenav(id).toggle();
     };
-    self.showPanel = function(id, story) {
+
+    self.showPanel = function (id, story) {
         self.story = story;
         $('.story-container-side').css('padding-top', $window.scrollY + 40);
         $mdSidenav(id).toggle();
     };
 
-    self.stories = storyService.stories;
+    self.stories = require('./stories.json');
 
     self.keypress = function ($event, story) {
         if ($event.keyCode === 13) self.activateStory(story)
@@ -68,80 +70,6 @@ function dialogController($scope, $mdDialog, $timeout, story) {
 
 }
 
-storyService.$inject = [];
-function storyService() {
-    return {
-        stories: [{
-            "id": 1,
-            "name": "stories_story_1_firm",
-            "template": "tivoli",
-            "highligh": "stories_story_1_highlight",
-            "year": 2007,
-            "localisation": "stories_story_1_localisation",
-            "type": "stories_story_1_type",
-            "shortDescription": "stories_story_1_description",
-            "grade": "",
-            "typeId": "edu",
-            "icon": "school"
-        }, {
-            "id": 2,
-            "name": "stories_story_2_firm",
-            "template": "exia",
-            "year": 2012,
-            "duration": "5 years",
-            "highligh": "stories_story_2_highlight",
-            "localisation": "stories_story_2_localisation",
-            "type": "stories_story_2_type",
-            "shortDescription": "stories_story_2_description",
-            "grade": "Software Engineer",
-            "typeId": "edu",
-            "icon": "school"
-        }, {
-            "id": 3,
-            "name": "stories_story_3_firm",
-            "template": "eurogiciel-intern",
-            "year": 2013,
-            "highligh": "stories_story_3_highlight",
-            "duration": "6 months",
-            "localisation": "stories_story_3_localisation",
-            "type": "stories_story_3_type",
-            "website": "www.eurogiciel.com",
-            "shortDescription": "stories_story_3_description",
-            "job-title": "Web software engineer",
-            "typeId": "stage",
-            "icon": "account_circle"
-        }, {
-            "id": 4,
-            "name": "stories_story_4_firm",
-            "template": "eurogiciel-job",
-            "year": 2014,
-            "highligh": "stories_story_4_highlight",
-            "localisation": "stories_story_4_localisation",
-            "type": "stories_story_4_type",
-            "website": "www.eurogiciel.com",
-            "shortDescription": "stories_story_4_description",
-            "job-title": "Web software engineer",
-            "typeId": "job",
-            "icon": "work"
-        }, {
-            "id": 5,
-            "name": "stories_story_5_firm",
-            "template": "kronos",
-            "active": true,
-            "highligh": "stories_story_5_highlight",
-            "year": 2016,
-            "localisation": "stories_story_5_localisation",
-            "type": "stories_story_5_type",
-            "website": "www.kronos.com",
-            "shortDescription": "stories_story_5_description",
-            "job-title": "Web software engineer",
-            "typeId": "job",
-            "icon": "work"
-        }]
-    }
-}
-
 angular.module('Story', [])
     .directive('story', storyDirective)
-    .controller('storyController', storyController)
-    .service('storyService', storyService);
+    .controller('storyController', storyController);

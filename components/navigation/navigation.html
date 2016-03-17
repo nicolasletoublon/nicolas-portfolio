@@ -12,17 +12,13 @@
             </md-button>
         </div>
         <div hide-xs class="toolbar-tools md-toolbar-tools toolbar-actions plain-title">
-            <md-button aria-label="{{section.name | translate }}" du-smooth-scroll="{{section.anchor}}"
-                       ng-class="{'active' : section.active}" hide-xs hide-sm translate="{{section.name}}"
-                       ng-repeat="section in navigation.sections track by $index" class="nav-button"
-                       ng-click="navigation.activate(section)">
-            </md-button>
             <md-button aria-label="{{section.name | translate}}" du-smooth-scroll="{{section.anchor}}"
                        ng-class="{'active' : section.active}" title="{{section.name}}"
-                       hide-gt-sm ng-repeat="section in navigation.sections track by $index"
+                        ng-repeat="section in navigation.sections track by $index"
                        ng-click="navigation.activate(section)"
                        class="nav-button nav-icons">
-                <i class="material-icons">{{section.icon}}</i>
+                <span hide-xs hide-sm translate="{{section.name}}"></span>
+                <i hide-gt-sm class="material-icons">{{section.icon}}</i>
             </md-button>
         </div>
     </div>
@@ -30,7 +26,7 @@
 
 <md-sidenav hide-gt-sm class="md-sidenav-left md-whiteframe-z2 menu-side-panel" md-component-id="menu-side">
     <md-toolbar class="menu-container-side md-primary">
-        <h1 class="md-toolbar-tools">Navigation</h1>
+        <h1 class="md-toolbar-tools" translate="navigation_title"></h1>
     </md-toolbar>
     <md-list ng-cloak class="list-story-container">
         <md-list-item class="list-item" ng-class="{'active' : section.active}"

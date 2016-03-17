@@ -12,42 +12,18 @@
             <p translate="skills_knowledge_text" translate-compile></p>
             <div layout="row" layout-align="space-around" class="domains-container">
                 <md-list layout-align="space-around start" layout="column" class="list-domains">
-                    <md-list-item class="md-2-line">
+                    <md-list-item class="md-2-line" ng-repeat="skill in skillsCtrl.skills.knowledge.first">
                         <md-icon>check</md-icon>
                         <div>
-                            <p>{{ 'skills_knowledge_1' | translate}}</p>
-                        </div>
-                    </md-list-item>
-                    <md-list-item class="md-2-line">
-                        <md-icon>check</md-icon>
-                        <div>
-                            <p>{{ 'skills_knowledge_2' | translate}}</p>
-                        </div>
-                    </md-list-item>
-                    <md-list-item class="md-2-line">
-                        <md-icon>check</md-icon>
-                        <div>
-                            <p>{{ 'skills_knowledge_3' | translate}}</p>
+                            <p translate="{{skill.name}}"></p>
                         </div>
                     </md-list-item>
                 </md-list>
                 <md-list layout-align="space-around start" layout="column" class="list-domains">
-                    <md-list-item class="md-2-line">
+                    <md-list-item class="md-2-line" ng-repeat="skill in skillsCtrl.skills.knowledge.second">
                         <md-icon>check</md-icon>
                         <div>
-                            <p>{{ 'skills_knowledge_4' | translate}}</p>
-                        </div>
-                    </md-list-item>
-                    <md-list-item class="md-2-line">
-                        <md-icon>check</md-icon>
-                        <div>
-                            <p>{{ 'skills_knowledge_5' | translate}}</p>
-                        </div>
-                    </md-list-item>
-                    <md-list-item class="md-2-line">
-                        <md-icon>check</md-icon>
-                        <div>
-                            <p>{{ 'skills_knowledge_6' | translate}}</p>
+                            <p translate="{{skill.name}}"></p>
                         </div>
                     </md-list-item>
                 </md-list>
@@ -57,25 +33,9 @@
         <div flex layout-align="space-around" class="expertise-container">
             <h2>{{ 'skills_expertise_title' | translate}}</h2>
             <div flex layout="column" layout-align="space-around" class="frameworks-container">
-                <div class="framework-container">
-                    <p class="framework-label">Angular JS 1.x</p>
-                    <md-progress-linear md-mode="determinate" value="80"></md-progress-linear>
-                </div>
-                <div class="framework-container">
-                    <p class="framework-label">Bootstrap 3 / Material Design</p>
-                    <md-progress-linear md-mode="determinate" value="90"></md-progress-linear>
-                </div>
-                <div class="framework-container">
-                    <p class="framework-label">Node JS</p>
-                    <md-progress-linear md-mode="determinate" value="70"></md-progress-linear>
-                </div>
-                <div class="framework-container">
-                    <p class="framework-label">React JS</p>
-                    <md-progress-linear md-mode="determinate" value="50"></md-progress-linear>
-                </div>
-                <div class="framework-container">
-                    <p class="framework-label">ASP MVC 5</p>
-                    <md-progress-linear md-mode="determinate" value="60"></md-progress-linear>
+                <div class="framework-container" ng-repeat="skill in skillsCtrl.skills.expertise.frameworks">
+                    <p class="framework-label" translate="{{skill.name}}">Angular JS 1.x</p>
+                    <md-progress-linear md-mode="determinate" value="{{skill.value}}"></md-progress-linear>
                 </div>
             </div>
             <div flex class="separator"></div>
@@ -83,39 +43,13 @@
                  class="skills-container">
 
                 <div flex layout="row" layout-align="space-around center" class="skill-container">
-                    <div layout="column" class="skill">
+                    <div layout="column" class="skill" ng-repeat="skill in skillsCtrl.skills.expertise.technos">
                         <md-progress-circular md-diameter="70" class="skill-first-bar" md-mode="determinate"
-                                              value="85"></md-progress-circular>
+                                              value="{{skill.value}}"></md-progress-circular>
                         <md-progress-circular md-diameter="70" class="skill-second-bar" md-mode="determinate"
                                               value="100"></md-progress-circular>
-                        <p class="skill-number-label">85%</p>
-                        <p>Javascript</p>
-                    </div>
-                    <div layout="column" class="skill">
-                        <md-progress-circular md-diameter="70" class="skill-first-bar" md-mode="determinate"
-                                              value="70"></md-progress-circular>
-                        <md-progress-circular md-diameter="70" class="skill-second-bar" md-mode="determinate"
-                                              value="100"></md-progress-circular>
-                        <p class="skill-number-label">70%</p>
-                        <p>Html 5</p>
-                    </div>
-                </div>
-                <div flex layout="row" layout-align="space-around center" class="skill-container">
-                    <div layout="column" class="skill">
-                        <md-progress-circular md-diameter="70" class="skill-first-bar" md-mode="determinate"
-                                              value="90"></md-progress-circular>
-                        <md-progress-circular md-diameter="70" class="skill-second-bar" md-mode="determinate"
-                                              value="100"></md-progress-circular>
-                        <p class="skill-number-label">90%</p>
-                        <p>Css 3</p>
-                    </div>
-                    <div layout="column" class="skill">
-                        <md-progress-circular md-diameter="70" class="skill-first-bar" md-mode="determinate"
-                                              value="65"></md-progress-circular>
-                        <md-progress-circular md-diameter="70" class="skill-second-bar" md-mode="determinate"
-                                              value="100"></md-progress-circular>
-                        <p class="skill-number-label">65%</p>
-                        <p>Java</p>
+                        <p class="skill-number-label">{{skill.value}}%</p>
+                        <p>{{skill.name}}</p>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,28 @@
+[
+  {
+    "name": "menu_home",
+    "icon": "home",
+    "active": true,
+    "anchor": "anchor-home"
+  },
+  {
+    "name": "menu_profile",
+    "icon": "person_outline",
+    "anchor": "anchor-profile"
+  },
+  {
+    "name": "menu_stories",
+    "icon": "timelapse",
+    "anchor": "anchor-stories"
+  },
+  {
+    "name": "menu_projects",
+    "icon": "format_paint",
+    "anchor": "anchor-projects"
+  },
+  {
+    "name": "menu_skills",
+    "icon": "palette",
+    "anchor": "anchor-skills"
+  }
+]
