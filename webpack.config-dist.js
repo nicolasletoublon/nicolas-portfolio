@@ -14,6 +14,7 @@ module.exports = {
     ],
     module: {
         preLoaders: [
+            {test: /\.json$/, loader: 'json'},
             {
                 test: /\.js$/,
                 loader: 'baggage?[file].html&[file].css'
