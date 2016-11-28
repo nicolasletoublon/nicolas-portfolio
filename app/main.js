@@ -26,16 +26,12 @@ function mainController($scope, $translate) {
 
 mainConfig.$inject = ["$mdThemingProvider", "$translateProvider"];
 function mainConfig($mdThemingProvider, $translateProvider) {
-    //$translateProvider.translations('en_EN', require('json!../i18n/locale-en_EN'));
+    $translateProvider.translations('en_EN', require('../i18n/locale-en_EN'));
     $translateProvider.translations('fr_FR', require('../i18n/locale-fr_FR'));
-    $translateProvider.preferredLanguage('fr_FR');
+    $translateProvider.preferredLanguage('en_EN');
 
-/*    $translateProvider.registerAvailableLanguageKeys(['en_EN', 'fr_FR'], {
+    $translateProvider.registerAvailableLanguageKeys(['en_EN', 'fr_FR'], {
         'en*': 'en_EN', 'fr*': 'fr_FR'
-    });*/
-
-    $translateProvider.registerAvailableLanguageKeys(['fr_FR'], {
-        'fr*': 'fr_FR'
     });
     $translateProvider.useSanitizeValueStrategy('sanitize');
     $translateProvider
